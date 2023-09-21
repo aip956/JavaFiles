@@ -1,3 +1,5 @@
+// https://practice.geeksforgeeks.org/problems/print-first-n-fibonacci-numbers1002/1/
+// Ask why I can't do this with an array
 import java.util.*;
 
 
