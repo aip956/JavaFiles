@@ -32,11 +32,6 @@ public class frogJump {
             oneSt = twoSt;
             twoSt = threeSt;
             threeSt = nextSt;
-            // System.out.println("29threeSt: " + threeSt);
-            // System.out.println("28twoSt: " + twoSt);
-            // System.out.println("27oneSt: " + oneSt);
-           
-            
         }
     return nextSt;
     }
