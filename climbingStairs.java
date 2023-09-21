@@ -23,11 +23,13 @@ public class climbingStairs {
   public static int climb(int n) {
     int oneSt = 1;
     int twoSt = 1;
+    System.out.println("n: " +n);
     for (int i = 0; i < n-1; i++) {
         int temp = oneSt;
         oneSt = oneSt + twoSt; 
         twoSt = temp;
-        System.out.println(oneSt);
+        System.out.println("i: " +i);
+        System.out.println("oneSt: " + oneSt);
     }
     return oneSt;
   }  
@@ -35,7 +37,8 @@ public class climbingStairs {
 
     public static void main(String[] args) {
         int n = 5;
-        
+        int n2 = 7;
         System.out.println("Result: " + climb(n));
+        System.out.println("Result: " + climb(n2));
     }
 }
