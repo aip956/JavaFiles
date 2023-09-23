@@ -11,7 +11,11 @@ public class sticklerThief {
 
 
     public static void main(String[] args) {
-
+        int[] a1 = {6, 5, 5, 7, 4};
+        int n1 = 5;
+        int[] a2 = {1, 5, 3};
+        int n2 = 3;
+        
     }
     
 }
