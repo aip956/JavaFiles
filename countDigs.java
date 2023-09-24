@@ -1,5 +1,7 @@
+import java.util.*;
+
 public class countDigs {
-    public int countDigits(int num) {
+    public static int countDigits(int num) {
         int sum = 0;
         while (num >= 0) {
             int mod = num % 10;
@@ -16,6 +18,7 @@ public class countDigs {
 
     public static void main(String[] args) {
         int num1 = 7;
-        System.out.println("Result1: " + countDigs(num1));
+        int result1 = countDigits(num1);
+        System.out.println("Result1: " + result1);
     }
 }
