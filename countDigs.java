@@ -2,21 +2,22 @@ import java.util.*;
 
 public class countDigs {
     public static int countDigits(int num) {
-        Set<Integer> sumsHash = new HashSet<>();
         int sum = 0;
-        while (num > 0) {
-            int mod = num % 10;
-            System.out.println("mod: " + mod);
-            System.out.println("num%mod: " + num%mod);
-            if (num % mod == 0) {
-                if (!sumsHash.contains(mod)) {
+        int remDigs = num % 10;
+        while (remDigs > 0) {
+            
+            System.out.println("remDigs: " + remDigs);
+            // System.out.println("remDigs: " + remDigs);
+            if (num % remDigs == 0) {
+                if (!sumsHash.contains(remDigs)) {
                     sum ++;
-                    sumsHash.add(mod);
+                    sumsHash.add(remDigs);
                     System.out.println("15sumsHash: " + sumsHash);
+                    num = num / 10;
                 }
                 System.out.println("17sum: " + sum);
             }
-            num = num / 10;
+            
             System.out.println("20num: " + num);
         }
         return sum;
