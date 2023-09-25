@@ -8,7 +8,7 @@
 import java.util.*;
 
 public class sticklerThief {
-    public int FindMaxSum(int arr[], int n)
+    public static int FindMaxSum(int arr[], int n)
     {
         // Your code here
         if (n == 0) return 0;
