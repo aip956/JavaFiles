@@ -7,7 +7,11 @@
 
 public static class largestNumPoss {
     static String findLargest(int N, int S){
-        // code here
+        // code here; if N = 2, S = 100; can't be done; 99 < 100
+        // Stringbuild 9 while < S
+        if (N * 9 < S) return -1; // need if statement if can't be done
+        
+        for ()
     }
 
 
