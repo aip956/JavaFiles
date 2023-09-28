@@ -19,10 +19,10 @@ public class sticklerThief {
 
         // max amount looted up to the 1st house is amount in 1st house
         dp[0] = arr[0];
-        System.out.println(" dp[0]" +  dp[0]);
+        System.out.println("dp[0]" +  dp[0]);
         // for 2nd house, choose max between 1st and 2nd house
         dp[1] = Math.max(arr[0], arr[1]);
-        System.out.println(" dp[1]" +  dp[1]);
+        System.out.println("dp[1]" +  dp[1]);
         // iterate for remaining houses
         for (int i = 2; i < n; i++) {
             // To decide whether to loot the ith house, choose the max between:
@@ -30,7 +30,7 @@ public class sticklerThief {
             // 2. Max amount looted up to the (i-1)th house
             System.out.println("dp[i-2]: " + dp[i - 2] );
             System.out.println("ith: " + arr[i]);
-            System.out.println("i-2 plus ith: " + dp[i - 2] + arr[i]);
+            System.out.println("i-2 plus ith: " + (dp[i - 2] + arr[i]));
             System.out.println("up to ith: " + dp[i - 1]);
             dp[i] = Math.max(dp[i - 2] + arr[i], dp[i - 1]);
             System.out.println("dp[i]: " + dp[i]);
