@@ -19,8 +19,9 @@ remaining to right is <= S
 import java.util.*;
 public class largestNumPoss {
     static String findLargest(int N, int S){
-
-        if (N * 9 < S) return "-1"; // need if statement if can't be done
+        System.out.println("N*9: " + (N*9));
+        System.out.println((N * 9) < S);
+        if (N * 9 < S || (S == 0 && N != 1)) return "-1"; // need if statement if can't be done
 
         StringBuilder output = new StringBuilder();
         int[] digits = new int[N];
@@ -44,8 +45,8 @@ public class largestNumPoss {
 
 
     public static void main (String[] args) {
-        int n1 = 2;
-        int s1 = 9;
+        int n1 = 4;
+        int s1 = 0;
         System.out.println("Output1: " + findLargest(n1, s1));
     }
 
