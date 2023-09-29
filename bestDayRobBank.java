@@ -1,7 +1,15 @@
 public class bestDayRobBank {
-    public static int[] goodDaysToRobBank(int[] security, int time) {
-
-
+    public List<Integer> goodDaysToRobBank(int[] security, int time) {
+        int[] output = {};
+        if (security.length < 1 + (2*time)) {
+            return output;
+        }
+        // have to consider time is large
+        
+        for (int i = 2; i < security.length - time; i++) {
+            if (security[i - time] >= security[i - time+1])
+        }
+        return output;
     }
 
 
