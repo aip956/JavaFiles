@@ -21,7 +21,7 @@ public class largestNumPoss {
     static String findLargest(int N, int S){
 
         if (N * 9 < S) return "-1"; // need if statement if can't be done
-        // 9 + 10*9
+
         StringBuilder output = new StringBuilder();
         int[] digits = new int[N];
         for (int i = 0; i < N; i++) {
@@ -39,7 +39,7 @@ public class largestNumPoss {
         for (int digit : digits) {
             output.append(digit);
         }
-        return output.toString;
+        return output.toString();
     }
 
 
