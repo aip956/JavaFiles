@@ -33,7 +33,7 @@ public class bestDayRobBank {
 
         }
         
-        // iterate over time windows
+        // iterate over time windows; where the before and after are >= time
         for (int i = time; i < security.length - time; i++) {
             // System.out.println("36: " + i);
             System.out.println("time: " + time);
