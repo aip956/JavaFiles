@@ -1,4 +1,9 @@
+// https://docs.google.com/document/d/1z0cH49vGZVqZ2AZOSgIZizMOZt9OmekYcHVshleolPo/edit
+
+
+
 import java.util.*;
+
 public class sortByFreq {
     public static String frequencySort(String s) {
         HashMap<Character, Integer> freqMap = new HashMap<>();
@@ -6,10 +11,22 @@ public class sortByFreq {
             freqMap.put(c, freqMap.getOrDefault(c,0) + 1);
             System.out.println("7freqMap: " + freqMap);
         }
-        Collections.sort(freqMap);
-        System.out.println("10freqMap: " + freqMap);
+        // Convert HashMap entries to a list
+        List<Map.Entry<Character, Integer>> charList = new ArrayList<>(freqMap.entrySet());
 
-        return s;
+        // Sort the list by vals / freqs in descending
+        charList.sort((a, b) -> b.getValue() - a.getValue());
+
+        // Stringbuilder to build the output
+        StringBuilder output = new StringBuilder();
+        for (Map.Entry<Character, Integer> entry : charList) {
+            char character = entry.getKey();
+            int frequency = entry.getValue();
+            for (int i = 0; i < frequency; i++) {
+                output.append(character);
+            }
+        }
+        return output.toString();
     }
 
 
