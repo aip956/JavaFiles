@@ -1,14 +1,28 @@
+
+
+
+
+
 public class bestDayRobBank {
     public List<Integer> goodDaysToRobBank(int[] security, int time) {
-        int[] output = {};
+        ArrayList<Integer> output = new ArrayList<>();
         if (security.length < 1 + (2*time)) {
             return output;
         }
         // have to consider time is large
-        
-        for (int i = 2; i < security.length - time; i++) {
-            if (security[i - time] >= security[i - time+1])
+
+        for (int i = time; i < time-1; i++) {
+            if (security[i-time] > security[i-time+1]) {
+                break;
+            }
+            for (int i = time; i < security.length - time; i++) {
+                if (security[i] > security[i+1]) {
+                    break;
+                }
+            }
+            ouput
         }
+        
         return output;
     }
 
