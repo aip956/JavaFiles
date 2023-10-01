@@ -1,4 +1,9 @@
-
+/* https://leetcode.com/problems/find-good-days-to-rob-the-bank/
+ * Find minima; create two arrays where
+ * 1. Before: each element is less than previous, add 1 so cummulative num of descending
+ * 2. After: each element is ascending; add 1 so cummulative num of ascending
+ * 3. Result is where index of before and after are >= than time
+ */
 
 
 
@@ -40,7 +45,6 @@ public class bestDayRobBank {
             System.out.println("numDaysBefore[i]: " + numDaysBefore[i]);
             System.out.println("numDaysAfter[i]: " + numDaysAfter[i]);
             if (numDaysBefore[i] >= time && numDaysAfter[i] >= time) {
- 
                 output.add(i);
             }
         }
