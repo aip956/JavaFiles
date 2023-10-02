@@ -51,13 +51,15 @@ public class closestPairFrom2Arrs {
                 int sum = arr[i] + brr[j];
                 System.out.println("52sum: " + sum);
                 int diff = x - sum;
+                if (minDiff < diff) {
+                    System.out.println("55: Diff<Min")
+                    minPair.add(arr[i], brr[j]);
+                }
                 System.out.println("54diff: " + diff);
                 minDiff = Math.min(minDiff, diff);
                 System.out.println("56minDiff: " + minDiff);
 
-                if (minDiff == diff) {
-                    minPair.add(arr[i], brr[j]);
-                }
+                
 
                 System.out.println("60minPair: " + minPair);
             }
