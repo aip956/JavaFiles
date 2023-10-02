@@ -43,27 +43,31 @@ public class closestPairFrom2Arrs {
         // code here
         int minDiff = Integer.MAX_VALUE;
         ArrayList<Integer> minPair = new ArrayList<>();
-        for (int j = 0; j < m; j++) {
-            for (int i = 0; i < n; i++) {
-                System.out.println("48arr[i], brr[j]: " + arr[i] +" , " + brr[j]);
-                System.out.println("48i: " + i);
-                System.out.println("49j: " + j);
-                int sum = arr[i] + brr[j];
-                System.out.println("52sum: " + sum);
-                int diff = x - sum;
-                System.out.println("54diff: " + diff);
-                if (minDiff > diff) {
-                    System.out.println("55: Diff<Min");
-                    minPair.clear();
-                    minPair.add(arr[i]);
-                    minPair.add(brr[j]);
-                    minDiff = diff;
-                    System.out.println("59minDiff: " + minDiff);
-                }
-                System.out.println("60minPair: " + minPair);
+        int i = 0;
+        int j = m - 1;
+        while (i < n && j >= 0) {
+            System.out.println("48arr[i], brr[j]: " + arr[i] +" , " + brr[j]);
+            System.out.println("48i: " + i);
+            System.out.println("49j: " + j);
+            int sum = arr[i] + brr[j];
+            System.out.println("52sum: " + sum);
+            int diff = x - sum;
+            System.out.println("54diff: " + diff);
+            if (Math.abs(minDiff) > Math.abs(diff)) {
+                System.out.println("55: Diff<Min");
+                minPair.clear();
+                minPair.add(arr[i]);
+                minPair.add(brr[j]);
+                minDiff = diff;
+                System.out.println("59minDiff: " + minDiff);
+            }
+            if (sum < x) {
+                i++;
+            } else {
+                j--;
             }
         }
-        System.out.println("57minPair: " + minPair);
+        System.out.println("60minPair: " + minPair);
         return minPair;
     }
 
@@ -75,6 +79,13 @@ public class closestPairFrom2Arrs {
         int m1 = 4;
         int x1 = 31;
         System.out.println("Output1: " + printClosest(arr1, brr1, n1, m1, x1));
+
+        // int arr2[] = {1, 4, 5, 7};
+        // int brr2[] = {10, 20, 30, 40};
+        // int n2 = 4;
+        // int m2 = 4;
+        // int x2 = 47;
+        // System.out.println("Output2: " + printClosest(arr2, brr2, n2, m2, x2));
     }
 }
 
