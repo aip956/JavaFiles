@@ -41,18 +41,25 @@ public class closestPairFrom2Arrs {
 
     public static ArrayList<Integer> printClosest (int arr[], int brr[], int n, int m, int x) {
         // code here
-        int minDiff = 0;
+        int minDiff = Integer.MAX_VALUE;
         ArrayList<Integer> minPair = new ArrayList<>();
         for (int j = 0; j < m; j++) {
             for (int i = 0; i < n; i++) {
-                int sum = arr[i] + arr[j];
+                System.out.println("48arr[i], brr[j]: " + arr[i] +" , " + brr[j]);
+                System.out.println("48i: " + i);
+                System.out.println("49j: " + j);
+                int sum = arr[i] + brr[j];
+                System.out.println("52sum: " + sum);
                 int diff = x - sum;
-                minDiff = Math.min(minDiff);
-                minPair.add(arr[i], arr[j]);
-                System.out.println("arr[i], brr[j]: " + arr[i] +" , " + brr[j]);
-                System.out.println("diff: " + diff);
-                System.out.println("minDiff: " + minDiff);
-                System.out.println("minPair: " + minPair);
+                System.out.println("54diff: " + diff);
+                minDiff = Math.min(minDiff, diff);
+                System.out.println("56minDiff: " + minDiff);
+
+                if (minDiff == diff) {
+                    minPair.add(arr[i], brr[j]);
+                }
+
+                System.out.println("60minPair: " + minPair);
             }
         }
         System.out.println("57minPair: " + minPair);
@@ -66,7 +73,7 @@ public class closestPairFrom2Arrs {
         int n1 = 4;
         int m1 = 4;
         int x1 = 31;
-        System.out.println("Output1: " printClosest(arr1, brr1, n1, m1, x1))
+        System.out.println("Output1: " + printClosest(arr1, brr1, n1, m1, x1));
     }
 }
 
