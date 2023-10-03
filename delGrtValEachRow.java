@@ -1,20 +1,23 @@
 
 /*
+https://leetcode.com/problems/delete-greatest-value-in-each-row/submissions/
+time complex: O(m * n^2); 
+    outer while loop runs for n iters
+    middle for loop iter through all rows m
+    innermost for loop iters through all n to find max
+    three nested loops
 
- subArr i = 0
-    int colMax = 0
-    find subArrMax; 4
-    subArrMaxInd
-    max = 4
- subArr i = 1
-    find subArrMax; 3
-    max = Math.max(colMax, max)
-    max still 4;
-find max of subArrs = 4
-remove 4 from subArr i = 0
-remove 3 from subArr i = 1
-maxSum += max;
-subArr lenghth is less one
+
+Space complex: O(1); not using any additional data strcts that grow w input size
+while numb of cols in row > 0
+iterate through all rows
+iterate through each row
+find row max
+find array max
+iterate through row and delete max by moving rest of cols to left
+do same for other rows
+decrement num of cols in row
+
  */
 
 
@@ -28,21 +31,19 @@ class delGrtValEachRow {
         // iterate through each subArrs
         while (n > 0)  { // for both rows
             int arrMax = -1; // max between subArrs
-            // iterate through row
-            for (int i = 0; i < m; i++) {
+            
+            for (int i = 0; i < m; i++) { // for both rows
                 int subArrMax = -1; // max within this subarray
-                for (int j = 0; j < n; j++) { // for one row
+                for (int j = 0; j < n; j++) { // for one row, find max of row and arrMax
                     System.out.println("35n: " + n);
                     subArrMax = Math.max(subArrMax, grid[i][j]);
                     System.out.println("i: " + i + ", j: " + j + " , subArrMax: " + subArrMax);
-                    
                     arrMax = Math.max(arrMax, subArrMax);
                     System.out.println("i: " + i + ", j: " + j + " , arrMax: " + arrMax);
                 }
                 System.out.println("40arrMax: " + arrMax);
 
                 
-
                     // go back through row; find subArrMax and shift elements after to left
                 for (int j = 0; j < n; j++) {
                     if (grid[i][j] == subArrMax) {
@@ -65,8 +66,11 @@ class delGrtValEachRow {
 
 
     public static void main(String[] args) {
-        int[][] grid = {{1,2,4}, {3,3,1}};
-        int output = deleteGreatestValue(grid);
-        System.out.println(output);
+        // int[][] grid = {{1,2,4}, {3,3,1}};
+        // int output = deleteGreatestValue(grid);
+        // System.out.println(output);
+        int[][] grid2 = {{10}};
+        int output2 = deleteGreatestValue(grid2);
+        System.out.println(output2);
     }
 }
