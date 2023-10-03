@@ -21,56 +21,29 @@ subArr lenghth is less one
 
 class delGrtValEachRow {
     public static int deleteGreatestValue(int[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
-        int summedMaxs = 0;
+        int m = grid.length; // 2
+        int n = grid[0].length; // 3
+        int summedMax = 0;
 
+        int arrMax = -1; // max between subArrs
 
     // iterate through each subArrs
     for (int i = 0; i < n; i++)  { // for both rows
-        int colMax = -1; // max between subArrs
         int subArrMax = -1; // max within this subarray
+        System.out.println("i: " + i );
         for (int j = 0; j < m; j++) { // for one row
-            
-            subArrMax = Math.max(subArrMax, grid[j][i]);
-            colMax = Math.max(colMax, subArrMax);
-        }
-
-
-
-
-
-    }
-        
-        System.out.println("8grid[0]len: " + grid[0].length);
-        for (int i = 0; i < grid.length; i++) {
-            System.out.println("i: "+ i);
-            
-            int subArrMax = 0;
-            int subArrMaxInd = 0;
-        
-        //System.out.println("i's length: "+ grid[i].length);
-        // iterate within subArr
-        for (int j = 0; j < grid[i].length; j++) {
-            
             subArrMax = Math.max(subArrMax, grid[i][j]);
-            subArrMaxInd = j;
-            System.out.println("j: "+ j);
-            System.out.println("19subArrMax: "+ subArrMax);
-            
+            System.out.println("i,j,subArrMax: " + i + " "+ j + " " + subArrMax);
+            arrMax = Math.max(arrMax, subArrMax);
+            System.out.println("i,j,arrMax: " + i + " "+ j + " " + arrMax);
         }
-        // remove subArrMax from subarray; add the max to summedMax
-        
-        System.out.println("24max of iteration: " + max);
-        grid[i] = removeElem(grid[i], subArrMax);
-        summedMaxs += max;
-        System.out.println("27MAX: " + max);
-        System.out.println("28grid[0]len: " + grid[0].length);
-        }
-    //System.out.println("grid: " + grid[0][1]);//
-
+        System.out.println("40arrMax: " + arrMax);
+        summedMax += arrMax;
+        System.out.println("42summedMax: " + summedMax);
     }
-    return summedMaxs;
+        System.out.println("44summedMax: " + summedMax);
+        return summedMax;
+        
   }
 
     public static int[] removeElem (int[] row, int elem) {
