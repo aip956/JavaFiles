@@ -27,13 +27,25 @@ class delGrtValEachRow {
 
 
     // iterate through each subArrs
-    for (int i = 0; i < n; i++)  {
+    for (int i = 0; i < n; i++)  { // for both rows
         int colMax = -1; // max between subArrs
         int subArrMax = -1; // max within this subarray
+        for (int j = 0; j < m; j++) { // for one row
+            
+            subArrMax = Math.max(subArrMax, grid[j][i]);
+            colMax = Math.max(colMax, subArrMax);
+        }
+
+
+
+
+
+    }
+        
         System.out.println("8grid[0]len: " + grid[0].length);
         for (int i = 0; i < grid.length; i++) {
             System.out.println("i: "+ i);
-            colMax = Math.max(colMax, )
+            
             int subArrMax = 0;
             int subArrMaxInd = 0;
         
