@@ -1,11 +1,14 @@
 
 /*
+
  subArr i = 0
+    int colMax = 0
     find subArrMax; 4
     subArrMaxInd
     max = 4
  subArr i = 1
     find subArrMax; 3
+    max = Math.max(colMax, max)
     max still 4;
 find max of subArrs = 4
 remove 4 from subArr i = 0
@@ -18,14 +21,19 @@ subArr lenghth is less one
 
 class delGrtValEachRow {
     public static int deleteGreatestValue(int[][] grid) {
-    int summedMaxs = 0;
-    int max = 0; // max between subArrs
+        int m = grid.length;
+        int n = grid[0].length;
+        int summedMaxs = 0;
+
 
     // iterate through each subArrs
-    while (grid[0].length > 0) {
+    for (int i = 0; i < n; i++)  {
+        int colMax = -1; // max between subArrs
+        int subArrMax = -1; // max within this subarray
         System.out.println("8grid[0]len: " + grid[0].length);
         for (int i = 0; i < grid.length; i++) {
             System.out.println("i: "+ i);
+            colMax = Math.max(colMax, )
             int subArrMax = 0;
             int subArrMaxInd = 0;
         
