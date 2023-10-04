@@ -16,6 +16,12 @@
 
 public class taskScheduler {
     public int leastInterval(char[] tasks, int n) {
+        int[] taskCount = new int[26];
+
+        // count freq of each task
+        for (char task : tasks) {
+            taskCount[task - 'A']++;
+        }
         
     }
 
