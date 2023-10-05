@@ -22,7 +22,7 @@ public class taskScheduler {
         // count freq of each task
         for (char task : tasks) {
             taskCount[task - 'A']++;
-            
+            System.out.println("taskCount[task]: " + taskCount[task]);
         }
 
         // Find the task with the highest freq
