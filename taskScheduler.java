@@ -23,6 +23,7 @@ public class taskScheduler {
         for (char task : tasks) {
             if (task >= 'A' && task <= 'Z') {
                 taskCount[task - 'A']++;
+                System.out.println("task: " + task);
                 System.out.println("taskCount[task]: " + taskCount[task - 'A']);
             }           
         }
@@ -36,13 +37,18 @@ public class taskScheduler {
 
         // Calc total time without cooldown
         int totalTime = (maxFreq - 1) * (n + 1) + maxFreq;
+        System.out.println("totalTime: " + totalTime);
 
         // Check if there are other tasks with same freq
         for (int count : taskCount) {
             if (count == maxFreq) {
                 totalTime++;
+                System.out.println("46count: " + count);
+                System.out.println("totalTime: " + totalTime);
             }
         }
+        System.out.println("50totalTime: " + totalTime);
+        System.out.println("51tasks.length: " + tasks.length);
         return Math.max(totalTime, tasks.length);
     }
 
