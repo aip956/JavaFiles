@@ -15,8 +15,9 @@
 
 
 public class taskScheduler {
-    public int leastInterval(char[] tasks, int n) {
+    public static int leastInterval(char[] tasks, int n) {
         int[] taskCount = new int[26];
+        int maxFreq = 0;
 
         // count freq of each task
         for (char task : tasks) {
@@ -44,7 +45,7 @@ public class taskScheduler {
 
 
     public static void main(String[] args) {
-        char[] tasks1 = { "A","A","A","B","B","B" };
+        char[] tasks1 = {'A','A','A','B','B','B'};
         int n1 = 2;
         System.out.println("Output1: " + leastInterval(tasks1, n1));
     }
