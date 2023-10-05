@@ -21,8 +21,16 @@ public class taskScheduler {
         // count freq of each task
         for (char task : tasks) {
             taskCount[task - 'A']++;
+            
         }
-        
+
+        // Find the task with the highest freq
+        for (int count : taskCount) {
+            maxFreq = Math.max(maxFreq, count);
+        }
+
+        // Calc total time without cooldown
+        int totalTime = (maxFreq)
     }
 
 
