@@ -23,13 +23,15 @@ public class taskScheduler {
         for (char task : tasks) {
             if (task >= 'A' && task <= 'Z') {
                 taskCount[task - 'A']++;
-                System.out.println("taskCount[task]: " + taskCount[task]);
+                System.out.println("taskCount[task]: " + taskCount[task - 'A']);
             }           
         }
 
         // Find the task with the highest freq
         for (int count : taskCount) {
             maxFreq = Math.max(maxFreq, count);
+            System.out.println("count: " + count);
+            System.out.println("maxFreq: " + maxFreq);
         }
 
         // Calc total time without cooldown
