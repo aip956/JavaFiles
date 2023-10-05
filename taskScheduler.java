@@ -30,7 +30,15 @@ public class taskScheduler {
         }
 
         // Calc total time without cooldown
-        int totalTime = (maxFreq)
+        int totalTime = (maxFreq - 1) * (n + 1) + maxFreq;
+
+        // Check if there are other tasks with same freq
+        for (int count : taskCount) {
+            if (count == maxFreq) {
+                totalTime++;
+            }
+        }
+        return Math.max(totalTime, tasks.length);
     }
 
 
