@@ -10,8 +10,8 @@
  */
 import java.util.*;
 public class rearrangeArray {
-    public int[] rearrangeArray(int[] nums) {
-        int[] result = [];
+    public static int[] rearrangeArray(int[] nums) {
+        int[] result = {};
         int left = 0; 
         int right = 0;
         int length = nums.length;
@@ -22,18 +22,21 @@ public class rearrangeArray {
         }
         System.out.println("23numsArr: " + numsArr);
         Collections.sort(numsArr);
-        while (left != right) {
-
+        for (int i = 0; i < length; i++) {
+            result[left] = numsArr[i];
+            result[right]
+        }
+            
         }
 
         return result;
     }
 
     public static void main(String[] args) {
-        int nums1 = {1,2,3,4,5};
+        int[] nums1 = {1,2,3,4,5};
         System.out.println("Output1: " + rearrangeArray(nums1));
 
-        int nums2 = {6,2,0,9,7};
-        System.out.println("Output2: " + rearrangeArray(nums2));
+        // int[] nums2 = {6,2,0,9,7};
+        // System.out.println("Output2: " + rearrangeArray(nums2));
     }
 }
