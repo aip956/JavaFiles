@@ -15,9 +15,18 @@ public class rearrangeArray {
         int left = 0; 
         int right = 0;
         int length = nums.length;
-        Collections.sort(nums);
-
+        ArrayList<Integer> numsArr = new ArrayList<>();
         
+        for (int num : nums) {
+            numsArr.add(num);
+        }
+        System.out.println("23numsArr: " + numsArr);
+        Collections.sort(numsArr);
+        while (left != right) {
+
+        }
+
+        return result;
     }
 
     public static void main(String[] args) {
