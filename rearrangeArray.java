@@ -12,9 +12,12 @@ import java.util.*;
 public class rearrangeArray {
     public static int[] rearrangeArray(int[] nums) {
         int[] result = {};
-        int left = 0; 
+
         int right = 0;
         int length = nums.length;
+        int left = Math.ceil(left / 2) + 1;
+        System.out.println("left: " + left);
+
         ArrayList<Integer> numsArr = new ArrayList<>();
         
         for (int num : nums) {
@@ -22,9 +25,15 @@ public class rearrangeArray {
         }
         System.out.println("23numsArr: " + numsArr);
         Collections.sort(numsArr);
-        for (int i = 0; i < length; i++) {
-            result[left] = numsArr[i];
-            result[right]
+        int i = 0;
+        while ( i < length) {
+            result[i] = numsArr[right];
+            System.out.println("31result[i]: " + result[i]);
+            result[i + 1] = numsArr[left];
+            System.out.println("31result[i]: " + result[i]);
+            right++;
+            left++;
+            i++;
         }
             
         }
