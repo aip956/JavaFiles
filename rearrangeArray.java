@@ -11,11 +11,11 @@
 import java.util.*;
 public class rearrangeArray {
     public static int[] rearrangeArray(int[] nums) {
-        int[] result = {};
+        int[] result = new int[nums.length];
 
         int right = 0;
         int length = nums.length;
-        int left = Math.ceil(left / 2) + 1;
+        int left = (int) (Math.ceil((double) length / 2));
         System.out.println("left: " + left);
 
         ArrayList<Integer> numsArr = new ArrayList<>();
@@ -23,29 +23,29 @@ public class rearrangeArray {
         for (int num : nums) {
             numsArr.add(num);
         }
-        System.out.println("23numsArr: " + numsArr);
         Collections.sort(numsArr);
+        System.out.println("23numsArr: " + numsArr);
+        
         int i = 0;
         while ( i < length) {
-            result[i] = numsArr[right];
+            result[i] = numsArr.get(right);
             System.out.println("31result[i]: " + result[i]);
-            result[i + 1] = numsArr[left];
-            System.out.println("31result[i]: " + result[i]);
+            if (left < length) {
+                result[i + 1] = numsArr.get(left);
+                System.out.println("31result[i+1]: " + result[i+1]);
+                left++;
+            }
             right++;
-            left++;
-            i++;
+            i+=2;
         }
-            
-        }
-
         return result;
     }
 
     public static void main(String[] args) {
-        int[] nums1 = {1,2,3,4,5};
-        System.out.println("Output1: " + rearrangeArray(nums1));
+        // int[] nums1 = {1,2,3,4,5,6};
+        // System.out.println("Output1: " + rearrangeArray(nums1));
 
-        // int[] nums2 = {6,2,0,9,7};
-        // System.out.println("Output2: " + rearrangeArray(nums2));
+        int[] nums2 = {6,2,0,9,7};
+        System.out.println("Output2: " + rearrangeArray(nums2));
     }
 }
