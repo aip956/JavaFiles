@@ -6,9 +6,9 @@
  * 4. New array alternates between left and right
  */
 
-
+import java.util.*;
 public class wiggleSort {
-    public void wiggleSort(int[] nums) {
+    public static void wiggleSort(int[] nums) {
         ArrayList<Integer> numsArr = new ArrayList<>();
         for (int num : nums) {
             numsArr.add(num);
@@ -20,6 +20,8 @@ public class wiggleSort {
 
     public static void main(String[] args) {
         int[] nums1 = {1,5,1,1,6,4};
+        System.out.println("Output: " + wiggleSort(nums1));
         // int[] nums2 = {1,3,2,2,3,1};
+        // System.out.println("Output2: " + wiggleSort(nums2));
     }
 }
