@@ -33,16 +33,18 @@ public class wiggleSort {
                 System.out.println("i: " + i + ", nums[i]: " + nums[i]);
                 right ++;
             }
-            nums[i + 1] = numsArr.get(left);
-            System.out.println("i+1: " + (i+1) + ", nums[i+1]: " + nums[i+1]);
-            left++;
+            if ((i + 1) < length) {
+                nums[i + 1] = numsArr.get(left);
+                System.out.println("i+1: " + (i+1) + ", nums[i+1]: " + nums[i+1]);
+                left++;
+            }
             i += 2;
         }
     }
 
 
     public static void main(String[] args) {
-        int[] nums1 = {1,5,1,1,6,4,7};
+        int[] nums1 = {1,5,1,1,6,4};
         wiggleSort(nums1);
         
         // int[] nums2 = {1,3,2,2,3,1};
