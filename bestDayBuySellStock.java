@@ -1,6 +1,8 @@
-// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+/* https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+Use min and max pointers, maxProfit
+Start min at 0; max at 1, maxProfit = max - min; increment max to be max of remaining vals
 
-
+*/
 public class bestDayBuySellStock {
     public static int maxProfit(int[] prices) {
         
