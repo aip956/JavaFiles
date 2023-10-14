@@ -1,7 +1,34 @@
+/*
+ * https://replit.com/@AntheaIp/MI453#Main.java
+ * Write a function named hidenp that takes two strings and returns 1
+if the first string is hidden in the second one,
+otherwise returns 0 followed by a newline.
+
+Let s1 and s2 be strings. We say that s1 is hidden in s2 if it's possible to
+find each character from s1 in s2, in the same order as they appear in s1.
+Also, the empty string is hidden in any string.
+
+s1, substring: isip
+s2, string: Mississippi
+ = 1
+
+ 2 pointers:
+ p1: i; find in s2; finds at index 1
+ p2: 1
+ p1: s: start at index 1 / p2, yes at index 2
+ p2: 2
+ p1: i, start at p2 = 2; yes at index 4
+ p2; 4
+ p1: p, start at p2 = 4, yes 
+ Yes
+ */
+
+
+
+
 public class hiddenString {
     public static boolean hidenp(String s1, String s2) {
         if (s1.length() == 0) return true;
-        int p1 = 0;
         int p2 = 0;
     
         for (int i = 0; i < s1.length(); i++) {
