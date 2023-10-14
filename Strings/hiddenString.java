@@ -23,19 +23,19 @@ public class hiddenString {
         if (!found) return false;
         }
         return true;
-      }
+    }
 
 
-    class Main {
-        public static void main(String[] args) {
-          String i1a = "fgex.;";
-          String i1b = "tyf34gdgf;'ektufjhgdgex.;.;rtjynur6";
-          System.out.println(hidenp(i1a, i1b));  // expected value: True
-          String i2a = "abc";
-          String i2b = "btarc";    
-          System.out.println(hidenp(i2a, i2b)); // expected value: False
-          String i3a = "";
-          String i3b = "long string ?ddl";
-          System.out.println(hidenp(i3a, i3b));    // expected value: True
-        }
+
+    public static void main(String[] args) {
+        String i1a = "fgex.;";
+        String i1b = "tyf34gdgf;'ektufjhgdgex.;.;rtjynur6";
+        System.out.println(hidenp(i1a, i1b));  // expected value: True
+        String i2a = "abc";
+        String i2b = "btarc";    
+        System.out.println(hidenp(i2a, i2b)); // expected value: False
+        String i3a = "";
+        String i3b = "long string ?ddl";
+        System.out.println(hidenp(i3a, i3b));    // expected value: True
+    }
 }
