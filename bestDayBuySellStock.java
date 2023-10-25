@@ -5,14 +5,21 @@ increment min if < old min
 */
 public class bestDayBuySellStock {
     public static int maxProfit(int[] prices) {
-        int min = 0;
+        int min = prices[0];
         int max = 1;
+        int profit = 0;
         int maxProfit = 0;
-        for (int i = 0; i < prices.length; i++) {
-            int profit = prices[max] - prices[min];
+        for (int i = 0; i < prices.length-1; i++) {
+            System.out.println("i: " + i);
+            if (prices[i] == Math.min(prices[i], prices[min]) ) {
+                profit = prices[max] - prices[min];
+                maxProfit = Math.max(maxProfit, profit);
+                System.out.println("16maxProf: " + maxProfit);
+                min = i;
+            }
             
         }
-
+        return maxProfit;
     }
 
 
