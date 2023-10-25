@@ -8,13 +8,29 @@
 
 public class containerMostWater {
     public static int maxArea(int[] height) {
-        System.out.println(height[0]);
-        return height[0];
+        
+        int maxArea = 0;
+        int left = 0;
+        int right = height.length - 1;
+        System.out.println("right: " + right);
+        System.out.println("heightright: " + height[right]);
+        while(left < right) {
+            int areaHeight = Math.min(height[left], height[right]);
+            int areaLen = right - left;
+            int area = areaHeight * areaLen;
+            System.out.println("area: " + area);
+            maxArea = Math.max(maxArea, area);
+            System.out.println("maxArea: " + maxArea);
+            // move the pointer of the min of the heights
+            if (height[left] <= height[right]) {
+                left++;
+            } else right--;
+        }
+        return maxArea;
     }
 
 
     public static void main(String[] args) {
-        System.out.println("Hello");
         int[] height = {1,8,6,2,5,4,8,3,7};
         System.out.println("Maxheight: " + maxArea(height));
 
