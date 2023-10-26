@@ -8,6 +8,13 @@ public class strstr {
         s.toCharArray();
         int i;
    
+        //  mississippi, 11; issi, 4
+        //  iterate 11 - 4 = 7
+        // set boolean = true
+        // iterate over lenght of substring
+        // if string.charAt i+j != substr.charAt j, 
+        // set to false, move to next string letter 
+        // if they equal, keep iterating through lenX
         for (i = 0; i <= lenS - lenX; i++) {
             boolean found = true;
             for (int j = 0; j < lenX; j++) {
