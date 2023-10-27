@@ -69,16 +69,21 @@ This code processes the input num and k from right to left, considering carryove
         while (i >= 0 || k > 0 || carry > 0) {
             int sum = carry;
             if (i >= 0) {
+                System.out.println("7i: " + i);
                 sum += num[i];
+                System.out.println("73sum: " + sum);
                 i--;
             }
             if (k > 0) {
                 sum += k % 10;
+                System.out.println("79sum: " + sum);
                 k /= 10;
+                System.out.println("81k: " + k);
             }
-            
+            System.out.println("83sum%10: " + sum % 10);
             result.add(0, sum % 10);
             carry = sum / 10;
+            System.out.println("86carry: " + carry);
         }
         
         return result;
