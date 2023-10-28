@@ -1,3 +1,5 @@
 Always ask how your tool works (eg if using Docker, how does it work?)
+hwo does WP compile ; overall logic
 
 string.length();
+string.charAt(index);
