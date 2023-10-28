@@ -1,0 +1,3 @@
+Always ask how your tool works (eg if using Docker, how does it work?)
+
+string.length();
