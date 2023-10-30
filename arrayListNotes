@@ -1,0 +1,8 @@
+
+declare new array list
+List<Integer> scores = new ArrayList<>();
+
+
+access the scores list; remove last item: scores.remove(length-1);
+access the scores list; access last item and add 2x: scores.add(Integer.valueOf(scores.get(length-1) * 2));
+
