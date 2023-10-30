@@ -17,3 +17,20 @@ Remove: a.remove(0);
 Clear: a.clear();
 #items: a.size();
 Sort: Collections.sort(a)
+
+
+ArrayList<Integer> a
+Sort: Collections.sort(a)
+Create a hashmap: Map<Integer, Integer> differences = new HashMap<>();
+Add differences into it: for (int i = 0; i < arr.length-1; i++){
+differences.put(arr[i], arr[i+1]-arr[i]); }
+Int minDiff = Integer.Max_Value; // set a value to a giant number to calc minimum
+
+Add to frequencyMap: frequencyMap.put(num, frequencyMap.getOrDefault(num,0) +1);
+Find the value in freqMap of 1: map over freqMap:if (frequencyMap.get(num) == 1)
+
+for (int num : freqMap.keySet()) {  	// map over freqMap
+if (freqMap.get(num) > 1) {	// if freq > 1
+dups.add(num);	// add to ArrayLlist
+}
+}
