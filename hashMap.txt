@@ -1,0 +1,28 @@
+HashMap: Key/value pairs, access by string
+Import java.util.HashMap
+HashMap<String, String> capitalCities = new HashMap<String, String>();
+Add items: capitalCities.put("England", "London");
+capitalCities.get("England");
+=> London
+To search by values:
+String targetCountry = null; 
+for (Map.Entry<String, String> entry : capitalCities.entrySet()) { 
+if (entry.getValue().equals(targetCity)) { 
+targetCountry = entry.getKey(); 
+break; // Once found, exit the loop } }
+Remove: capitalCities.remove(“England”)
+Clear: capitalCities.clear();
+#items: capitalCities.size();
+for (String i : capitalCities.keySet()) 
+=> will give the countries
+for (String i : capitalCities.values()) 
+=> will give the cities
+Frequency map: create, put or increment, map for freq > 1
+HashMap<Integer, Integer> freqMap = new HashMap<>();
+for (int num : arr) {
+freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
+}
+for (int num : freqMap.keySet()) {
+if (freqMap.get(num) > 1) {
+dups.add(num);
+}
