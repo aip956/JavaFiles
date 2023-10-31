@@ -1,0 +1,18 @@
+Set
+import java.util.HashSet;
+Set<Character> setA = new HashSet<>();
+ <= for each ch in A; need to convert A from String to CharArray
+For (ch : A.toCharArray()) {
+setA.add(ch);
+}
+Remove: setA.remove(ch);
+Clear all: setA.clear();
+#items: setA.size();
+
+Are any chars from setA in setB?
+TreeSet auto-sorts chars in ascending order, since output needs to be sorted
+Create new set: set<Character> nonCommonChars = new TreeSet<>();
+For (ch : setA) {
+If (!setB.contains(ch)) {
+nonCommonChars.add(ch);
+}
