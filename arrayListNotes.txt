@@ -1,4 +1,4 @@
-
+Searchable, maintains insertion order, mutable
 declare new array list
 List<Integer> scores = new ArrayList<>();
 
