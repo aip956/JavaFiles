@@ -28,3 +28,9 @@ for (int num : freqMap.keySet()) {
 if (freqMap.get(num) > 1) {
 dups.add(num);
 }
+
+Fast, key:value lookup
+Good for unsorted
+
+Worst case insert/delete runtimes are linear
+Keys are not ordered; linear time to search for a keyNot cache-friendly
