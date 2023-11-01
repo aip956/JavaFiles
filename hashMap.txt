@@ -61,3 +61,5 @@ iteration
 
 Ruby: lunch = Hash.new
 will create a new empty hash
+profile.compact! will return all vaalues not null
+profile.flatten will turn hash to an Array
