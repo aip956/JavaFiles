@@ -63,3 +63,11 @@ Ruby: lunch = Hash.new
 will create a new empty hash
 profile.compact! will return all vaalues not null
 profile.flatten will turn hash to an Array
+
+iterate through hash:
+polygons.each do |shape, slides|
+
+olympic_trials.select { |name, time| time < 10.05 } will filter times < 10.05
+
+olympic_trials.has_key?(:Sally)
+it's a symbol
