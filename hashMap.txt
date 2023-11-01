@@ -34,3 +34,15 @@ Good for unsorted
 
 Worst case insert/delete runtimes are linear
 Keys are not ordered; linear time to search for a keyNot cache-friendly
+
+Big O cheat sheet for time and space: https://www.bigocheatsheet.com/
+
+Hash table is an important key-val data structure that is implemented in three components:
+Array   
+
+
+
+platform.openai.com/playground
+will transalte between languages
+
+https://replit.com/@jessekathryn/HashPractice?v=1
