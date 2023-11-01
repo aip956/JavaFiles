@@ -71,3 +71,6 @@ olympic_trials.select { |name, time| time < 10.05 } will filter times < 10.05
 
 olympic_trials.has_key?(:Sally)
 it's a symbol
+
+
+https://leetcode.com/tag/hash-table/

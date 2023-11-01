@@ -1,11 +1,16 @@
+import java.util.*;
+
 public class twoSum {
     public static int[] twoSum(int[] nums, int target) {
         // iterate through nums
         // for each element, is the compliment in a hash
         // if not put it index, compliment
-
-        for (int num : nums) {
-            
+        HashMap<Integer> compHash = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int compliment = target - nums[i];
+            if (compHash.getValue().equals(compliment)) {
+                
+            }
         }
     }
 
