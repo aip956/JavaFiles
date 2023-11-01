@@ -46,3 +46,8 @@ platform.openai.com/playground
 will transalte between languages
 
 https://replit.com/@jessekathryn/HashPractice?v=1
+
+Curly {}: Indication it's a Hash
+Types: hash can store multiple data Types
+Hash key: Key holds a value of a  hash
+hash valuel: Value at a certain key of a hash
