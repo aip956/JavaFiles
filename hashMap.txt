@@ -51,3 +51,13 @@ Curly {}: Indication it's a Hash
 Types: hash can store multiple data Types
 Hash key: Key holds a value of a  hash
 hash valuel: Value at a certain key of a hash
+access
+Assignment
+
+insertion
+deletion
+iteration
+
+
+Ruby: lunch = Hash.new
+will create a new empty hash
