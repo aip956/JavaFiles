@@ -5,12 +5,15 @@ public class twoSum {
         // iterate through nums
         // for each element, is the compliment in a hash
         // if not put it index, compliment
-        HashMap<Integer> compHash = new HashMap<>();
+        HashMap<Integer, Integer> compHash = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int compliment = target - nums[i];
-            if (compHash.getValue().equals(compliment)) {
-                
+            if (compHash.containsKey(compliment)) {
+                return new int[] {compHash.get(compliment), i};
+            } else {
+                compHash.put(i, compliment);
             }
+            System.out.println("Hash: " + compHash);
         }
     }
 
