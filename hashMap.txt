@@ -74,3 +74,6 @@ it's a symbol
 
 
 https://leetcode.com/tag/hash-table/
+Declare a hash: Map<Integer, Integer> compHash = new HashMap<>()
+Search for the key, not the value: if (compHash.containsKey(compliment))
+Add to the hash: compHash.put(nums[i], i);
