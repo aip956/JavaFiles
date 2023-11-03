@@ -80,4 +80,4 @@ Add to the hash: compHash.put(nums[i], i);
 
 
 throws exception:
-try catch; tries to retrieve a value, 
+try catch; tries to retrieve a value, if not found can thow error e 
