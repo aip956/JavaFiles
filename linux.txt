@@ -17,16 +17,27 @@ mv newfile.txt ../
 Delete "file2.txt".
 rm file2.txt
 Create a symbolic link to "file3.txt" called "symlink.txt".
-
+ls -i gives inode 
+ln -s file3.txt symlink.txt
 Find all files with a ".txt" extension in the current directory.
+ls *.txt
+
 
 Level 2: File Manipulation and Permissions
 
 Navigate to your home directory.
+cd ~
 Create a new file called "important.txt".
+touch important.txt
 Append the line "This is important data!" to "important.txt".
+echo This is important data! >> important.txt
+cat important.txt to view contents
 Set read, write, and execute permissions for the owner on "important.txt".
+currently -rw-r--r--
+chmod u+rwx important.txt
+-rwxr--r--
 Create a new group called "securegroup".
+sudo groupadd securegroup
 Add yourself to "securegroup".
 Change the group of "important.txt" to "securegroup".
 Set read and write permissions for the group on "important.txt".
