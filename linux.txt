@@ -1,0 +1,78 @@
+Level 1: Basic Navigation
+
+Display the current working directory.
+pwd
+Create a new directory called "exercise1".
+mkdir excercise1
+Navigate to the newly created directory.
+cd exercise1
+Create three empty files: "file1.txt", "file2.txt", and "file3.txt".
+touch file1.txt file2.txt file3.txt
+List all files and directories in the current folder, including hidden ones.
+ls -a
+Rename "file1.txt" to "newfile.txt".
+mv file1.txt newfile.txt
+Move "newfile.txt" to the parent directory.
+mv newfile.txt ../
+Delete "file2.txt".
+rm file2.txt
+Create a symbolic link to "file3.txt" called "symlink.txt".
+
+Find all files with a ".txt" extension in the current directory.
+
+Level 2: File Manipulation and Permissions
+
+Navigate to your home directory.
+Create a new file called "important.txt".
+Append the line "This is important data!" to "important.txt".
+Set read, write, and execute permissions for the owner on "important.txt".
+Create a new group called "securegroup".
+Add yourself to "securegroup".
+Change the group of "important.txt" to "securegroup".
+Set read and write permissions for the group on "important.txt".
+Deny read and write permissions for others on "important.txt".
+View the permissions of "important.txt" and verify they are set correctly.
+
+Level 3: Text Processing
+
+Create a new file called "data.txt" with some random text.
+Count the number of lines in "data.txt".
+Display the first 5 lines of "data.txt".
+Display the last 5 lines of "data.txt".
+Search for the word "Lorem" in "data.txt".
+Replace all occurrences of "Lorem" with "Ipsum" in "data.txt".
+Sort "data.txt" in alphabetical order.
+Find unique lines in "data.txt".
+Extract the second column of data from "data.txt" (assuming columns are space-separated).
+Save the extracted data into a new file called "extracted.txt".
+
+
+Level 4: Process Management
+
+Open a text editor using the command-line and leave it running in the background.
+List all running processes.
+Find the process ID (PID) of the text editor you opened.
+Send a termination signal to the text editor process (gracefully close it).
+Check the status of the text editor process to ensure it's not running.
+Open a new terminal session and monitor running processes continuously (refresh every 2 seconds).
+Open another terminal session and start a time-consuming process (e.g., "sleep 30").
+Use a signal to pause the time-consuming process.
+Resume the paused process.
+Terminate the time-consuming process.
+
+-> Be cautious when using commands like rm, kill, and rsync, as they can have permanent effects on your system or data if misused. <-
+
+Exercise 5: Shell Scripting
+
+Create a new shell script called "backup.sh".
+Open "backup.sh" in a text editor.
+Add a shebang line to indicate it should be run with Bash.
+Define a variable to store the source directory you want to back up.
+Define a variable to store the destination directory for the backup.
+Use the "rsync" command to synchronize the source and destination directories.
+Make the script executable.
+Run the script and verify the files are backed up.
+Add a timestamp to the backup destination directory to differentiate backups.
+Test the script by modifying some files in the source directory and running the backup again.
+
+
