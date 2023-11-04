@@ -1,5 +1,3 @@
-Answer key: https://docs.google.com/document/d/167XkQdjjNdZuYiPMZOB7uzR9zaFShH8mMO1RYsqCYz8/edit
-
 Level 1: Basic Navigation
 
 Display the current working directory.
@@ -49,31 +47,20 @@ View the permissions of "important.txt" and verify they are set correctly.
 Level 3: Text Processing
 
 Create a new file called "data.txt" with some random text.
-    touch data.txt
 Count the number of lines in "data.txt".
-    wc -l data.txt
 Display the first 5 lines of "data.txt".
-    head -n 5 data.txt
 Display the last 5 lines of "data.txt".
-    tail -n 5 data.txt
 Search for the word "Lorem" in "data.txt".
-    grep "Lorem" data.txt
 Replace all occurrences of "Lorem" with "Ipsum" in "data.txt".
-    "sed" command
-    sed -i.bak 's/Lorem/Ipsum/g' data.txt
 Sort "data.txt" in alphabetical order.
-    sort data.txt -o data.txt
 Find unique lines in "data.txt".
-    sort data.txt | uniq
 Extract the second column of data from "data.txt" (assuming columns are space-separated).
-    awk '{print $2}' data.txt
 Save the extracted data into a new file called "extracted.txt".
-    awk '{print $2}' data.txt > extracted.txt
+
 
 Level 4: Process Management
 
 Open a text editor using the command-line and leave it running in the background.
-    
 List all running processes.
 Find the process ID (PID) of the text editor you opened.
 Send a termination signal to the text editor process (gracefully close it).
