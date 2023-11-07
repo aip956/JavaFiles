@@ -78,9 +78,11 @@ List all running processes.
     ps aux
     
 Find the process ID (PID) of the text editor you opened.
-
+    pgrep gedit
 Send a termination signal to the text editor process (gracefully close it).
+    ps aux | grep gedit
 Check the status of the text editor process to ensure it's not running.
+    
 Open a new terminal session and monitor running processes continuously (refresh every 2 seconds).
 Open another terminal session and start a time-consuming process (e.g., "sleep 30").
 Use a signal to pause the time-consuming process.
