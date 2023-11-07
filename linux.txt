@@ -73,9 +73,12 @@ Save the extracted data into a new file called "extracted.txt".
 Level 4: Process Management
 
 Open a text editor using the command-line and leave it running in the background.
-    
+
 List all running processes.
+    ps aux
+    
 Find the process ID (PID) of the text editor you opened.
+
 Send a termination signal to the text editor process (gracefully close it).
 Check the status of the text editor process to ensure it's not running.
 Open a new terminal session and monitor running processes continuously (refresh every 2 seconds).
