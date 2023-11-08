@@ -15,9 +15,14 @@ public class validAnagram {
             if (!charFreq.containsKey(letter)) {
                 return false;
             }
-            
+            int count = charFreq.get(letter);
+            if (count <= 0) {
+                return false; // if a char count goes negative, return false
+            }
+            charFreq.put(c, count-1);
+
         }
-        
+        return true;
     }
 
     public static void main(String[] args) {
