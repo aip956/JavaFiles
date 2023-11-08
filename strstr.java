@@ -42,7 +42,13 @@ public class strstr {
         int lenX = x.length();
         s.toCharArray();
         x.toCharArray();
-        
+        for (int i = 0; i < (lenS - lenX); i++) {
+            boolean found = true;
+            for (int j = 0; j < lenX; j++) {
+                
+            }
+        }
+
     }
 
 
