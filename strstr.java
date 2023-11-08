@@ -36,7 +36,13 @@ public class strstr {
         // to charArray on both
         // iterate on s-x length, if s[i] = x[i+j]
         // boolean found = true
-        // iterate through 
+        // iterate through subarray, if !=, found = false to jump out of loop
+
+        int lenS = s.length();
+        int lenX = x.length();
+        s.toCharArray();
+        x.toCharArray();
+        
     }
 
 
