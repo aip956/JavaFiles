@@ -45,9 +45,16 @@ public class strstr {
         for (int i = 0; i < (lenS - lenX); i++) {
             boolean found = true;
             for (int j = 0; j < lenX; j++) {
-                
+                if (s.charAt(i+j) != x.charAt(j)) {
+                    found = false;
+                    break;
+                }
+            }
+            if (found) {
+                return i;
             }
         }
+        return -1;
 
     }
 
