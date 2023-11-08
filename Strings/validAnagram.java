@@ -1,9 +1,9 @@
 // https://leetcode.com/problems/valid-anagram/
 import java.util.*;
-package Strings;
+
 
 public class validAnagram {
-    public boolean isAnagram(String s, String t) {
+    public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) return false;
         Map<Character, Integer> charFreq = new HashMap<>();
         // create map for s
@@ -19,7 +19,7 @@ public class validAnagram {
             if (count <= 0) {
                 return false; // if a char count goes negative, return false
             }
-            charFreq.put(c, count-1);
+            charFreq.put(letter, count-1);
 
         }
         return true;
@@ -28,7 +28,7 @@ public class validAnagram {
     public static void main(String[] args) {
         String s = "anagram";
         String t = "nagaram";
-        System.out.println("Output: " + isAnagram(s, t);
+        System.out.println("Output: " + isAnagram(s, t));
     }
     
 }
