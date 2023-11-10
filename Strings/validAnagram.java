@@ -41,6 +41,9 @@ public class validAnagram {
  * if char is in obj, decease value by one
  * if extra char or not enough, return false
  * 
+ * Time complexity: O(2n) => O(n); looping though each character
+ * Space complexity: O(c) where c is at most 26 chars
+ * 
  * Create a hash table for s, and one for t
  * Determine if they are equal
  * decrease each occurence from t in s
