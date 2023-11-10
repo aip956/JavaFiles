@@ -3,7 +3,7 @@ import java.util.*;
 public class isItOneBit {
     public static boolean isOneBitCharacter(int[] bits) {
         // [1,1,0,0,0] ; length =5
-        System.out.println("5: " + bits[2]);
+        // System.out.println("5: " + bits[2]);
         int i = 0;
         boolean isOne = true;
         while (i < bits.length) {
