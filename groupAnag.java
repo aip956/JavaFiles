@@ -10,15 +10,21 @@ public class groupAnag {
         Map<String, List<String>> map = new HashMap<>();
 
         for (String word : strs) {
+            // make a char[] from the word
             char[] chars = word.toCharArray();
+            // sort letters in the word
             Arrays.sort(chars);
-            System.out.println("chars: "+ chars);
+            // make a string from the chars[]; bat => abt
             String sortedWord = new String(chars);
 
+            // if the map does not contain the sorted word, add it
             if (!map.containsKey(sortedWord)) {
                 map.put(sortedWord, new ArrayList<>());
+                System.out.println("23map: " + map);
             }
+            // add the word based on it's sorted version
             map.get(sortedWord).add(word);
+            System.out.println("27map: " + map);
         }
         return new ArrayList<>(map.values());
     }
