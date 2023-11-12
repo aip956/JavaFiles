@@ -7,6 +7,9 @@ public class addArrayToNum {
     
     // public static List<Integer> addToArrayForm(int[] num, int k) {
     //     // convert num to a number; mult each num by 10 and add
+    //  2,1,5: 
+    //  number = 0*10 +5 = 5
+    //  number = 5 
     //     // add k
     //     // convert back to array    
     //     long number = 0;
