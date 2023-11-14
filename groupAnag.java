@@ -34,10 +34,15 @@ public class groupAnag {
         // create charArray for each word => sorted word
         // if sorted word is in the wordMap, add based on sorted version
 
-        Map<String> strsMap = new HashMap<>();
+        Map<String, List<String>> strsMap = new HashMap<>();
         for (String word : strs) {
             char[] wordCharArray = word.toCharArray();
             System.out.println(wordCharArray);
+            String sortedWord = wordCharArray.toString();
+
+            if (!strsMap.containsKey(sortedWord)) {
+                
+            }
         }
 
     }
