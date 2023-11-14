@@ -17,7 +17,7 @@ public class groupAnag {
     //         // make a string from the chars[]; bat => abt
     //         String sortedWord = new String(chars);
 
-    //         // if the map does not contain the sorted word, add it
+    //         // if the map does not contain the sorted word, add it and empty ArrayList
     //         if (!map.containsKey(sortedWord)) {
     //             map.put(sortedWord, new ArrayList<>());
     //             System.out.println("23map: " + map);
@@ -37,9 +37,11 @@ public class groupAnag {
         Map<String, List<String>> strsMap = new HashMap<>();
         for (String word : strs) {
             char[] wordCharArray = word.toCharArray();
-            System.out.println(wordCharArray);
-            String sortedWord = wordCharArray.toString();
-
+            // System.out.println("40wordCharArray: " + wordCharArray);
+            Arrays.sort(wordCharArray);
+            // String sortedWord = wordCharArray.toString();
+            String sortedWord = new String(wordCharArray);
+            System.out.println("42sortedWord: " + sortedWord);
             if (!strsMap.containsKey(sortedWord)) {
                 strsMap.put(sortedWord, new ArrayList<>());
                 System.out.println("45strsMap: " + strsMap);
