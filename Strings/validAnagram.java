@@ -25,7 +25,12 @@ public class validAnagram {
         // }
         // return true;
 
-        
+        // if lengths are not equal, return false
+        // frequency map of s
+        // iterate through t, 
+        // if letter in t is not in freqMap, return false
+        // delete frequency for each letter
+
     }
 
     public static void main(String[] args) {
