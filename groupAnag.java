@@ -48,6 +48,7 @@ public class groupAnag {
             strsMap.get(sortedWord).add(word);
             System.out.println("49strsMap: " + strsMap);
         }
+        return new ArrayList<>(strsMap.values());
 
     }
 
