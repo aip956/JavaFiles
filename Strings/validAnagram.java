@@ -4,25 +4,28 @@ import java.util.*;
 
 public class validAnagram {
     public static boolean isAnagram(String s, String t) {
-        if (s.length() != t.length()) return false;
-        Map<Character, Integer> charFreq = new HashMap<>();
-        // create map for s
-        for (Character letter : s.toCharArray()) {
-            charFreq.put(letter, charFreq.getOrDefault(letter, 0) + 1);
-        }
-        // decrement for t
-        for (Character letter : t.toCharArray()) {
-            if (!charFreq.containsKey(letter)) {
-                return false;
-            }
-            int count = charFreq.get(letter);
-            if (count <= 0) {
-                return false; // if a char count goes negative, return false
-            }
-            charFreq.put(letter, count-1);
+        // if (s.length() != t.length()) return false;
+        // Map<Character, Integer> charFreq = new HashMap<>();
+        // // create map for s
+        // for (Character letter : s.toCharArray()) {
+        //     charFreq.put(letter, charFreq.getOrDefault(letter, 0) + 1);
+        // }
+        // // decrement for t
+        // System.out.println("14 charFreq: " + charFreq);
+        // for (Character letter : t.toCharArray()) {
+        //     if (!charFreq.containsKey(letter)) {
+        //         return false;
+        //     }
+        //     int count = charFreq.get(letter);
+        //     if (count <= 0) {
+        //         return false; // if a char count goes negative, return false
+        //     }
+        //     charFreq.put(letter, count-1);
 
-        }
-        return true;
+        // }
+        // return true;
+
+        
     }
 
     public static void main(String[] args) {
