@@ -29,8 +29,28 @@ public class validAnagram {
         // frequency map of s
         // iterate through t, 
         // if letter in t is not in freqMap, return false
+        // if count of freq is <= 0, return false
         // delete frequency for each letter
+        if (s.length() != t.length()) {
+            return false;
+        }
+        Map<Character, Integer> freqMapS = new HashMap<>();
+        for (Character letter : s.toCharArray()) {
+            freqMapS.put(letter, freqMapS.getOrDefault(letter, 0) +1);
 
+        }
+        // iterate through t
+        for (Character letter : t.toCharArray()) {
+            if (!freqMapS.containsKey(letter)) {
+                return false;
+            }
+            int count = freqMapS.get(letter);
+            if (count <= 0) {
+                return false;
+            }
+            freqMapS.put(letter, count-1);
+        }
+        return true;
     }
 
     public static void main(String[] args) {
