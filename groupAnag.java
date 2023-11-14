@@ -41,8 +41,12 @@ public class groupAnag {
             String sortedWord = wordCharArray.toString();
 
             if (!strsMap.containsKey(sortedWord)) {
-                
+                strsMap.put(sortedWord, new ArrayList<>());
+                System.out.println("45strsMap: " + strsMap);
+
             }
+            strsMap.get(sortedWord).add(word);
+            System.out.println("49strsMap: " + strsMap);
         }
 
     }
