@@ -49,14 +49,15 @@ public class strstr {
             boolean match = true;
             for (Integer j = 0; j < xLen; j++) {
                 if (s[i+j] != x[j]) {
-                    
+                    match = false;
+                    break;
                 }
             }
+            if (match == true) {
+            return i;
+            }
         }
-
-        
-
-
+        return -1;
 
     }
 
