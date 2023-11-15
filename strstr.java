@@ -32,29 +32,31 @@ public class strstr {
 
 
     public static int findStrstr(String s, String x) {
-        // string length of s and x
-        // to charArray on both
-        // iterate on s-x length, if s[i] = x[i+j]
-        // boolean found = true
-        // iterate through subarray, if !=, found = false to jump out of loop
-
-        int lenS = s.length();
-        int lenX = x.length();
+   /*
+   s = "mississippi", x = "ippi"
+    * iterate over length of s - x
+    length s, length x
+    set boolean true
+    iterate over length x
+    for each letter in x, if != s, set boolean to false
+    if makes through all x, return boolean = true and index
+    */
+        Integer sLen = s.length();
+        Integer xLen = x.length();
         s.toCharArray();
-        x.toCharArray();
-        for (int i = 0; i < (lenS - lenX); i++) {
-            boolean found = true;
-            for (int j = 0; j < lenX; j++) {
-                if (s.charAt(i+j) != x.charAt(j)) {
-                    found = false;
-                    break;
+
+        for (Integer i = 0; i < sLen - xLen; i++) {
+            boolean match = true;
+            for (Integer j = 0; j < xLen; j++) {
+                if (s[i+j] != x[j]) {
+                    
                 }
             }
-            if (found) {
-                return i;
-            }
         }
-        return -1;
+
+        
+
+
 
     }
 
