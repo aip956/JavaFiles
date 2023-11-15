@@ -46,10 +46,10 @@ public class strstr {
         s.toCharArray();
         x.toCharArray();
 
-        for (Integer i = 0; i < sLen - xLen; i++) {
+        for (int i = 0; i < sLen - xLen; i++) {
             boolean match = true;
-            for (Integer j = 0; j < xLen; j++) {
-                if (s[i+j] != x[j]) {
+            for (int j = 0; j < xLen; j++) {
+                if (s.charAt(i+j) != x.charAt(j)) {
                     match = false;
                     break;
                 }
