@@ -44,6 +44,7 @@ public class strstr {
         Integer sLen = s.length();
         Integer xLen = x.length();
         s.toCharArray();
+        x.toCharArray();
 
         for (Integer i = 0; i < sLen - xLen; i++) {
             boolean match = true;
