@@ -5,7 +5,8 @@ public class firstBadVersion {
         // if mid = false, mid = (mid + bad) / 2
         since i don't have function that determines which number is good/bad, i have bad as
         input
-        left & right pointers;
+        left & right pointers; while left >= right
+        want to find where n=good and left=bad
         */
         int left = n - 1;
         int right = 0;
