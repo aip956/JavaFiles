@@ -1,13 +1,19 @@
 public class firstBadVersion {
-    public int firstBadVersion(int n) {
-        // divide n by 2; that is the pivot; isBadVersion(mid) = false; number is good
+    public int firstBadVersion(int n, int bad) {
+        /* divide n by 2; that is the pivot; isBadVersion(mid) = false; number is good
         // if mid = true, mid = mid / 2
         // if mid = false, mid = (mid + bad) / 2
+        since i don't have function that determines which number is good/bad, i have bad as
+        input
+        left & right pointers;
+        */
         int left = n - 1;
         int right = 0;
         int mid = n / 2;
         System.out.println("mid: " + mid);
-        while (!isBadVersion(mid))
+        while (left <= right){
+            if ()
+        }
         if (!isBadVersion(mid)) {
             System.out.println("mid is good: " + !isBadVersion(mid));
             mid = mid / 2;
