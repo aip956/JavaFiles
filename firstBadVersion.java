@@ -13,7 +13,7 @@ public class firstBadVersion {
         int mid = n / 2;
         System.out.println("mid: " + mid);
         while (left <= right){
-            if ()
+            if (n[left])
         }
         if (!isBadVersion(mid)) {
             System.out.println("mid is good: " + !isBadVersion(mid));
