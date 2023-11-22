@@ -15,13 +15,13 @@ public class firstBadVersion {
         while (left <= right){
             if (left)
         }
-        if (!isBadVersion(mid)) {
-            System.out.println("mid is good: " + !isBadVersion(mid));
-            mid = mid / 2;
-        } else {
-            System.out.println("mid is good: " + !isBadVersion(mid));
-            mid = (n+mid) / 2;
-        }
+        // if (!isBadVersion(mid)) {
+        //     System.out.println("mid is good: " + !isBadVersion(mid));
+        //     mid = mid / 2;
+        // } else {
+        //     System.out.println("mid is good: " + !isBadVersion(mid));
+        //     mid = (n+mid) / 2;
+        // }
         
     }
 
