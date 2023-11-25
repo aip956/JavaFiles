@@ -6,6 +6,7 @@ public class printPattern {
     }
 
     public static void main(String[] args) {
-        
+        int n1 = 16;
+        System.out.println("Output1: " + pattern(n1));
     }
 }
