@@ -25,9 +25,9 @@ public class bestDayBuySellStock {
         int profit = 0;
         int maxProfit = 0;
         for (int i = 1; i <= prices.length; i++) {
-            profit = prices[max] - prices[min];
+            profit = max - min;
             profit = Math.max(maxProfit, profit);
-            if (prices[i] < prices[i+1]) {
+            if (prices[i] < min) {
                 min = prices[i+1];
                 i++;
             }
