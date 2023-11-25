@@ -20,7 +20,8 @@ public class bestDayBuySellStock {
     //     }
     //     return maxProfit;
     // }
-
+        int min = prices[0];
+        int max = prices[1];
 
 
 
