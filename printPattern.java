@@ -2,11 +2,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class printPattern {
-        public List<Integer> pattern(int N){
+        public static List<Integer> pattern(int N){
         // code here
         List<Integer> list = new ArrayList<>();
         list.add(N);
-
+        
+        if (N <= 0) {
+            return list;
+        }
+        
+        if (N > 0) {
+            list.addAll(pattern(N - 5));
+        } else {
+            list.addAll(pattern(N + 5));
+        }
+        return list;
     }
 
     public static void main(String[] args) {
