@@ -22,7 +22,10 @@ public class bestDayBuySellStock {
     // }
         int min = prices[0];
         int max = prices[1];
-
+        int maxProfit = prices[max] - prices[min];
+        while (max <= prices.length) {
+            
+        }
 
 
     }
