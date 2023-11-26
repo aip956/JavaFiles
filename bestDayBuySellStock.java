@@ -31,8 +31,9 @@ public class bestDayBuySellStock {
                 min = prices[i];
                 System.out.println("i: " + i + ", min: " + min);
             }
+            System.out.println("i: " + i + ", min: " + min + "maxProfit: " + maxProfit);
         }
-
+        return maxProfit;
 
     }
 
