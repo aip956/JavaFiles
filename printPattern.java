@@ -9,14 +9,11 @@ public class printPattern {
         
         if (N <= 0) {
             return list;
-        }
-        
-        if (N > 0) {
-            list.addAll(pattern(N - 5));
         } else {
-            list.addAll(pattern(N + 5));
+            list.addAll(pattern(N - 5));
+            list.add(N);
+            return list;
         }
-        return list;
     }
 
     public static void main(String[] args) {

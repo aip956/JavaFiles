@@ -28,8 +28,8 @@ public class bestDayBuySellStock {
             profit = max - min;
             profit = Math.max(maxProfit, profit);
             if (prices[i] < min) {
-                min = prices[i+1];
-                i++;
+                min = prices[i];
+                System.out.println("i: " + i + ", min: " + min);
             }
         }
 
