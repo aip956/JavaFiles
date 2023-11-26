@@ -24,20 +24,15 @@ public class bestDayBuySellStock {
         int max = 1;
         int profit = 0;
         int maxProfit = 0;
-        for (int i = 1; i <= prices.length; i++) {
+        for (int i = 1; i < prices.length; i++) {
             min = Math.min(prices[min], prices[i]);
             profit = prices[max] - prices[min];
+            maxProfit = Math.max(profit, maxProfit);
             System.out.println("i: " + i);
-            System.out.println("max: " + max);
-            System.out.println("min: " + min);
+            System.out.println("prices[max]: " + prices[max]);
+            System.out.println("prices[min]: " + prices[min]);
             System.out.println("profit: " + profit);
-
-            profit = Math.max(maxProfit, profit);
-            if (prices[i] < min) {
-                min = prices[i];
-                System.out.println("i: " + i + ", min: " + min);
-            }
-            System.out.println("i: " + i + ", min: " + min + " maxProfit: " + maxProfit);
+            max = i;
         }
         return maxProfit;
     }
