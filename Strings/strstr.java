@@ -40,6 +40,7 @@ public class strstr {
     iterate over length x
     for each letter in x, if != s, set boolean to false
     if makes through all x, return boolean = true and index
+    https://replit.com/@aip956/Role455
     */
         Integer sLen = s.length();
         Integer xLen = x.length();
