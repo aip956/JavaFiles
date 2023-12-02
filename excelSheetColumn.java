@@ -1,6 +1,11 @@
 public class excelSheetColumn {
     public static String column(n) {
-        
+        while (n > 0) {
+            int mod = n % 26;
+            System.out.println("Rem: ", remainder);
+
+        }
+        return 1;
     }
 
     public static void main(String[] args) {
