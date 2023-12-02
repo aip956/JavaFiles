@@ -1,5 +1,12 @@
 public class excelSheetColumn {
-    
+    public static String column(n) {
+        
+    }
+
+    public static void main(String[] args) {
+        int n1 = 701;
+        System.out.println("Column1: ", column(n1));
+    }
 }
 
 
