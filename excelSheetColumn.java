@@ -8,13 +8,28 @@ public class excelSheetColumn {
 /*
 
 n = 1, ascii = 65, result = 'A'
-letter = 65+(n-1)
+mod = n % 26 = 1
+letter = mod - 1 + 65 => A
+
 
 n = 28, n%26 = 2, 65 + (2 - 1); ascii 66 = B
+mod = n % 26 = 2
+letter = (mod - 1) + 65 = 66 => B
+n = 28 / 26 = 1
+
+mod = 1 % 26 = 1
+letter = (mod - 1) + 65 = 65 => A
 
 n = 701; 
-n%26 = 26.9
+701%26 = 5
+n = 701, n%26 = 25, 65 + (25 - 1); ascii 89 = Y
+n = 701 / 26 = 26
+mod 26%26 = 0
+letter = (mod - 1) + 65 = 65 => B
+n = 28 / 26 = 1
 
+mod = 1 % 26 = 1
+letter = (mod - 1) + 65 = 65 => A
 
  * Topic: Excel Sheet Column Title
 
