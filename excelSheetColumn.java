@@ -8,6 +8,13 @@ public class excelSheetColumn {
 /*
 
 n = 1, ascii = 65, result = 'A'
+letter = 65+(n-1)
+
+n = 28, n%26 = 2, 65 + (2 - 1); ascii 66 = B
+
+n = 701; 
+n%26 = 26.9
+
 
  * Topic: Excel Sheet Column Title
 
