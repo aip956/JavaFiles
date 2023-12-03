@@ -4,25 +4,17 @@ public class excelSheetColumn {
         String output = "";
         while (n > 0) {
             System.out.println("n: " + n);
-            int mod = n % 26;
+            int mod = (n - 1) % 26;
             System.out.println("mod: " + mod);
-            output = Character.toString(mod+64) + output;
+            output = Character.toString(mod+65) + output;
             System.out.println("output: " + output);
-            n = (int)Math.floor(n / 26);
-
+            n = (int)Math.floor((n - 1) / 26);
         }
-        return "A";
+        return output;
     }
-//     n = 701; 
-// 701%26 = 5
-// n = 701, n%26 = 25, 65 + (25 - 1); ascii 89 = Y
-// n = 701 / 26 = 26
-// mod 26%26 = 0
-// letter = (mod - 1) + 65 = 65 => B
-// n = 28 / 26 = 1
 
     public static void main(String[] args) {
-        int n1 = 701;
+        int n1 = 703;
         column(n1);
         // System.out.println("Column1: ", column(n1));
     }
