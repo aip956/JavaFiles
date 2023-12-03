@@ -1,13 +1,16 @@
+import java.util.*;
 public class excelSheetColumn {
     public static String column(int n) {
         String output = "";
-        // while (n > 0) {
+        while (n > 0) {
+            System.out.println("n: " + n);
             int mod = n % 26;
-            System.out.println("mod: ", mod);
-            output = Character.toString(mod);
-            System.out.println("output: ", output);
+            System.out.println("mod: " + mod);
+            output = Character.toString(mod+64) + output;
+            System.out.println("output: " + output);
+            n = (int)Math.floor(n / 26);
 
-        // }
+        }
         return "A";
     }
 //     n = 701; 
@@ -42,7 +45,7 @@ mod = 1 % 26 = 1
 letter = (mod - 1) + 65 = 65 => A
 
 n = 701; 
-701%26 = 5
+
 n = 701, n%26 = 25, 65 + (25 - 1); ascii 89 = Y
 n = 701 / 26 = 26
 mod 26%26 = 0
