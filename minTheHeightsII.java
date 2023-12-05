@@ -5,11 +5,19 @@ public class minTheHeightsII {
         // code here
         // Arrays.sort(arr);
         int sum = 0;
+        int diff = 0;
+        int maxDiff = 0;
         for (int element : arr) {
             sum += element;
         }
         int avg = sum / n;
-        
+        for (int element : arr) {
+            if (element <= avg) {
+                element += k;
+                diff = 
+                maxDiff = Math.max(diff)
+            }
+        }
 
     }
 
