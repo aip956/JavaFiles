@@ -1,7 +1,16 @@
+import java.util.*;
+
 public class minTheHeightsII {
     public static int getMinDiff(int[] arr, int n, int k) {
         // code here
+        // Arrays.sort(arr);
+        int sum = 0;
+        for (int element : arr) {
+            sum += element;
+        }
+        int avg = sum / n;
         
+
     }
 
 
