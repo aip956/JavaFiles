@@ -1,16 +1,16 @@
 public class minTheHeightsII {
-    int getMinDiff(int[] arr, int n, int k) {
+    public static int getMinDiff(int[] arr, int n, int k) {
         // code here
+        
     }
 
 
     public static void main(String[] args) {
-
+        int N1 = 4;
+        int K1 = 2;
+        int[] Arr = {1, 5, 8, 10};
+        System.out.println("Output1: " + getMinDiff(Arr, N1, K1));
     }
-
-
-
-
 }
 
 
