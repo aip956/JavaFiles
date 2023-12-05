@@ -5,7 +5,7 @@ public class minTheHeightsII {
 
 
     public static void main(String[] args) {
-        
+
     }
 
 
@@ -15,6 +15,13 @@ public class minTheHeightsII {
 
 
 /*
+1. sort the array
+2. Find average of array
+3. for each element in the array, 
+4. if element <= average, add k to the element; diff
+5. diff = Math.max(diff, 
+
+https://www.geeksforgeeks.org/problems/minimize-the-heights3351/1
 Given an array arr[] denoting heights of N towers and a positive integer K.
 
 For each tower, you must perform exactly one of the following operations exactly once.
