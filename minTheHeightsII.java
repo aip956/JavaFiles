@@ -11,14 +11,24 @@ public class minTheHeightsII {
             sum += element;
         }
         int avg = sum / n;
+        int minHeight = 110;
+        int maxHeight = 0;
+        // { 1, 3, 4, 3, 9, 4}; sum = 24, avg = 4
+        // 
         for (int element : arr) {
             if (element <= avg) {
                 element += k;
-                diff = 
-                maxDiff = Math.max(diff)
+                minHeight = Math.min(element, minHeight);
+                diff = (maxHeight - minHeight);
+                // maxDiff = (int)Math.max(diff); 
+            }
+            if (element > avg) {
+                element -= k;
+                maxHeight = Math.max(element, maxHeight);
+                diff = maxHeight - minHeight;
             }
         }
-
+        return diff;
     }
 
 
