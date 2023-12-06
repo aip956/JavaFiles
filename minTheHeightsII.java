@@ -17,15 +17,22 @@ public class minTheHeightsII {
         // 
         for (int element : arr) {
             if (element <= avg) {
+                System.out.println("el: " + element);
                 element += k;
                 minHeight = Math.min(element, minHeight);
+                System.out.println("minH: " + minHeight);
                 diff = (maxHeight - minHeight);
-                // maxDiff = (int)Math.max(diff); 
+                System.out.println("25diff: " + diff); 
             }
             if (element > avg) {
+                System.out.println("el: " + element);
+
                 element -= k;
                 maxHeight = Math.max(element, maxHeight);
+                System.out.println("minH: " + minHeight);
                 diff = maxHeight - minHeight;
+                System.out.println("34diff: " + diff); 
+
             }
         }
         return diff;
@@ -36,7 +43,8 @@ public class minTheHeightsII {
         int N1 = 4;
         int K1 = 2;
         int[] Arr = {1, 5, 8, 10};
-        System.out.println("Output1: " + getMinDiff(Arr, N1, K1));
+        int[] Arr2 = {1, 3, 4, 3, 9, 4};
+        System.out.println("Output1: " + getMinDiff(Arr2, N1, K1));
     }
 }
 
