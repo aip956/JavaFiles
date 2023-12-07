@@ -5,3 +5,4 @@
 12/3: Excel sheet column
 12/4: Applied to sales and recr roles
 12/6: Applied to 2 recr roles
+12/7: applied to more recruiter and SWE roles
