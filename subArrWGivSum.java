@@ -39,15 +39,18 @@ public class subArrWGivSum {
         // int arr[] = {1,2,3,7,5};
         // int n = 5;
         // int s = 12;
-        int arr[] = {1,2,3,4,5,6,7,8,9,10};
-        int n = 10;
-        int s = 20;
+        // int arr[] = {1,2,3,4,5,6,7,8,9,10};
+        // int n = 10;
+        // int s = 20;
         // int arr[] = {1,2};
         // int n = 2;
         // int s = 1;
         // int arr[] = {1,2,3,4};
         // int n = 4;
         // int s = 0;
+        int arr[] = {1,2,3,4};
+        int n = 4;
+        int s = 0;
         ArrayList output =subarraySum(arr, n, s);
         System.out.println("Output: " + output); // Output: 
     }
