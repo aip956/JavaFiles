@@ -1,27 +1,38 @@
-import java.util.*;
+// import java.util.*;
 import java.lang.Math;
 public class transformToPrime {
-
     public static int minNumber(int arr[], int N)
     {
         int sum = 0;
+        int minNum = 1;
         for (int i = 0; i < N; i++) {
             sum += arr[i];
         }
-        if sum is prime
-
+        if (isPrime(sum)) {
+            return 0;
+        }
+        System.out.println("12Sum: " + sum);
+        while (!isPrime(sum)) {
+            sum ++;
+            System.out.println("15Sum: " + sum);
+            minNum++;
+            System.out.println("17minNum: " + minNum);
+        }
+        return sum - ;
     }
 
     public static boolean isPrime(int num) {
         if (num <= 2) {
             return false;
         }
-        int squareRoot = Math.ceil(sqrt(num));
-        for (int i = 3; i < squareRoot; i++) {
+
+        int squareRoot = (int)Math.ceil(Math.sqrt(num));
+        for (int i = 2; i < squareRoot; i++) {
             if (num % i == 0) {
                 return false;
             }
         }
+        return true;
     }
 
     public static void main(String[] args) {
@@ -29,8 +40,6 @@ public class transformToPrime {
         int arr[] = {2, 4, 6, 8, 12};
         System.out.println("Output: " + minNumber(arr, N));
     }
-
-
 }
 
 
