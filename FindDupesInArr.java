@@ -32,6 +32,7 @@ public class FindDupesInArr {
 }
 
 
+        // https://www.geeksforgeeks.org/problems/find-duplicates-in-an-array/1?page=1&sortBy=submissions
         // works but times out
     // ArrayList<Integer> dupes = new ArrayList<>();
     // ArrayList<Integer> uniques = new ArrayList<>();
