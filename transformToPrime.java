@@ -1,7 +1,23 @@
+import java.util.*;
+import java.lang.Math;
 public class transformToPrime {
+
     public static int minNumber(int arr[], int N)
     {
+        int sum = 0;
+        for (int i = 0; i < N; i++) {
+            sum += arr[i];
+        }
+        if sum is prime
 
+    }
+
+    public static boolean isPrime(int num) {
+        if (num <= 2) {
+            return false;
+        }
+        int squareRoot = Math.ceil(sqrt(num));
+        for 
     }
 
     public static void main(String[] args) {
