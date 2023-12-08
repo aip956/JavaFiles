@@ -17,7 +17,11 @@ public class transformToPrime {
             return false;
         }
         int squareRoot = Math.ceil(sqrt(num));
-        for 
+        for (int i = 3; i < squareRoot; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
     }
 
     public static void main(String[] args) {
