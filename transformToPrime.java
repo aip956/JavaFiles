@@ -12,3 +12,11 @@ public class transformToPrime {
 
 
 }
+
+
+/*
+ * https://www.geeksforgeeks.org/problems/transform-to-prime4635/1
+ * create function to determine if a number is prime (> 2, mod 3 - sqrt num not 0; sqrt(num))
+ * sum the array; if sum not prime, return 0
+ * 
+ */
