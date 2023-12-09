@@ -12,4 +12,8 @@
     sortAnArrayOf012
     findDuplicatesInArray
 12/8: Smith number 
-    
+    Reached out to Ling Lin and Niting Qi for DoorDash
+    Ayham Adawi at NYU 
+    Oscar at Columbia
+12/9: 
+
