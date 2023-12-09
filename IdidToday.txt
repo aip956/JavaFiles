@@ -11,3 +11,5 @@
     KadanesAlg
     sortAnArrayOf012
     findDuplicatesInArray
+12/8: Smith number 
+    
