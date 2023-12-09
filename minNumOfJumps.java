@@ -5,7 +5,11 @@ public class minNumOfJumps {
         if (n <= 1) return 0;
         if (arr[0] == 0) return -1;
 
+        int maxReach = arr[0];
+        int steps = arr[0];
+        int jumps = 1;
         
+
 
 
         return -1;
