@@ -15,5 +15,7 @@
     Reached out to Ling Lin and Niting Qi for DoorDash
     Ayham Adawi at NYU 
     Oscar at Columbia
-12/9: 
-
+12/9: Gabriel helped me depoly StockPortfolio
+    Saturday class
+    Collab: Cat API
+12/10: Submitted StockPortfolio

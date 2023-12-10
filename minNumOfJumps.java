@@ -15,6 +15,8 @@ public class minNumOfJumps {
             maxReach = Math.max(maxReach, i+arr[i]);
             steps--;
             System.out.println("17i: " + i);
+            System.out.println("17arr[i]: " + arr[i]);
+            System.out.println("17i+arr[i]): " + (i+arr[i]));
             System.out.println("18maxR: " + maxReach);
             System.out.println("19steps: " + steps);
 
