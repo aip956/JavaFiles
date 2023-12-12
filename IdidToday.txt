@@ -20,8 +20,16 @@
     Collab: Cat API
 12/10: Submitted StockPortfolio
     Do Eng Case data crunch (x2 and z calc); watch youtube
+        Get sum, row and column and total
+        Exp val of chicken = Total Y7 * Total Chicken / TotalTotal
+        Get ExpVal for all observed
+        X2 Test Stat: (obs - expval) squared
+        https://www.khanacademy.org/math/ap-statistics/chi-square-tests/chi-square-goodness-fit/v/chi-square-statistic
     G4G problem
     Arden's exp
+    Amazon assess
+12/11: started Tetris
+    Started Eng Case
 
 
 

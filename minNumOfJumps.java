@@ -31,7 +31,7 @@ public class minNumOfJumps {
 
     public static void main(String[] args) {
         int N = 11;
-        int arr[] = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
+        int arr[] = {1, 3, 5, 9, 7, 2, 6, 7, 6, 8, 9};
         System.out.println("Output: " + minJumps(arr));
     }
 }
