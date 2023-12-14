@@ -37,6 +37,10 @@
     Women Who Code: trees
     Applied to JPMC, research for HireVue
 12/14: JPMC HireVue
+    minNumOfJumps not finished
+    need to revisit trees.txt
+    examRoom
+    
 
 
 
