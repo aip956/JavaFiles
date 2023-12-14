@@ -1,2 +1,4 @@
 12/13 Women Who Code
 
+parent - child relationship between nodes
+Top to bottom
