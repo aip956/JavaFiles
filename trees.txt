@@ -2,3 +2,4 @@
 
 parent - child relationship between nodes
 Top to bottom
+multiple types of trees
