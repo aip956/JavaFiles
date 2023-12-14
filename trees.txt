@@ -72,3 +72,5 @@ const preorderTraversal = root => {
     preorder(root)
     return result
 }
+
+https://leetcode.com/problems/binary-tree-inorder-traversal/solutions/1860290/tree-traversals-preorder-inorder-and-postorder-traverse-algorithms-all-in-one/
