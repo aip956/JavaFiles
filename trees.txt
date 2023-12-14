@@ -8,3 +8,54 @@ single linked list is a type of tree
 Real world applications of trees:
 HTML DOM; document / html // head // body
 AI: decision tree
+Folders in operating system; have root and different folders, subfolders
+JSON format: key, value, children
+
+first node == Root node; level 0
+Children are level 1
+Leaf: child with no children
+connection: Edge
+
+how to traverse tree
+breadth first postorder
+Depth first search: Postorder, preorder, inorder, left-right
+
+https://leetcode.com/articles/Figures/145_transverse.png
+
+breadth: by layers 0, then left-right
+depth first:
+    postorder: bottom, left, right, top, by layer
+    preorder: Top, bottom, left, right
+    Inorder: Left, node, right
+
+/big O 
+
+     10
+    /   \
+  6     15
+ /  \       \
+3   8       20
+
+Leetcode maxim depth of binary tree
+Use breadth first; use queue
+queue = []
+return result = [10,6,15,3,8,20]
+
+
+Add 10 to queue
+while queue has any value, keep going
+is there a right or left node? take out 6 from q to result
+left node = 3, right = 8
+
+
+dfs
+https://leetcode.com/problems/binary-tree-preorder-traversal/
+binary tree preorder traversal
+1. create an array that will store all the nodes to return
+2. helper function which takes the node 
+    check if there is a node
+    push the value of the accepted node to the array    
+    check if left child or right child and call that function itself
+3. Invoke funciton 
+4. Return result 
+
