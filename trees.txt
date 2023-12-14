@@ -59,3 +59,16 @@ binary tree preorder traversal
 3. Invoke funciton 
 4. Return result 
 
+
+const preorderTraversal = root => {
+    let result = []
+    function preorder(node) {
+        if (node) {
+            result.push(node.val)
+            if (node.left) preorder(node.left)
+            if (node.right) preorder(node.right)
+        }
+    }
+    preorder(root)
+    return result
+}
