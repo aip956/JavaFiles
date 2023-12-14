@@ -2,4 +2,5 @@
 
 parent - child relationship between nodes
 Top to bottom
-multiple types of trees
+multiple types of trees; graph vs. tree (depends on number of nodes; one is binary tree)
+single linked list is a type of tree
