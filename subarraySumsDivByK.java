@@ -5,27 +5,23 @@ class subarraySumsDivByK {
         int left = 0;
         int right = 0;
         int numArrs = 0;
-        int sum = 0;
+        int sum;
         // [4,5,0,-2,-3,1]
         while (left < nums.length) {
             System.out.println("10leftt: " + left);
-
+            sum = 0;
+            right = left;
             while (right < nums.length) {
                 System.out.println("11rightInd: " + right);
                 System.out.println("15nums[right]: " + nums[right]);
-                System.out.println("16sum: " + sum);
-                System.out.println("17left+sum " + (nums[left] + sum));
-                if ((nums[left] + sum) % k == 0) {
-                    System.out.println("19sum " + (nums[left] + nums[right]));
+                System.out.println("15sumBef: " + sum);
+                sum += nums[right];
+                System.out.println("18sumAft: " + sum);
+                if (sum % k == 0) {
                     numArrs++;
                     System.out.println("21numArrs: " + numArrs);
                 }
                 right++;
-                if (right < nums.length - 2) {
-                    sum += nums[right];
-                }
-                System.out.println("26right: " + right);
-                System.out.println("27sum: " + sum);
             }
             left++;
         }
@@ -34,8 +30,10 @@ class subarraySumsDivByK {
 
 
     public static void main(String[] args) {
-        int[] nums = {4,5,0,-2,-3,1};
-        int k = 5;
+        // int[] nums = {4,5,0,-2,-3,1};
+        // int k = 5;
+        int[] nums = {5};
+        int k = 9;
         System.out.println("Output: " + subarraysDivByK(nums, k));
     }
 }
