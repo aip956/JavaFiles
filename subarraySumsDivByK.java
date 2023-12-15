@@ -39,7 +39,33 @@ class subarraySumsDivByK {
 }
 
 
-/*
+/* Works, but does not pass since it times out
+Here is chatGPT's response:
+public int subarraysDivByK(int[] nums, int k) {
+    int[] modCounts = new int[k];
+    int count = 0;
+    int sum = 0;
+    modCounts[0] = 1; // To include subarrays that start at index 0
+    
+    for (int num : nums) {
+        sum = (sum + num) % k;
+        if (sum < 0) // Handling negative remainders
+            sum += k;
+        
+        count += modCounts[sum];
+        modCounts[sum]++;
+    }
+    return count;
+}
+This solution uses a hash map modCounts to store the counts of remainders encountered 
+while iterating through the array. It updates the count whenever a particular remainder 
+is encountered, indicating that a subarray with a sum divisible by k has been found.
+
+This optimized solution has a time complexity of O(N), where N is the length of the 
+nums array, making it more efficient for larger inputs and preventing timeout errors.
+
+
+
 https://leetcode.com/problems/subarray-sums-divisible-by-k/
 974. Subarray Sums Divisible by K
 Medium
