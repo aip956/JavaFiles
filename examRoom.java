@@ -26,6 +26,8 @@ class ExamRoom {
 
 /* 
  * https://leetcode.com/problems/exam-room/
+ * // when seat, determine greatest distances
+ * // it's the left - right / 2
  * 855. Exam Room
 Medium
 1.3K
