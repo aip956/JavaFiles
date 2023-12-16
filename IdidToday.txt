@@ -44,7 +44,11 @@
 12/15: Amazon assessment
     JPMC assessment; isPossible and Missing Words
     Finished subarraySumsDivByK
-
+12/16: for standup:
+    Applied to JPMC, completed HireVue and Hacker
+    Eng collab on A/B testing, 
+    Eng Eng
+    Amazon assessment
 
 
 
