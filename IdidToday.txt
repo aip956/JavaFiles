@@ -54,6 +54,8 @@
     read on Code War
     Reach out to Chris for Tetris overview
     start AWS training
+    Leetcode examRoom
+    Leetcode reaching points
 
 
 
