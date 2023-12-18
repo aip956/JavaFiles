@@ -56,10 +56,11 @@
     start AWS training
     Leetcode examRoom
     Leetcode reaching points
-    Apply to restos: Applied to culinaryagents roles: 5 roles
-    Applied to BNY Mellon
-    Applied to SageSure
-    
+    X Apply to restos: Applied to culinaryagents roles: 5 roles
+    X Applied to BNY Mellon
+    X Applied to SageSure
+
+
 
 
 
