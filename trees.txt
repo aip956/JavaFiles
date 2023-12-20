@@ -79,7 +79,37 @@ https://leetcode.com/problems/binary-tree-inorder-traversal/solutions/1860290/tr
 12/20
 https://www.bigocheatsheet.com
 wiki page: https://en.wikipedia.org/wiki/Binary_search_tree
+visutreesort.com
 every tree is a graph, but not vice-versa
 leetcode binary tree preorder traversal: https://leetcode.com/problems/binary-tree-preorder-traversal/description/
 graphs: https://pages.cs.wisc.edu/~vernon/cs367/notes/13.GRAPH.html#:~:text=Every%20tree%20is%20a%20graph,(they%20have%20no%20direction).
+slides: https://docs.google.com/presentation/d/1IMZFeSPE9BBNQcMLW7d9d4C1jvVjq6RBoY1YBKrDpk0/edit?usp=sharing
 
+create a var to contain the vals of the node and to be returned at the end
+Check if there is a root, and if not, return result
+Create a var array to imitate a stack
+While or For loop to go through each node
+
+            10
+            / \
+           6   8
+          / \    \
+         3   5     4
+
+    result = []
+    stack = [10]
+    Does 10 have children, if has right, push, if has left, push
+    result = [10]
+    stack = [8, 5]
+    result = 10, 6, 
+    stack = [8,5,3]
+    result = [10, 6, 3] LIFO
+    3 has no childd,
+    5 has no child
+    go back to while - 5
+    10, 6, 3. 5
+    stack = 4
+    result: 10,6,3,5,8,4; stack is now empty, exit while loop
+    return result
+    keep asking if there is a right child, left child
+    
