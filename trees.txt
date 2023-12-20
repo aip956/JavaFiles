@@ -79,4 +79,6 @@ https://leetcode.com/problems/binary-tree-inorder-traversal/solutions/1860290/tr
 12/20
 https://www.bigocheatsheet.com
 wiki page: https://en.wikipedia.org/wiki/Binary_search_tree
+every tree is a graph, but not vice-versa
+leetcode binary tree preorder traversal: https://leetcode.com/problems/binary-tree-preorder-traversal/description/
 
