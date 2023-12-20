@@ -112,4 +112,19 @@ While or For loop to go through each node
     result: 10,6,3,5,8,4; stack is now empty, exit while loop
     return result
     keep asking if there is a right child, left child
-    
+
+const preorderTraversal = root = {
+    let result = []
+    if (!root) return result
+    let stack = [root]
+    while (stack.length > 0) {
+        let node = stack.pop()
+        result.push(node.val)
+        // check if there is a right and left child
+        if (node.right) stack.push(node.right)
+        if (node.left) stack.push(node.left)
+    }
+    return result
+}
+Time complexity: O(N) visit each node once
+Space complexity: O(n)
