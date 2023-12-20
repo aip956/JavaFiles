@@ -81,4 +81,5 @@ https://www.bigocheatsheet.com
 wiki page: https://en.wikipedia.org/wiki/Binary_search_tree
 every tree is a graph, but not vice-versa
 leetcode binary tree preorder traversal: https://leetcode.com/problems/binary-tree-preorder-traversal/description/
+graphs: https://pages.cs.wisc.edu/~vernon/cs367/notes/13.GRAPH.html#:~:text=Every%20tree%20is%20a%20graph,(they%20have%20no%20direction).
 
