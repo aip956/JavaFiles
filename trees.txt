@@ -128,3 +128,5 @@ const preorderTraversal = root = {
 }
 Time complexity: O(N) visit each node once
 Space complexity: O(n)
+
+go through post order and pre order
