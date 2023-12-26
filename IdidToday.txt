@@ -73,7 +73,7 @@
 12/23: AWS, Compute (Week 2)
 12/24: AWS Network
     Applic for Campus
-
+12/26: AWS
 
 
 
