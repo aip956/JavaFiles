@@ -1,4 +1,10 @@
 // https://www.geeksforgeeks.org/find-subarray-with-given-sum/
+/*
+Traverse the array from start to end.
+From every index start another loop from i to the end of the array to get all subarrays starting from i, and keep a variable currentSum to calculate the sum of every subarray.
+For every index in inner loop update currentSum = currentSum + arr[j]
+If the currentSum is equal to the given sum then print the subarray.
+ */
 
 import java.util.ArrayList;
 
