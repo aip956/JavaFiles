@@ -79,7 +79,7 @@
 12/28: AWS
 12/29: AWS; finished AWS Fundamentals
 12/30: Plan: Tetris, Eng Lab, Coursera Data, Arden calc
-12/31: Data Eng; tomorrow: Tetris, Intv prep, coding prob 
+12/31: Data Eng; tomorrow: Tetris, Intv prep, coding prob, applications
 
 
 
