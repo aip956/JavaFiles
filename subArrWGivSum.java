@@ -41,15 +41,32 @@ public class subArrWGivSum {
         // increment right while sum < = s
         // if sum == s, result.add(left+1, right+1)
         // increment left
+        // int arr[] = {1,2,3,4,5,6,7,8,9,10};
         int left = 0;
         int right = 1;
-        int sum = arr[left] + arr[right];
-
-        while(right < n) {
-            sum += arr[right];
-
+        if (s == 0 || n == 0) {
+            result.add(-1);
+            return result;
         }
-
+        while(right < n) {
+            int sum = arr[left] + arr[right]; //, left = 0, right =1, sum = 3
+            while (sum <= s) {
+                if (sum == s) {
+                    result.add(left+1);
+                    result.add(right+1);
+                    return result;
+                }
+                right ++; // right = 2
+                sum += arr[right]; // sum = 6
+                System.out.println("57right: " + right);
+                System.out.println("58sum: " + sum);
+            }
+            left++;
+            right = left + 1;
+            System.out.println("62left: " + left);
+            System.out.println("63right: " + right);
+        }
+        result.add(-1);
         return result;
     }
  
@@ -93,16 +110,19 @@ public class subArrWGivSum {
         // int s = 12;
         // int arr[] = {1,2,3,4,5,6,7,8,9,10};
         // int n = 10;
-        // int s = 20;
+        // int s = 9;
+        int arr[] = {0};
+        int n = 1;
+        int s = 0;
         // int arr[] = {1,2};
         // int n = 2;
         // int s = 1;
         // int arr[] = {1,2,3,4};
         // int n = 4;
         // int s = 0;
-        int arr[] = {1,2,3,4};
-        int n = 4;
-        int s = 0;
+        // int arr[] = {1,2,3,4};
+        // int n = 4;
+        // int s = 0;
         ArrayList output =subarraySum(arr, n, s);
         System.out.println("Output: " + output); // Output: 
     }
