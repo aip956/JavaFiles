@@ -21,42 +21,69 @@ Output: 2 4
 Explanation: The sum of elements 
 from 2nd position to 4th position 
 is 12.
+
+Example 2:
+Input:
+N = 10, S = 15
+A[] = {1,2,3,4,5,6,7,8,9,10}
+Output: 1 5
+Explanation: The sum of elements 
+from 1st position to 5th position
+is 15.
  */
 
 import java.util.ArrayList;
 
 public class subArrWGivSum {
-     static ArrayList<Integer> subarraySum(int[] arr, int n, int s) 
-    {        
-        //right = 1, add arr[right] until >= s
-        // if = s, return left+1 and right+1; add to arrayList
-        // if > s, add left++, reset right to left+1, add arr[right]
-        int left = 0;
-        int right = 0;
-        int cummulativeTotal = 0;
+    static ArrayList<Integer> subarraySum(int[] arr, int n, int s) {
         ArrayList<Integer> result = new ArrayList<>();
-        if (s == 0 || n == 0) {
-            result.add(-1); 
-            return result;
+        // left and right indices; start at 0, 1
+        // increment right while sum < = s
+        // if sum == s, result.add(left+1, right+1)
+        // increment left
+        int left = 0;
+        int right = 1;
+        int sum = arr[left] + arr[right];
+
+        while(right < n) {
+            sum += arr[right];
+
         }
-        while (right < n) {
-            System.out.println("right: " + right);
-            System.out.println("n: " + n);
-            cummulativeTotal += arr[right];
-            while (cummulativeTotal > s) {
-                cummulativeTotal -= arr[left];
-                left++;
-            }
-            if (cummulativeTotal == s) {
-                    result.add(left + 1);
-                    result.add(right + 1);
-                    return result;
-                } 
-            right++;
-        }
-        result.add(-1); 
+
         return result;
     }
+ 
+    //  static ArrayList<Integer> subarraySum(int[] arr, int n, int s) 
+    // {        
+    //     //right = 1, add arr[right] until >= s
+    //     // if = s, return left+1 and right+1; add to arrayList
+    //     // if > s, add left++, reset right to left+1, add arr[right]
+    //     int left = 0;
+    //     int right = 0;
+    //     int cummulativeTotal = 0;
+    //     ArrayList<Integer> result = new ArrayList<>();
+    //     if (s == 0 || n == 0) {
+    //         result.add(-1); 
+    //         return result;
+    //     }
+    //     while (right < n) {
+    //         System.out.println("right: " + right);
+    //         System.out.println("n: " + n);
+    //         cummulativeTotal += arr[right];
+    //         while (cummulativeTotal > s) {
+    //             cummulativeTotal -= arr[left];
+    //             left++;
+    //         }
+    //         if (cummulativeTotal == s) {
+    //                 result.add(left + 1);
+    //                 result.add(right + 1);
+    //                 return result;
+    //             } 
+    //         right++;
+    //     }
+    //     result.add(-1); 
+    //     return result;
+    // }
 
 
     public static void main(String[] args) {
