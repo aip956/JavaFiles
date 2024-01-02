@@ -83,6 +83,9 @@
 1/1: Tetris
     Started Data on Coursera
     Found Data project on LIL
+    BNY research
+1/2: Talk with John
+    BNY research
 
 
 
