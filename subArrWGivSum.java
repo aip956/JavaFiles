@@ -36,41 +36,60 @@ import java.util.ArrayList;
 
 public class subArrWGivSum {
     static ArrayList<Integer> subarraySum(int[] arr, int n, int s) {
+
+        /*
+        check if the s = 0; if so, return the index at 0, +1; else return -1
+        left and right indices; start at 0, 0
+        while right index < n
+        sum with right index; sum += arr[right]
+        if sum > s, remove elements starting at left until no longer exceeding s
+        check if the sum = s, if so add 1 to the indices and return
+        increment right index
+        if there is no sum == s, return -1
+         int arr[] = {1,2,3,4,5,6,7,8,9,10};
+        */ 
         ArrayList<Integer> result = new ArrayList<>();
-        // left and right indices; start at 0, 1
-        // increment right while sum < = s
-        // if sum == s, result.add(left+1, right+1)
-        // increment left
-        // int arr[] = {1,2,3,4,5,6,7,8,9,10};
         int left = 0;
-        int right = 1;
-        if (s == 0 || n == 0) {
+        int right = 0;
+        int sum = 0;
+        System.out.println("s: " + s);
+
+        if (s == 0) {
+            // If the target sum is 0, and the array contains 0, return the first occurrence of the 0
+            for (int i = 0; i < n; i++) {
+                if (arr[i] == 0) {
+                    result.add(i + 1);
+                    result.add(i + 1);
+                    return result;
+                }
+            }
             result.add(-1);
             return result;
         }
+
         while(right < n) {
-            int sum = arr[left] + arr[right]; //, left = 0, right =1, sum = 3
-            while (sum <= s) {
-                if (sum == s) {
-                    result.add(left+1);
-                    result.add(right+1);
-                    return result;
-                }
-                right ++; // right = 2
-                sum += arr[right]; // sum = 6
-                System.out.println("57right: " + right);
-                System.out.println("58sum: " + sum);
+            sum += arr[right];
+            System.out.println("51rightInd: " + right);
+            System.out.println("51sum: " + sum);
+            while (sum > s) {
+                System.out.println("60leftInd: " + left);
+                sum -= arr[left];
+                System.out.println("62sum: " + sum);
+                left++;
             }
-            left++;
-            right = left + 1;
-            System.out.println("62left: " + left);
-            System.out.println("63right: " + right);
+            if (sum == s) {
+                result.add(left+1);
+                result.add(right+1);
+                return result;
+            }
+            right++;
         }
         result.add(-1);
         return result;
     }
  
     //  static ArrayList<Integer> subarraySum(int[] arr, int n, int s) 
+    //           System.out.println("58sum: " + sum + ", s: " + s);
     // {        
     //     //right = 1, add arr[right] until >= s
     //     // if = s, return left+1 and right+1; add to arrayList
@@ -111,18 +130,18 @@ public class subArrWGivSum {
         // int arr[] = {1,2,3,4,5,6,7,8,9,10};
         // int n = 10;
         // int s = 9;
-        int arr[] = {0};
-        int n = 1;
-        int s = 0;
+        // int arr[] = {0};
+        // int n = 1;
+        // int s = 0;
         // int arr[] = {1,2};
         // int n = 2;
         // int s = 1;
         // int arr[] = {1,2,3,4};
         // int n = 4;
         // int s = 0;
-        // int arr[] = {1,2,3,4};
-        // int n = 4;
-        // int s = 0;
+        int arr[] = {1,2,3,4};
+        int n = 4;
+        int s = 0;
         ArrayList output =subarraySum(arr, n, s);
         System.out.println("Output: " + output); // Output: 
     }
