@@ -47,6 +47,7 @@ public class subArrWGivSum {
         increment right index
         if there is no sum == s, return -1
          int arr[] = {1,2,3,4,5,6,7,8,9,10};
+         solution below passes!
         */ 
         ArrayList<Integer> result = new ArrayList<>();
         int left = 0;
