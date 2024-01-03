@@ -86,6 +86,10 @@
     BNY research
 1/2: Talk with John
     BNY research
+    Subarray with given sum: Check for sum=0 (return index or -1); sum with right ind, while
+    sum > s, remove left elements; check for sum == s and return indices+1, else return -1
+    
+
 
 
 
