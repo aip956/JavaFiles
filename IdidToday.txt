@@ -89,7 +89,7 @@
     Subarray with given sum: Check for sum=0 (return index or -1); sum with right ind, while
     sum > s, remove left elements; check for sum == s and return indices+1, else return -1
 1/3: BNY screen
-    Started Data Eng project
+    Started Data Eng project; created Google big query account
 1/5: Data Eng project
     Sent email to agency 
 
