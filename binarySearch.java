@@ -1,10 +1,14 @@
 public class binarySearch {
-    int binarysearch(int arr[], int n, int k) {
+    int static binarysearch(int arr[], int n, int k) {
         // code here
     }
 
 
     public static void main(String[] args) {
+        int arr[] = {1, 2, 3, 4, 5};
+        int n = 5;
+        int k = 4;
+        System.out.println("Output: " + binarysearch(arr, n, k));
 
     }
 }
