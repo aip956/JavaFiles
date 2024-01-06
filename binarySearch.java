@@ -4,9 +4,17 @@ public class binarySearch {
         // find midpoint of arr
         // is midpoint == k; return index + 1
         // if mid < k, search on right
-        int mid = int(Math.floor(n / 2));
+        int mid = (int) Math.floor(n / 2);
+        System.out.println("8mid: " + mid);
         while (mid != k) {
-
+            if (arr[mid] == k) {
+                return mid+1;
+            } else if (arr[mid] > k) {
+                mid = (int) Math.floor(mid / 2);
+                System.out.println("14mid: " + mid);
+            } else if (arr[mid] < k) {
+                mid = (int) Math.floor(mid / 2);
+            
         }
         return 0;
     }
@@ -16,6 +24,9 @@ public class binarySearch {
         int arr[] = {1, 2, 3, 4, 5};
         int n = 5;
         int k = 4;
+        // int arr[] = {11, 22, 33, 44, 55, 66, 77};
+        // int n = 7;
+        // int k = 445;
         System.out.println("Output: " + binarysearch(arr, n, k));
 
     }
