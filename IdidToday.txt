@@ -92,6 +92,7 @@
     Started Data Eng project; created Google big query account
 1/5: Data Eng project
     Sent email to agency 
+1/6: Binary search
 1/8
 
 
