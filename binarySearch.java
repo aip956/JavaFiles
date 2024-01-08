@@ -4,17 +4,30 @@ public class binarySearch {
         // find midpoint of arr
         // is midpoint == k; return index + 1
         // if mid < k, search on right
+        // search fails if:
+        // {0, 1, 2, 3, 4, 5, 6, 8, 9, 10}; k = 7
+        // k is out of bounds
 
+        int low = 0;
+        int high = n-1;
         int mid = (int) Math.floor(n / 2);
         System.out.println("8mid: " + mid);
-        while (mid != n && mid != 0) {
+        while (mid < high && mid > low) {
+            System.out.println("11mid: " + mid);
+            System.out.println("11low: " + low);
+            System.out.println("11high: " + high);
+            System.out.println("11arr[mid]: " + arr[mid]);
             if (arr[mid] == k) {
-                return mid+1;
+                return mid;
             } else if (arr[mid] > k) {
-                mid = (int) Math.floor(mid / 2);
-                System.out.println("14mid: " + mid);
+                high = mid;
+                mid -= (int) Math.floor((high-low) / 2);
+                
+                System.out.println("16mid: " + mid);
             } else if (arr[mid] < k) {
-                mid = (int) Math.floor((n - mid) / 2);
+                low = mid;
+                mid += (int) Math.floor((high - low) / 2);
+                
                 System.out.println("19mid: " + mid);
             }
         }
@@ -23,15 +36,28 @@ public class binarySearch {
 
 
     public static void main(String[] args) {
-        int arr[] = {1, 2, 3, 4, 5};
-        int n = 5;
-        int k = 4;
-        // int arr[] = {11, 22, 33, 44, 55, 66, 77};
-        // int n = 7;
-        // int k = 445;
+        // int arr[] = {1, 2, 3, 4, 5};
+        // int n = 5;
+        // int k = 4;
+        // int arr[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};  //12
+        // mid = 8
+        // mid = mid + 15 - 8 / 2; 11; low = 8
+        // mid = low = 11; mid(11) + 4/2 = 13
+        // mid = high = 13; 
+
+        // int arr[] = {11, 22, 33, 44, 55, 66, 77, 88, 99, 111, 121, 133, 144};
+        // mid = 13/2 = 6
+        // mid = 6 + (13-6/2) = 9; arr[9] = 111
+        // mid = 9 + (13 - 9)/2 = 11; arr[11] = 133
+        // mid = 11 (133);  + (13 - 11)/2 = 12 
+        // int n = 16;
+        // int k = 121;
         // int arr[] = {11, 22, 33, 44, 55};
         // int n = 5;
         // int k = 445;
+        int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 17, 18, 19, 20, 21, 22, 25, 26, 27, 29, 31, 32, 33, 35, 36, 40, 41, 42, 43, 46, 47, 48, 51, 54, 55, 56, 57, 58, 61, 63, 64, 65, 67, 69, 71, 74, 77, 78, 79, 80, 81, 82, 83, 85, 86, 87, 88, 89, 90, 91, 93, 95, 99, 100};
+        int n = 68;
+        int k = 99;
         System.out.println("Output: " + binarysearch(arr, n, k));
 
     }
