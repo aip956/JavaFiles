@@ -93,6 +93,7 @@
 1/5: Data Eng project
     Sent email to agency 
 1/6: Binary search
+    Class; 2048 collab
 1/8
 
 
