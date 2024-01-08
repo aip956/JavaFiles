@@ -94,7 +94,9 @@
     Sent email to agency 
 1/6: Binary search
     Class; 2048 collab
-1/8
+1/8: Data Eng Coursera
+    WWCode Days of Code Challenge
+    
 
 
 
