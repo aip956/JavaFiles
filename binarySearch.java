@@ -7,6 +7,13 @@ public class binarySearch {
         // search fails if:
         // {0, 1, 2, 3, 4, 5, 6, 8, 9, 10}; k = 7
         // k is out of bounds
+        // G4G: initial left, right, middle
+        // while left < right, define middle
+        // Check if array[middle] == k, return middle
+        // if arr[m] < x, left = middle + 1
+        // else right = middle - 1
+        // else return -1
+
 
         int low = 0;
         int high = n-1;
