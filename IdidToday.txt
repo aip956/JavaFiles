@@ -96,6 +96,9 @@
     Class; 2048 collab
 1/8: Data Eng Coursera
     WWCode Days of Code Challenge: Challenge to code every day
+    Joined WWCode Cloud
+    Binary Search
+    JPMC prep
 
 
 

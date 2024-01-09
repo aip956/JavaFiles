@@ -1,41 +1,21 @@
 public class binarySearch {
     static int binarysearch(int arr[], int n, int k) {
-        // code here
-        // find midpoint of arr
-        // is midpoint == k; return index + 1
-        // if mid < k, search on right
-        // search fails if:
-        // {0, 1, 2, 3, 4, 5, 6, 8, 9, 10}; k = 7
-        // k is out of bounds
-        // G4G: initial left, right, middle
-        // while left < right, define middle
-        // Check if array[middle] == k, return middle
-        // if arr[m] < x, left = middle + 1
-        // else right = middle - 1
-        // else return -1
-
-
         int low = 0;
         int high = n-1;
-        int mid = (int) Math.floor(n / 2);
-        System.out.println("8mid: " + mid);
-        while (mid < high && mid > low) {
-            System.out.println("11mid: " + mid);
-            System.out.println("11low: " + low);
-            System.out.println("11high: " + high);
-            System.out.println("11arr[mid]: " + arr[mid]);
+        while (low <= high) {
+            int mid = (high + low) / 2;
+            System.out.println("21mid: " + mid);
+            System.out.println("22low: " + low);
+            System.out.println("23high: " + high);
+            System.out.println("24arr[mid]: " + arr[mid]);
             if (arr[mid] == k) {
                 return mid;
-            } else if (arr[mid] > k) {
-                high = mid;
-                mid -= (int) Math.floor((high-low) / 2);
-                
-                System.out.println("16mid: " + mid);
             } else if (arr[mid] < k) {
-                low = mid;
-                mid += (int) Math.floor((high - low) / 2);
-                
-                System.out.println("19mid: " + mid);
+                low = mid + 1;
+                System.out.println("29low: " + low);
+            } else {
+                high = mid - 1;
+                System.out.println("31high: " + high);
             }
         }
         return -1;
@@ -43,10 +23,12 @@ public class binarySearch {
 
 
     public static void main(String[] args) {
-        // int arr[] = {1, 2, 3, 4, 5};
-        // int n = 5;
-        // int k = 4;
+        int arr[] = {1, 2, 3, 4, 5};
+        int n = 5;
+        int k = 4;
         // int arr[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};  //12
+        // int n = 15;
+        // int k = 13;
         // mid = 8
         // mid = mid + 15 - 8 / 2; 11; low = 8
         // mid = low = 11; mid(11) + 4/2 = 13
@@ -62,16 +44,28 @@ public class binarySearch {
         // int arr[] = {11, 22, 33, 44, 55};
         // int n = 5;
         // int k = 445;
-        int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 17, 18, 19, 20, 21, 22, 25, 26, 27, 29, 31, 32, 33, 35, 36, 40, 41, 42, 43, 46, 47, 48, 51, 54, 55, 56, 57, 58, 61, 63, 64, 65, 67, 69, 71, 74, 77, 78, 79, 80, 81, 82, 83, 85, 86, 87, 88, 89, 90, 91, 93, 95, 99, 100};
-        int n = 68;
-        int k = 99;
+        // int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 17, 18, 19, 20, 21, 22, 25, 26, 27, 29, 31, 32, 33, 35, 36, 40, 41, 42, 43, 46, 47, 48, 51, 54, 55, 56, 57, 58, 61, 63, 64, 65, 67, 69, 71, 74, 77, 78, 79, 80, 81, 82, 83, 85, 86, 87, 88, 89, 90, 91, 93, 95, 99, 100};
+        // int n = 68;
+        // int k = 99;
         System.out.println("Output: " + binarysearch(arr, n, k));
 
     }
 }
 
 
-
+        // code here
+        // find midpoint of arr
+        // is midpoint == k; return index + 1
+        // if mid < k, search on right
+        // search fails if:
+        // {0, 1, 2, 3, 4, 5, 6, 8, 9, 10}; k = 7
+        // k is out of bounds
+        // G4G: initial left, right, middle
+        // while left < right, define middle
+        // Check if array[middle] == k, return middle
+        // if arr[m] < x, left = middle + 1
+        // else right = middle - 1
+        // else return -1
 /*
  * https://www.geeksforgeeks.org/problems/binary-search-1587115620/1?page=1&difficulty=Basic&sortBy=submissions
  * Given a sorted array of size N and an integer K, find the position(0-based indexing) at which K is present in 
