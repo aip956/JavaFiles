@@ -6,29 +6,6 @@
 import java.util.*;
 
 public class groupAnag {
-    // public static List<List<String>> groupAnagrams(String[] strs) {
-    //     Map<String, List<String>> map = new HashMap<>();
-
-    //     for (String word : strs) {
-    //         // make a char[] from the word
-    //         char[] chars = word.toCharArray();
-    //         // sort letters in the word
-    //         Arrays.sort(chars);
-    //         // make a string from the chars[]; bat => abt
-    //         String sortedWord = new String(chars);
-
-    //         // if the map does not contain the sorted word, add it and empty ArrayList
-    //         if (!map.containsKey(sortedWord)) {
-    //             map.put(sortedWord, new ArrayList<>());
-    //             System.out.println("23map: " + map);
-    //         }
-    //         // add the word based on it's sorted version
-    //         map.get(sortedWord).add(word);
-    //         System.out.println("27map: " + map);
-    //     }
-    //     return new ArrayList<>(map.values());
-    // }
-
     public static List<List<String>> groupAnagrams(String[] strs) {
         // word in the strs array, sorted word
         // create charArray for each word => sorted word
@@ -61,3 +38,46 @@ public class groupAnag {
         System.out.println(groupAnagrams(strs));
     }
 }
+
+/*
+ // public static List<List<String>> groupAnagrams(String[] strs) {
+    //     Map<String, List<String>> map = new HashMap<>();
+
+    //     for (String word : strs) {
+    //         // make a char[] from the word
+    //         char[] chars = word.toCharArray();
+    //         // sort letters in the word
+    //         Arrays.sort(chars);
+    //         // make a string from the chars[]; bat => abt
+    //         String sortedWord = new String(chars);
+
+    //         // if the map does not contain the sorted word, add it and empty ArrayList
+    //         if (!map.containsKey(sortedWord)) {
+    //             map.put(sortedWord, new ArrayList<>());
+    //             System.out.println("23map: " + map);
+    //         }
+    //         // add the word based on it's sorted version
+    //         map.get(sortedWord).add(word);
+    //         System.out.println("27map: " + map);
+    //     }
+    //     return new ArrayList<>(map.values());
+    // }
+ * Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, 
+typically using all the original letters exactly once.
+
+
+Example 1:
+Input: strs = ["eat","tea","tan","ate","nat","bat"]
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+Example 2:
+Input: strs = [""]
+Output: [[""]]
+
+Example 3:
+Input: strs = ["a"]
+Output: [["a"]]
+
+ */
