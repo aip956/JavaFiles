@@ -12,24 +12,19 @@ create an array
  * 
  */
 
-        Map <Integer, Integer> comp = new HashMap<>();
+
+        Map<Integer, Integer> compHash = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            
+            int compliment = target - nums[i];
+            System.out.println("Compl: " + compliment);
+            if (compHash.containsKey(compliment)) {
+                return new int[] {compHash.get(compliment), i};
+            } else {
+                compHash.put(nums[i], i);
+            }
+            System.out.println("Hash: " + compHash);
         }
-
-
-        // Map<Integer, Integer> compHash = new HashMap<>();
-        // for (int i = 0; i < nums.length; i++) {
-        //     int compliment = target - nums[i];
-        //     System.out.println("Compl: " + compliment);
-        //     if (compHash.containsKey(compliment)) {
-        //         return new int[] {compHash.get(compliment), i};
-        //     } else {
-        //         compHash.put(nums[i], i);
-        //     }
-        //     System.out.println("Hash: " + compHash);
-        // }
-        // return new int[] {};
+        return new int[] {};
     }
 
     public static void main(String[] args) {
