@@ -103,8 +103,10 @@
     LIL Data project
     Applied to jobs
     Tetris, Springboot
-1/10: TwoSum
-    Plan: Java Prob logic, 
+1/10: TwoSum, Search2DMatrix, bestDayBuySellStock
+    Plan: Java Prob logic, Missing Words, is isPossible
+    HTTPS request
+    4 pillars of OOP
 
 
 
