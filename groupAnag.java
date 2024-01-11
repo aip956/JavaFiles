@@ -2,6 +2,16 @@
 // use hash to group
 // O(mn) m input strings; n length of string
 // create array for each word; 26 x 0 to count each letter
+/*
+ * crate Map <String, List<String>>
+ * for each word in strs
+ * convert to charArray
+ * Sort the charArray word
+ * Convert back to string
+ * If Map does not containsKey sortedWord, put (sortedWord, new ArrayList<>()) (sorted word and empty array list)
+ * Add the sorted word
+ * return a new array list of the map values 
+ */
 
 import java.util.*;
 
@@ -11,23 +21,34 @@ public class groupAnag {
         // create charArray for each word => sorted word
         // if sorted word is in the wordMap, add based on sorted version
 
-        Map<String, List<String>> strsMap = new HashMap<>();
+        Map<String, List<String>> strMap = new HashMap<>();
         for (String word : strs) {
-            char[] wordCharArray = word.toCharArray();
-            // System.out.println("40wordCharArray: " + wordCharArray);
-            Arrays.sort(wordCharArray);
-            // String sortedWord = wordCharArray.toString();
-            String sortedWord = new String(wordCharArray);
-            System.out.println("42sortedWord: " + sortedWord);
-            if (!strsMap.containsKey(sortedWord)) {
-                strsMap.put(sortedWord, new ArrayList<>());
-                System.out.println("45strsMap: " + strsMap);
-
+            char[]charArrWord = word.toCharArray();
+            Arrays.sort(charArrWord);
+            String sortedWord = new String(charArrWord);
+            if (!strMap.containsKey(sortedWord)) {
+                strMap.put(sortedWord, new ArrayList<>());
             }
-            strsMap.get(sortedWord).add(word);
-            System.out.println("49strsMap: " + strsMap);
+            strMap.get(sortedWord).add(word);
         }
-        return new ArrayList<>(strsMap.values());
+        return new ArrayList<>(strMap.values());
+        // Map<String, List<String>> strsMap = new HashMap<>();
+        // for (String word : strs) {
+        //     char[] wordCharArray = word.toCharArray();
+        //     // System.out.println("40wordCharArray: " + wordCharArray);
+        //     Arrays.sort(wordCharArray);
+        //     // String sortedWord = wordCharArray.toString();
+        //     String sortedWord = new String(wordCharArray);
+        //     System.out.println("42sortedWord: " + sortedWord);
+        //     if (!strsMap.containsKey(sortedWord)) {
+        //         strsMap.put(sortedWord, new ArrayList<>());
+        //         System.out.println("45strsMap: " + strsMap);
+
+        //     }
+        //     strsMap.get(sortedWord).add(word);
+        //     System.out.println("49strsMap: " + strsMap);
+        // }
+        // return new ArrayList<>(strsMap.values());
 
     }
 
