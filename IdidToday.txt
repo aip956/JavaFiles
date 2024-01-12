@@ -111,7 +111,7 @@
     prep for BNY
     Installed Hex Editor
     tomorrow: understand static, review OOP Mastermind, setter, getter, StockPortfolio
-
+1/12: BNY interview!
 
 
 
