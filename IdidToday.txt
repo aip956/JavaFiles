@@ -109,6 +109,7 @@
     4 pillars of OOP
 1/11: Got Prep materail
     prep for BNY
+    Installed Hex Editor
     tomorrow: understand static, review OOP Mastermind, setter, getter, StockPortfolio
 
 
