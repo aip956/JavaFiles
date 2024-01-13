@@ -1,4 +1,13 @@
 public class sortList {
+    public ListNode sortList(ListNode head) {
+        
+        
+    }
+
+
+    public static void main(String[] args) {
+        int[] head = {4,2,1,3};
+    }
     
 }
 
