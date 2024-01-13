@@ -112,6 +112,8 @@
     Installed Hex Editor
     tomorrow: understand static, review OOP Mastermind, setter, getter, StockPortfolio
 1/12: BNY interview!
+    https://www.learncs.online/lessons/java/constructors#overloaded-constructors
+    Map vs. Hash
 
 
 
