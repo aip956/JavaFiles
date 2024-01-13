@@ -116,7 +116,7 @@
     Map vs. Hash
     Overloaded: Can have multiple methods with same name, but different signatures
     Override: Child class has method from parent, but different implementation
-
+1/13: Know class declaration, constructor declaration, methods
 
 
 
