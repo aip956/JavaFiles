@@ -1,7 +1,7 @@
 /* 
 Abstraction demonstrated by abstracting the common
 behaviors of animals into the 'Animal' class, creating
-specific sublcasses like 'Dog' and 'Cat' that provide
+specific subclasses like 'Dog' and 'Cat' that provide
 specialized implementations of the 'speak' method.
 
 Inheritance demonstrated by the relationship between
