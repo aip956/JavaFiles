@@ -121,7 +121,9 @@
 1/14: Taking notes from G4G
 1/16: Some leetcode review  
     Review sorting
-    
+    Mixed data example
+    Review MM OOP, StockPortfolio
+
 
 
 
