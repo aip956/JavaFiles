@@ -1,13 +1,15 @@
 public class reachingPoints {
     public boolean reachingPoints(int sx, int sy, int tx, int ty) {
+        // while destination is still greater than origin
+        // terminates when either origin xy passes destin xy
         while (tx >= sx && ty >= sy) {
             if (tx == sx && ty == sy) {
                 return true;
             }
-            
+            // if destin x > y, if destin x > origin x; modul
             if (tx > ty) {
                 if (ty > sy) {
-                    tx %= ty;
+                    tx %= ty; // equiv of 
                 } else {
                     return (tx - sx) % ty == 0;
                 }
