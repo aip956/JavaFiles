@@ -119,6 +119,9 @@
 1/13: Know class declaration, constructor declaration, methods: https://www.geeksforgeeks.org/classes-objects-java/?ref=lbp
     Started working on linked list
 1/14: Taking notes from G4G
+1/16: Some leetcode review  
+    Review sorting
+    
 
 
 
