@@ -3,20 +3,30 @@ public class reachingPoints {
         // while destination is still greater than origin
         // terminates when either origin xy passes destin xy
         while (tx >= sx && ty >= sy) {
+            System.out.println("5sx: " + sx);
+            System.out.println("6sy: " + sy);
+            System.out.println("7tx: " + tx);
+            System.out.println("8ty: " + ty);
             if (tx == sx && ty == sy) {
                 return true;
             }
             // if destin x > y, if destin x > origin x; modul
             if (tx > ty) {
+                System.out.println("15tx: " + tx + ", ty: " + ty);
                 if (ty > sy) {
-                    tx %= ty; // equiv of 
+                    tx %= ty; // equiv of subtracting multiples of ty from tx
+                    System.out.println("18tx: " + tx);
                 } else {
+                    System.out.println("20");
                     return (tx - sx) % ty == 0;
                 }
             } else {
                 if (tx > sx) {
+                    System.out.println("25tx: " + tx + ", sx: " + sx);
                     ty %= tx;
+                    System.out.println("27ty: " + ty);
                 } else {
+                    System.out.println("29");
                     return (ty - sy) % tx == 0;
                 }
             }
@@ -28,9 +38,9 @@ public class reachingPoints {
     public static void main(String[] args) {
         reachingPoints solution = new reachingPoints();
         System.out.println(solution.reachingPoints(1, 1, 3, 5));  // Output: true
-        System.out.println(solution.reachingPoints(1, 1, 2, 2));  // Output: false
-        System.out.println(solution.reachingPoints(1, 1, 1, 1));  // Output: true
-        System.out.println(solution.reachingPoints(1, 1, 1000000000, 1));  // Output: true
+        // System.out.println(solution.reachingPoints(1, 1, 2, 2));  // Output: false
+        // System.out.println(solution.reachingPoints(1, 1, 1, 1));  // Output: true
+        // System.out.println(solution.reachingPoints(1, 1, 1000000000, 1));  // Output: true
     }
 }
 
