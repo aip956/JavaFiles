@@ -8,16 +8,28 @@ public class removeDups {
         go through array until find next unique num and move it to unique ind
         check that nums[i] != nums[uniqueInd]; i=0; i=1 are same
         if !=, increment k and uniqueInd
-        if =, 
+        if =, don't increment
         if nums[i] < nums[i+1]
-
         */ 
-        
+        int uniqueInd = 0;
+        for (int i = 1; i < nums.length; i ++) {
+            if (nums[uniqueInd] != nums[i]) {
+                uniqueInd++;
+                nums[uniqueInd] = nums[i];
+            }
+        }
+        return uniqueInd + 1;
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 1, 2};
-        System.out.println("Output: " + removeDuplicates(nums));
+        int[] nums = {1, 1, 2, 2, 3, 4, 4, 5};
+        int k = removeDuplicates(nums);
+        System.out.print("Output: ");
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i]);
+        }
+        System.out.print("\n");
+        System.out.println("K: " + k);
     }
 }
 
