@@ -123,7 +123,8 @@
     Review sorting
     Mixed data example
     Review MM OOP, StockPortfolio
-1/17: Eng Lab: https://github.com/arosenfeld2003/qwasar_core_war
+1/17: Did interview
+    Eng Lab: https://github.com/arosenfeld2003/qwasar_core_war
     Tetris
     Sorting, Searching, LinkedList
     Leetcode github tutorial
