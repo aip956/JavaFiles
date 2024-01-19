@@ -20,10 +20,10 @@ public class kadanes {
 
 
     public static void main(String[] args) {
-        // int arr[] = {1,2,3,-2,5};
-        // int n = 5;
-        int arr[] = {-1,-2,-3,-4};
-        int n = 4;
+        int arr[] = {1,2,3,-2,5};
+        int n = 5;
+        // int arr[] = {-1,-2,-3,-4};
+        // int n = 4;
         kadanes kadanesInst = new kadanes();
         Long output = kadanesInst.maxSubarraySum(arr, n);
         System.out.println("Output: " + output); // Output: 
