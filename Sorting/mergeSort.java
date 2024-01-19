@@ -2,7 +2,8 @@ import java.util.*;
 
 public class mergeSort {
     public static void mergeSort(int[] arr) {
-        
+        // if array is empty or 1 element
+        if (arr.length <= 1 || arr == null) { return; }
 
 
         
