@@ -134,7 +134,7 @@
     https://app.jobscan.co/scan/28631821
 1/18 Merge sort 
 1/19: Worked on Data Eng project
-
+1/20: Need to correct StockPortfolio
 
 
 
