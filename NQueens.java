@@ -1,8 +1,18 @@
 import java.util.*;
 
-public class N-Queens {
+public class NQueens {
     public static List<List<String>> solveNQueens(int n) {
-        List<List<String>> result = new List<>();
+        List<List<String>> result = new ArrayList<>();
+        char[][] board = new char[n][n];
+
+        // Init board with dots
+        for (int i = 0; i < n; i++ ) {
+            for (int j = 0; j < n; j++) {
+                board[i][j] = '.';
+            }
+        }
+
+        
 
         return result;
     }
@@ -10,11 +20,21 @@ public class N-Queens {
 
     public static void main(String{} args) {
         int n = 4;
-        System.out.pringln("Output: " + resutl);
+        System.out.println("Output: " + solveNQueens(n));
 
     }
+}
+
+
 
 /*
+neg diag: r - c - -2, -1, 0, 1, 2; const
+pos diag: r + c = constant also
+cols = set; PosDiag = set; negDiag = set;
+
+
+
+
  * https://leetcode.com/problems/n-queens/
  * The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.
 
@@ -38,4 +58,4 @@ Constraints:
  */
 
 
-}
+
