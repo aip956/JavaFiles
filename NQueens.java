@@ -32,7 +32,7 @@ public class NQueens {
 
 
 
-    private boolean isValidPlacement(char[][] board, int row, int col) {
+    private static boolean isValidPlacement(char[][] board, int row, int col) {
         // Check that no queens attack horiz, vertic, diagon
         for (int i = 0; i < row; i++) {
             if (board[i][col] == 'Q' || (col - row + i >= 0 && board[i][col - row + i] == 'Q') || (col + row - i < board.length && board[i][col + row - i] == 'Q')) {
@@ -42,7 +42,7 @@ public class NQueens {
         return true;
     }
 
-    private List<String> constructSolution(char[][] board) {
+    private static List<String> constructSolution(char[][] board) {
         List<String> solution = new ArrayList<>();
         for (char[] row : board) {
             solution.add(new String(row));
@@ -52,7 +52,7 @@ public class NQueens {
 
 
     public static void main(String[] args) {
-        int n = 4;
+        int n = 1;
         System.out.println("Output: " + solveNQueens(n));
 
     }
