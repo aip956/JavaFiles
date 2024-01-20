@@ -11,14 +11,47 @@ public class NQueens {
                 board[i][j] = '.';
             }
         }
+        solve(0, board, result);
+            
+        return result;        
+    }
 
-        
-
-        return result;
+    public static void solve(int row, char[][] board, List<List<String>> result) {
+        if (row == board.length) {
+            result.add(constructSolution(board));
+            return;
+        }
+        for (int col = 0; col < board.length; col++) {
+            if (isValidPlacement(board, row, col)) {
+                board[row][col] = 'Q';
+                solve(row + 1, board, result);
+                board[row][col] = '.';
+            }
+        }
     }
 
 
-    public static void main(String{} args) {
+
+    private boolean isValidPlacement(char[][] board, int row, int col) {
+        // Check that no queens attack horiz, vertic, diagon
+        for (int i = 0; i < row; i++) {
+            if (board[i][col] == 'Q' || (col - row + i >= 0 && board[i][col - row + i] == 'Q') || (col + row - i < board.length && board[i][col + row - i] == 'Q')) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private List<String> constructSolution(char[][] board) {
+        List<String> solution = new ArrayList<>();
+        for (char[] row : board) {
+            solution.add(new String(row));
+        }
+        return solution;
+    }
+
+
+    public static void main(String[] args) {
         int n = 4;
         System.out.println("Output: " + solveNQueens(n));
 
