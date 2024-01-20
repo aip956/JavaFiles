@@ -132,7 +132,8 @@
     https://refactoring.guru/design-patterns/abstract-factory
     Data class: https://console.cloud.google.com/home/dashboard?project=plucky-shell-410321
     https://app.jobscan.co/scan/28631821
-
+1/18 Merge sort 
+1/19: Worked on Data Eng project
 
 
 
