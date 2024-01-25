@@ -144,6 +144,7 @@
     Read Core Wars
 1/24 Read Core Wars
     reviewed exam room
+    Insertion sort
 1/25 Read core Wars
     Study linked list
     Study trees
