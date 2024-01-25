@@ -2,7 +2,6 @@ import java.util.*;
 
 class ExamRoom {
 
-    public class ExamRoom {
         private TreeSet<Integer> occupiedSeats;
         private int n;
 
@@ -11,7 +10,7 @@ class ExamRoom {
             this.occupiedSeats = new TreeSet<>();
         }
         
-    }
+
     
     public int seat() {
         if (occupiedSeats.isEmpty()) {
@@ -21,20 +20,25 @@ class ExamRoom {
         
         int maxDistance = occupiedSeats.first();  // Dist from start
         int startSeat = 0;
+        int resultSeat = 0;
 
         // Iterate through the occup seats to find max dist
         for (int seat : occupiedSeats) {
             int distance = (seat - startSeat) / 2;
             if (distance > maxDistance) {
                 maxDistance = distance;
+                resultSeat = (seat + startSeat) / 2;
             }
             startSeat = seat;
         }
 
         // Check dist from the end
-        int newSeat = startSeat + maxDistance;
-        occupiedSeats.add(newSeat);
-        return newSeat;
+        if (n - 1 - occupiedSeats.last() > maxDistance) {
+            resultSeat = n - 1;
+        }
+        // int newSeat = (occupiedSeats.last() - startSeat) / 2 + startSeat;
+        occupiedSeats.add(resultSeat);
+        return resultSeat;
     }
     
     public void leave(int p) {
