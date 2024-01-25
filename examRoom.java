@@ -1,15 +1,40 @@
+import java.util.*;
+
 class ExamRoom {
 
     public ExamRoom(int n) {
+        private TreeSet<Integer> occupiedSeats;
+        private int n;
+
+        public ExamRoom(int n) {
+            this.n = n;
+            this.occupiedSeats = new TreeSet<>();
+        }
         
     }
     
     public int seat() {
+        if (occupiedSeats.isEmpty()) {
+            occupiedSeats.add(0);
+            return 0;
+        }
         
+        int maxDistance = occupiedSeats.first();  // Dist from start
+        int startSeat = 0;
     }
     
     public void leave(int p) {
         
+    }
+
+    public static void main(String[] args) {
+        ExamRoom examRoom = new ExamRoom(10);
+        System.out.println(examRoom.seat());
+        System.out.println(examRoom.seat());
+        System.out.println(examRoom.seat());
+        System.out.println(examRoom.seat());
+        examRoom.leave(4);
+        System.out.println(examRoom.seat());
     }
 }
 
