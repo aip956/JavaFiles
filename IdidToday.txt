@@ -150,6 +150,8 @@
     Study trees
     Coursera Algorithms
 1/26 Read core Wars
+    Eng Case Study
+1.27 Class
 
 
 
