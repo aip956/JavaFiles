@@ -149,6 +149,8 @@
     Study linked list
     Study trees
     Coursera Algorithms
+1/26 Read core Wars
+
 
 
 
