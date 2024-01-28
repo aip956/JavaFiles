@@ -17,11 +17,13 @@ public class NQueens {
     }
 
     public static void solve(int row, char[][] board, List<List<String>> result) {
+        System.out.println("solve20row: " + row);
         if (row == board.length) {
             result.add(constructSolution(board));
             return;
         }
         for (int col = 0; col < board.length; col++) {
+            System.out.println("solve25col: " + col);
             if (isValidPlacement(board, row, col)) {
                 board[row][col] = 'Q';
                 solve(row + 1, board, result);
@@ -52,7 +54,7 @@ public class NQueens {
 
 
     public static void main(String[] args) {
-        int n = 1;
+        int n = 4;
         System.out.println("Output: " + solveNQueens(n));
 
     }
