@@ -156,6 +156,9 @@
     To do: Pinterest application, Unstick on Data Project, Core Wars, Tetris, Algos (Princeton; tree expert)
     Hex is a tree 
 1/28 Pinterest app
+1/29 EDA Event driven architecture
+
+
 
 
 
