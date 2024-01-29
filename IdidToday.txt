@@ -156,7 +156,8 @@
     To do: Pinterest application, Unstick on Data Project, Core Wars, Tetris, Algos (Princeton; tree expert)
     Hex is a tree 
 1/28 Pinterest app
-1/29 EDA Event driven architecture: 
+1/29 Data Engineer's Lunch
+    EDA Event driven architecture: 
         Easy to reason
         Feedback loops
         Evolvability
@@ -172,6 +173,8 @@
             Message brokers: Kafka, RabbitMQ, Celery
             Distributed compute: Ray, kubernetes, flink
             AI Model Integrations: OpenAI, PyTorch, Hugging face 
+        Aineko: Python framework for building event driven AI apps quickly
+        
 
 
 
