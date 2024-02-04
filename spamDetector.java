@@ -1,9 +1,11 @@
 import java.util.*;
 
 public class spamDetector {
-    public static String[] getSpamEmails(String[] subjects, String[] spamWords){
-        String result = new String[subjects.length];
-
+    public static List<String> getSpamEmails(List<String> subjects, List<String> spam_words) {    
+        
+        List<String> result = new ArrayList<>();
+        
+        
 
 
         return result;
