@@ -10,12 +10,12 @@ public class stockTriplets {
             for (int j = i+1; j < length - 1; j++) {
                 for (int k = j+1; k < length; k++) {
                     int sum = arr.get(i) + arr.get(j) + arr.get(k);     
-                    int mod = sum % d;
-                    
+                    if (sum % d == 0) {
+                        count ++;
+                    }
                 }
             }
         }
-        
         return count;
     }
 
@@ -31,10 +31,10 @@ public class stockTriplets {
 
 /*
 sort the array
-for each element i, use left and right pointer
-if sum is < target, increase left
-if sum is > target, decrease right
-start with i = 0, left = i+1, right = last element
+iterate through all possible triplets
+i, j, k
+j = i + 1
+k = j + 1
  * The cost of a stock on each day is given in an array arr. 
  * An investor wants to buy the stocks in triplets such that 
  * the sum of the cost for three days is divisible by d. 
