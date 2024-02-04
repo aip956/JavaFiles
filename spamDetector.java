@@ -11,14 +11,15 @@ public class spamDetector {
                 if (subject.contains(word)) {
                     counter++;
                 }
-                System.out.println("Subject: " + subject);
-                if (counter >= 2) {
-                    result.add("Spam");
-                    System.out.println("is spam");
-                } else {
-                    System.out.println("Not spam");
-                }
             }
+            // System.out.println("Subject: " + subject);
+                if (counter >= 2) {
+                    result.add("spam");
+                    // System.out.println("result: " + result);
+                } else {
+                    result.add("Not spam");
+                    // System.out.println("Not_spam");
+                }
         }
         
 
