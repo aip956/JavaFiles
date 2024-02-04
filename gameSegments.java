@@ -3,13 +3,42 @@ import java.util.*;
 public class gameSegments {
     public static int playSegments(List<Integer> coins) {
         int segments = 0;
+        int play2 = 0;
+        int play1 = 0;
         System.out.println("coins: " + coins);
-        
+
+        // Calculate if only player 2
+        for (int coin : coins) {
+            if (coin == 1) play2 ++;
+            else play2 --;
+        }
+        System.out.println("play2: " + play2);
+
+        // Compare if player 1 plays
+        if (play2 < 0) {return 0;}
+
+        for (int i = 0; i < coins.size(); i++) {
+            System.out.println("i: " + i + ", coin: " + coins.get(i));
+            if (coins.get(i) == 1) {
+                play1 ++;
+                play2 --;
+            } else {
+                play1 --;
+                play2 ++;
+            }
+            if (play1 > play2) {
+                segments = i + 1;
+                return segments;
+            }
+        }
         return segments;
     }
 
     public static void main(String[] args) {
-        List<Integer> coins = Arrays.asList(1,1,0,1);
+        // List<Integer> coins = Arrays.asList(1,1,0,1);
+        // List<Integer> coins = Arrays.asList(1,0,0,1,0); // 0
+        List<Integer> coins = Arrays.asList(1,1,1,0,1); // 2
+
         System.out.println(playSegments(coins));
     }
 }
