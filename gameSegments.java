@@ -17,14 +17,13 @@ public class gameSegments {
         // Compare if player 1 plays
         if (play2 < 0) {return 0;}
 
+        // Find where player 1 > player 2
         for (int i = 0; i < coins.size(); i++) {
             System.out.println("i: " + i + ", coin: " + coins.get(i));
             if (coins.get(i) == 1) {
                 play1 ++;
-                play2 --;
             } else {
                 play1 --;
-                play2 ++;
             }
             if (play1 > play2) {
                 segments = i + 1;
@@ -45,6 +44,8 @@ public class gameSegments {
 
 
 /*
+Time complexity: O(n) for first loop, O(n) for second, so O(2n) => O(n)
+Space complexit: O(1) since I'm creating variables not dependent on array size
  * A video game dev is developing a game in which the character makes their way through several segments of a level. In each segment, if the character collects a coin, the player scores a point. However, if a segment does not contain a count, the player loses a point. Player 1 always begins the level, and at some point, game play is turned over to player 2 to complete the level. Player 1’s goal is to achieve a higher score than player 2 once he  level is completed. Given the status of tame segments, determine the minimum number of segments player 1 should play so that in the end their score is greater than player 2’s score
 
 Ex:

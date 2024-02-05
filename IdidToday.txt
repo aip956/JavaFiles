@@ -181,6 +181,7 @@
     Algo class
 2/1: Python problems
     Eng lab
+2/4: Practiced former HR problems
 
 
 
