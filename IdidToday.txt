@@ -182,6 +182,7 @@
 2/1: Python problems
     Eng lab
 2/4: Practiced former HR problems
+2/5: Core war champs
 
 
 
