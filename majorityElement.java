@@ -1,14 +1,37 @@
+import java.util.*;
+
 public class majorityElement {
     static int majorityElement(int a[], int size)
     {
+        // this passes!
         int majEl = -1;
-
-
+        HashMap<Integer,Integer> freqMap = new HashMap<>();
+        for (int num : a) {
+            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
+        }
+        System.out.println(freqMap);
+        for (int num : freqMap.keySet()) {
+            if (freqMap.get(num) > size / 2) {
+                majEl = num;
+                return majEl;
+            }
+        }
         return majEl;
     } 
+    public static void main(String[] args) {
+        // int N = 5;
+        // int[] A = {3,1,3,3,2};
+        int N = 1;
+        int[] A = {15};
+        System.out.println("Output: " + majorityElement(A, N));
+    }
 }
 
 /*
+make frequency map
+if element's frequency > n/2, return element
+
+
  * https://www.geeksforgeeks.org/problems/majority-element-1587115620/1?page=1&sortBy=submissions
  * Given an array A of N elements. 
  * Find the majority element in the array. 
