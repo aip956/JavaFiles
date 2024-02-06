@@ -1,7 +1,18 @@
 public class countInversion {
     static long inversionCount(long arr[], long N)
     {
-        // Your Code Here; count inversions
+        // Your Code Here; count inversions; try insertion sort
+        // * While i >= 0
+        // *  If arr[i] < arr[i-1], count swap
+        long count = 0;
+
+        for (int i = )
+            while (i < N) {
+                if (arr[i] < arr [i - 1]) {
+
+                }
+            }
+
 
     }
 
