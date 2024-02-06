@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.*;
 
 public class diagonalDiff {
     public static int diagonalDifference(List<List<Integer>> arr) {
@@ -9,23 +9,34 @@ public class diagonalDiff {
        int leftSum = 0;
        int rightSum = 0;
        int n = arr.size();
-       // int j = 0;
-       // int i = 0;
+
        for (int i = 0; i < n; i++) {
+        System.out.println("15i: " + i);
            for (int j = 0; j < n; j++) {
+            System.out.println("17j: " + j);
                if (i == j) {
+                
+                System.out.println("18arr.get(i).get(j): " + arr.get(i).get(j));
                leftSum += arr.get(i).get(j);
+               System.out.println("20leftSum: " + leftSum);
            }
-           if (j == n - 1 - i) {
-               rightSum =+  arr.get(i).get(j);
-           }
+            if (j == n - 1 - i) {
+                    System.out.println("21ij: " + j + ", n-1-i: " + (n - 1 - i));
+                    System.out.println("22arr.get(i).get(j): " + arr.get(i).get(j));
+                    rightSum +=  arr.get(i).get(j);
+                    System.out.println("26rightSum: " + rightSum);
+            }
            }
        }
    return Math.abs(leftSum - rightSum);
    }
 
    public static void main(String[] args) {
-    List<List<Integer>> arr = {{11, 2, 4}, {4, 5, 6} , {10, 8, -12}};
+    List<List<Integer>> arr = List.of(
+        List.of(11, 2, 4), 
+        List.of(4, 5, 6), 
+        List.of(10, 8, -12)
+        );
     System.out.println("Output: " + diagonalDifference(arr));
    }
 
