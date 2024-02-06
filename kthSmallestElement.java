@@ -1,16 +1,39 @@
+// import java.util.stream.IntStream;
+import java.util.*;
+
 public class kthSmallestElement {
     public static int kthSmallest(int[] arr, int l, int r, int k) 
-    { 
+    {   // passes!
         // Convert to array list
         // Sort array list
         // get element k+1; return it
+        // Integer[] integerArray = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+        
+        // create wrapper array from primitive arr
+        // Integer[] array = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+        // ArrayList<Integer> arrList = new ArrayList<>(Arrays.asList(array));
+
+        // create array list, copy arr into it
+        ArrayList<Integer> arrList = new ArrayList<>();
+        for (int num : arr) {
+            arrList.add(num);
+        }
+        Collections.sort(arrList);
+        // System.out.println(arrList);
+    
+
+        return arrList.get(k-1);
     } 
 
     public static void main(String[] args) {
-        int[] arr = {7, 10, 4, 20, 15};
+        // int[] arr = {7, 10, 4, 20, 15};
+        // int K = 4;
+        // int L = 0;
+        // int R = 4;
+        int[] arr = {7, 10, 4, 20, 15, 25, 12, 33, 19};
         int K = 4;
         int L = 0;
-        int R = 4;
+        int R = 10;
         System.out.println("Output: " + kthSmallest(arr, L, R, K));
     }
 }
