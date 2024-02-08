@@ -1,17 +1,21 @@
+import java.util.*;
 public class buddyStrings {
     public boolean buddyStrings(String s, String goal) {
         // test they are the same length
         // if A==B, if there are repeated chars, return true
         // else count number of differences; if there are only 2 AND the strings are equal after swap, return tru
-        
+        if (s.length() != goal.length()) return false;
+        if (s.equals(goal)) {
+            
+        }
 
         
     }
 
     public static void main(String[] args) {
-        String A = "aaaaaaabc";
-        String B = "aaaaaaacb";
-        System.out.println("Output: " + buddyStrings(A, B));
+        String s = "aaaaaaabc";
+        String goal = "aaaaaaacb";
+        System.out.println("Output: " + buddyStrings(s, goal));
     }
 
 }
