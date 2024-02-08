@@ -3,8 +3,8 @@ public class buddyStrings {
         // test they are the same length
         // if A==B, if there are repeated chars, return true
         // else count number of differences; if there are only 2 AND the strings are equal after swap, return tru
-
         
+
         
     }
 
