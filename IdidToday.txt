@@ -183,6 +183,9 @@
     Eng lab
 2/4: Practiced former HR problems
 2/5: Core war champs
+2/6: HR practice: diagonal diff, count inversion, kth smallest
+    Study SQL
+
 
 
 
