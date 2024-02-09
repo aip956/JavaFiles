@@ -22,6 +22,7 @@ public class buddyStrings {
         int[] diffIndicies = new int[2];
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) != goal.charAt(i)) {
+                if (diffCount == 2) return false;
                 diffIndicies[diffCount] = i;
                 diffCount++;
                 System.out.println("27i: " + i);
@@ -43,6 +44,7 @@ public class buddyStrings {
 
 
 /*
+solution passes
  * https://leetcode.com/problems/buddy-strings/
  * Given two strings s and goal, return true if you can swap two letters in s so the result is equal to goal, otherwise, return false.
 
