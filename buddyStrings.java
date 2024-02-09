@@ -1,6 +1,6 @@
 import java.util.*;
 public class buddyStrings {
-    public boolean buddyStrings(String s, String goal) {
+    public static boolean buddyStrings(String s, String goal) {
         // 1. test they are the same length
         // 2. if A==B, if there are repeated chars, return true
         // 3. else count number of differences; if there are only 2 AND the strings are equal after swap, return tru
@@ -24,10 +24,12 @@ public class buddyStrings {
             if (s.charAt(i) != goal.charAt(i)) {
                 diffIndicies[diffCount] = i;
                 diffCount++;
+                System.out.println("27i: " + i);
             }
         }
         if (diffCount != 2) return false;
-        if ()
+        return (s.charAt(diffIndicies[0]) == goal.charAt(diffIndicies[1]) 
+        && s.charAt(diffIndicies[1]) == goal.charAt(diffIndicies[0]));
         
     }
 
