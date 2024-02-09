@@ -45,6 +45,13 @@ public class buddyStrings {
 
 /*
 solution passes
+space: O(1); created diffIndices array fixed at 2 and does not depend on 
+s and goal
+time: O(n);worst case will iterate through s and goal twice:
+    1. checking for repeated chars in s
+    2. once comparing characters betweeen s and goal
+    Depends on length of s/goal
+
  * https://leetcode.com/problems/buddy-strings/
  * Given two strings s and goal, return true if you can swap two letters in s so the result is equal to goal, otherwise, return false.
 
