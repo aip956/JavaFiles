@@ -6,7 +6,6 @@ public class gameSegments {
         int play2 = 0;
         int play1 = 0;
         System.out.println("coins: " + coins);
-
         // Calculate if only player 2
         for (int coin : coins) {
             if (coin == 1) play2 ++;

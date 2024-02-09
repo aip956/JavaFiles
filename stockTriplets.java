@@ -18,7 +18,6 @@ public class stockTriplets {
         }
         return count;
     }
-
     public static void main(String[] args) {
         List<Integer> arr = Arrays.asList(3,3,4,7,8);
         int d = 5;
