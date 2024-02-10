@@ -5,7 +5,8 @@ public class longestPrefix {
         String output = new String("");
         for (int i = 0; i < strs.length(); i++) { // iterate through the array
             for (int j = 0; j < strs[0].length(); j++) { // iterate in a word
-                char letter = strs[0][j]
+                char letter = strs[0][j];
+                if (charAt(strs[i][j])equals(letter)
 
             }
         }
