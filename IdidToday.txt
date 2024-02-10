@@ -185,6 +185,10 @@
 2/5: Core war champs
 2/6: HR practice: diagonal diff, count inversion, kth smallest
     Study SQL
+2/9: IBM HackerRank
+    Requested referrals for Home Depot and Datadog
+2/10 Will submit application for Home Depot
+
 
 
 
