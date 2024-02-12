@@ -200,8 +200,10 @@
     Python and Pandas to pull data
     dbt data build tool for data transformation
     data engineering zoom Camp for dbt: https://datatalks.club/blog/data-engineering-zoomcamp.html
+        https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/cohorts/2024
+        https://www.youtube.com/watch?v=AtRhA-NfS24
+    Shopify SQL: https://github.com/Shopify/eng-intern-assessment-data/blob/main/sql/task1.sql
     
-
 
 
 
