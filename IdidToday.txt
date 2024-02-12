@@ -196,6 +196,15 @@
         Tetris
         1 Leetcode
 
+    Terraform delcarative tool to govern and create cloud infra as code
+    Python and Pandas to pull data
+    dbt data build tool for data transformation
+    data engineering zoom Camp for dbt: https://datatalks.club/blog/data-engineering-zoomcamp.html
+    
+
+
+
+
 
 
 
