@@ -25,6 +25,7 @@ public class longestPrefix {
 }
 
 /*
+Solution passes
 Space: O(m)
     Stringbuilter for output, length of common prefix can be equal
     to the shortest string(m). Also use constant amount of space for currLetter,

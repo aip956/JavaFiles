@@ -191,10 +191,12 @@
 2/10 Will submit application for Home Depot
     Last week: Role play, prep SQL, took IBM OA, tailored resume
 2/12 Data Eng Lunch
+    Applied to August Schools on Wellfound
     To Do: Core War
         Algo class
         Tetris
-        1 Leetcode
+        1 Leetcode: Longest prefix
+        
 
     Terraform delcarative tool to govern and create cloud infra as code
     Python and Pandas to pull data
@@ -203,7 +205,7 @@
         https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/cohorts/2024
         https://www.youtube.com/watch?v=AtRhA-NfS24
     Shopify SQL: https://github.com/Shopify/eng-intern-assessment-data/blob/main/sql/task1.sql
-    
+
 
 
 
