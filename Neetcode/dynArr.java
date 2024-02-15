@@ -31,7 +31,9 @@ class DynamicArray {
 
     public int popback() {
         // decrem length by 1, return element popped back
-        this.length --;
+        if (this.length > 0) {
+            this.length --;
+        }
         return this.arr[this.length];
     }
 
@@ -43,8 +45,9 @@ class DynamicArray {
         // copy old array to new one
         for (int i = 0; i < this.length; i++) {
             new_arr[i] = this.arr[i];
-            this.arr = new_arr;
         } 
+        this.arr = new_arr;
+
     }
 
     public int getSize() {
