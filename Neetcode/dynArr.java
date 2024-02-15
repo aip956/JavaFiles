@@ -25,7 +25,8 @@ class DynamicArray {
         if (this.length == this.capacity) {
             this.resize();
         }
-        this.arr[length - 1] = n;
+        this.arr[length] = n;
+        this.length++;
     }
 
     public int popback() {
