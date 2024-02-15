@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class romanToInt {
     public static int romanToInt(String s) {
         /* 
@@ -8,6 +10,9 @@ public class romanToInt {
         for letter in string, add value from has to total
         if value > prev value, total -= 2*prev
         */
+        HashMap<String, Integer> roman = new HashMap<>();
+
+
     }
 
     public static void main(String[] args) {
@@ -19,3 +24,7 @@ public class romanToInt {
         System.out.println("Output3: " + romanToInt(s3));
     }
 }
+/*
+ * https://leetcode.com/problems/roman-to-integer/description/
+ * 
+ */

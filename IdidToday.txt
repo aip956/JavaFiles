@@ -196,7 +196,7 @@
         Algo class
         Tetris
         1 Leetcode: Longest prefix
-        
+
 
     Terraform delcarative tool to govern and create cloud infra as code
     Python and Pandas to pull data
@@ -205,6 +205,16 @@
         https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/cohorts/2024
         https://www.youtube.com/watch?v=AtRhA-NfS24
     Shopify SQL: https://github.com/Shopify/eng-intern-assessment-data/blob/main/sql/task1.sql
+
+2/13: Hiring event Blue Print 
+    Core Wars
+2/14: dynamic Array in neetcode
+    Started reading trees
+2.15: roman to integer
+    neetcode LinkedList
+    Linux Study
+    Core Wars
+    met with Brad
 
 
 
