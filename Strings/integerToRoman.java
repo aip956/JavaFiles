@@ -1,9 +1,10 @@
 public class integerToRoman {
     public static String intToRoman(int num) {
         /*
-         * create hash for letter:num; IV, V, IX, X, 
-         * X can be placed before L (50) and C (100) to make 40 and 90. 
-C can be placed before D (500) and M (1000) to make 400 and 900.
+         * create hash for letter:num; IV, V, IX, X, XC, standard nums but 
+         * also for 4x and 9x
+         * work backwards, get digit for each
+         * 
          * string output, int prev
          * if 
          */

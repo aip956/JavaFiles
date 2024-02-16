@@ -215,6 +215,8 @@
     Linux Study
     Core Wars
     met with Brad
+2/16: Int to roman
+    Mock interview
 
 
 
