@@ -217,6 +217,8 @@
     met with Brad
 2/16: Int to roman
     Mock interview
+2/19: Degree of Array   
+    Mock interview
 
 
 
