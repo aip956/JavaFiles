@@ -4,9 +4,34 @@ public class degreeOfArray {
     public static int findShortestSubArray(int[] nums) {
         HashMap <Integer, Integer> freqMap = new HashMap<>();
         int short_arr_len = 0;
-
+        for (int num : nums) {
+            freqMap.put(num, freqMap.getOrDefault(num, 0) +1);
+        }
         
+        // find degree
+        int degree = 0;
+        for (int freq : freqMap.values()) {
+            degree = Math.max(degree, freq);
+        }
 
+        // Find first and last occurence indices of elements with degree freq
+        
+        for (int num : freqMap.keySet()) { // iterate through the values
+            if(freqMap.get(num) == degree) { // if key num's value = degree
+            int first_ind = -1;
+            int last_ind = -1;
+
+            for (int i = 0; i < nums.length; i++) {
+                if (nums[i] == num) { // if elem in array is = key of degree
+                    if (first_ind == -1) {
+                        first_ind = i;
+                    }
+                    last_ind = i;
+                }
+            }
+            short_arr_len = Math.min(short_arr_len, (last_ind = first_ind + 1));
+            }
+        }
         return short_arr_len;
     }
 
