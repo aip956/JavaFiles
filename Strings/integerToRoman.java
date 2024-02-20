@@ -2,33 +2,16 @@ import java.util.HashMap;
 
 public class integerToRoman {
     public static String intToRoman(int num) {
-        HashMap<String, Integer> roMap = new HashMap<>();
-        roMap.put("M", 1000);
-        roMap.put("CM", 900);
-        roMap.put( "D", 500);
-        roMap.put("CD", 400);
-        roMap.put("C", 100);
-        roMap.put("XC", 90);
-        roMap.put("L", 50);
-        roMap.put("XL", 40);
-        roMap.put("X", 10);
-        roMap.put("IX", 9);
-        roMap.put("V", 5);
-        roMap.put("IV", 4);
-        roMap.put("I", 1);
-        // create list of sorted romans
-        List<String> sortedRomans = new 
+        String[] roman = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        int[] romNums = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
         StringBuilder result = new StringBuilder();
         while (num > 0) {
-            for (String roman : roMap.keySet()) {
-                // System.out.println("8roman: " + roman);
-                // System.out.println("9roMap.values(): " + roMap.values());
-
-                if (num >= roMap.get(roman)) {
-                    result.append(roman);
-                    System.out.println("10result: " + result);
-                    num -= roMap.get(roman);
-                    System.out.println("15num: " + num);
+            for (int i = 0; i < romNums.length; i++) {
+                if (num >= romNums[i]) {
+                    result.append(roman[i]);
+                    System.out.println("14result: " + result);
+                    num -= romNums[i];
+                    System.out.println("16num: " + num);
                     break;
                 }
             }
@@ -37,10 +20,10 @@ public class integerToRoman {
     }
 
     public static void main(String[] args) {
-        int num1 = 3;
+        // int num1 = 3;
         int num2 = 58;
         int num3 = 1994;
-        System.out.println("Output1: " + intToRoman(num1));
+        // System.out.println("Output1: " + intToRoman(num1));
         System.out.println("Output2: " + intToRoman(num2));
         System.out.println("Output3: " + intToRoman(num3));
     }
