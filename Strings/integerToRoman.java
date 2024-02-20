@@ -1,12 +1,31 @@
 public class integerToRoman {
     public static String intToRoman(int num) {
         /*
-         * create hash for letter:num; IV, V, IX, X, XC, standard nums but 
-         * also for 4x and 9x
-         * work backwards, get digit for each
-         * 
-         * string output, int prev
-         * if 
+        if input num > highest roman, add it to the string builder and 
+        reduce corresponding val from input
+        if input < highest roman, then check with next highest roman
+        Hash:
+        M, 1000
+        CM, 900
+        D, 500
+        CD, 400
+        C, 100
+        XC, 90
+        L, 50
+        XL, 40
+        X, 10
+        IX, 9
+        V, 5
+        IV, 4
+        I, 1
+
+        for 58: check 1000, 500, 100, 
+        58 > 50, so add L, sub 50 from 58, num = 8, string = L
+        8 > 5, so add V, num - 5 = 3, string = LV
+        3 > 1, add I, num - 1 = 2, string = LVI
+        2 > 1, add I, num - 1 = 1, string = LVII
+        1 >= 1, add I, num - 1 = 0, string = LVIII
+
          */
     }
 
