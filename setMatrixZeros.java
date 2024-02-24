@@ -35,12 +35,23 @@ public class setMatrixZeros {
         if (matrix[0][0] == 0) {
             Arrays.fill(matrix[0], 0);
         }
-        
+        if (Col == 0) {
+            for (int i = 0; i < n; i++) {
+                matrix[i][0] = 0;
+            }
+        }  
     }
 
     public static void main(String[] args) {
         int[][] matrix1 = {{1,1,1},{1,0,1},{1,1,1}};
-        System.out.println("Output1: " + setZeroes(matrix1));
+        setZeroes(matrix1);
+        for (int i = 0; i < matrix1.length; i++) {
+            for (int j = 0; j < matrix1[0].length; j++) {
+                System.out.print(matrix1[i][j] + " ");
+            }
+            System.out.println();
+        }
+        
     }
 }
 
