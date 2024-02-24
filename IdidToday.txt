@@ -219,7 +219,16 @@
     Mock interview
 2/19: Degree of Array   
     Mock interview
+    Scheduler for core war
+2/20: Int to roman
+    For standup: Mock intvw with Mammadu
+    Practice coding problems
+    Tetris
+    Prep for interview
+    Got a Tech Support Screening call
+    jennifer will send a list of areas to check opps
 
+2/23 Core War
 
 
 
