@@ -17,6 +17,18 @@ the space complexity is O(1), indicating constant space usage.
 So, the code has a time complexity of O(n) 
 and a space complexity of O(1), making it an 
 efficient solution for the "Climbing Stairs" problem.
+
+Start at n
+DP array of index 0 to n
+at n, there is 1 way to get to n
+at n-1, there is 1 way to get to n
+at n-2, there are 2 ways to get to n; or 1 + 1 from 2 prev = 2
+at n-3, 2 + 1 = 3
+at n-4, 3 + 2 = 5
+n - 5;, 5 + 3 = 8
+val at n - 2 = val_onestep + val_twostep
+then shift
+
  */
 
 public class climbingStairs {

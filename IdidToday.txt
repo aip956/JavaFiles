@@ -229,6 +229,8 @@
     jennifer will send a list of areas to check opps
 
 2/23 Core War
+2/24 Set Matrix Zeroes
+
 
 
 
