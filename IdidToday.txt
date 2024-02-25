@@ -230,6 +230,11 @@
 
 2/23 Core War
 2/24 Set Matrix Zeroes
+2/25: practice climbing stairs, set Matrix 0s
+    Tetris
+    Learn Heap
+    
+
 
 
 
