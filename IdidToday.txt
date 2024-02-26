@@ -230,10 +230,18 @@
 
 2/23 Core War
 2/24 Set Matrix Zeroes
-2/25: practice climbing stairs, set Matrix 0s
+2/25: X practice climbing stairs, set Matrix 0s (set0copy)
     Tetris
     Learn Heap
+    Prep for interview
+2/26 Data Eng Lunch: Apache Iceberg
+    Table format standard, libraries to store
+    Catalog -> Metadata file -> Manifest List -> Manifest -> Data file in storage
     
+    Dremio data lake
+
+
+
 
 
 
