@@ -240,6 +240,7 @@
     Dremio data lake
     Interview
     Bash practice
+2/27 Bash learning
 
 
 
