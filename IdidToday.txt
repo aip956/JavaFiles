@@ -237,9 +237,9 @@
 2/26 Data Eng Lunch: Apache Iceberg
     Table format standard, libraries to store
     Catalog -> Metadata file -> Manifest List -> Manifest -> Data file in storage
-    
     Dremio data lake
-
+    Interview
+    Bash practice
 
 
 
