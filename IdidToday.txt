@@ -243,6 +243,11 @@
 2/27 Bash learning
     SQL practice
     Contains Duplicate, can compare length of set or if set Contains
+3/3 Completed Reach essay draft; asked Andy and John to review
+    Bash Study
+3/4 Readme for Core War
+    Reach essay edits
+    SQL and Bash
 
 
 
