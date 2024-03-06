@@ -3,7 +3,8 @@ public class buddyStrings {
     public static boolean buddyStrings(String s, String goal) {
         // 1. test they are the same length
         // 2. if A==B, if there are repeated chars, return true
-        // 3. else count number of differences; if there are only 2 AND the strings are equal after swap, return tru
+        // 3. else count number of differences; if there are only 2 
+        // AND the strings are equal after swap, return tru
         // 1.
         if (s.length() != goal.length()) return false;
 

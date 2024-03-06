@@ -248,6 +248,12 @@
 3/4 Readme for Core War
     Reach essay edits
     SQL and Bash
+3/5 Submitted REACH essay
+    Met with Tony for Core War
+3/6 WHC seminar
+    Core War refactoring
+    review buddy strings; other leetcode
+    Tetris
 
 
 
