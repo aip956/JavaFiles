@@ -1,8 +1,8 @@
 
 
 Arrays & Hashing
-Contains Duplicate	
-Valid Anagram	
+Contains Duplicate	X
+Valid Anagram	OK
 Two Sum	
 Group Anagrams	
 Top K Frequent Elements	
