@@ -2,7 +2,19 @@ import java.util.HashMap;
 
 public class validAnaCopy {
     public static boolean isAnagram(String s, String t) {
-       
+       if (s.length() != t.length()) return false;
+       HashMap<Character, Integer> sfreq = new HashMap<>();
+       for (Character letter : s.toCharArray()) {
+            sfreq.put(letter, sfreq.getOrDefault(letter, 0)+1);
+
+       }
+       for (Character letter : t.toCharArray()) {
+        if (!sfreq.containsKey(letter)) return false;
+        int count = sfreq.get(letter);
+        if (count <= 0) return false;
+        sfreq.put(letter, count -1);
+       }
+       return true;
     }
     public static void main(String[] args) {
         String s1 = "anagram";
