@@ -3,7 +3,7 @@
 Arrays & Hashing
 Contains Duplicate	X
 Valid Anagram	OK
-Two Sum	
+Two Sum	    OK
 Group Anagrams	
 Top K Frequent Elements	
 Product of Array Except Self	
