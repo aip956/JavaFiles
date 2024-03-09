@@ -94,3 +94,26 @@ Longest Increasing Subsequence
 Unique Paths	
 Longest Common Subsequence
 
+
+Greedy
+Maximum Subarray	
+Jump Game
+
+Intervals
+Insert Interval	
+Merge Intervals	
+Non Overlapping Intervals	
+Meeting Rooms   	
+Meeting Rooms II   
+
+Math & Geometry
+Rotate Image	
+Spiral Matrix	
+Set Matrix Zeroes
+
+Bit Manipulation
+Number of 1 Bits	
+Counting Bits	
+Reverse Bits	
+Missing Number	
+Sum of Two Integers
