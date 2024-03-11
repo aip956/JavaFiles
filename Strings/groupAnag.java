@@ -1,15 +1,26 @@
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class groupAnag {
     public static List<List<String>> groupAnagrams(String[] strs) {
+        // Initialize Map
         HashMap<String,List<String>> map = new HashMap<>();
         for (String word : strs) {
-            chars[] wordArr = word.toCharArray();
+            // Convert word to char array to sort it, then to string
+            char[] wordArr = word.toCharArray();
             Arrays.sort(wordArr);
             String sortedWord = wordArr.toString();
 
+            // Group Anagrams in Map; sorted word is key
+            // If map does not contain the sorted word as key, creates a new empty list
+            if (!map.containsKey(sortedWord)) {
+                map.put(sortedWord, new ArrayList<>());
+            }
+            // Add the word to the sortedWord's list
+            map.get(sortedWord).add(word);
+
         }
+        // return the values of the map without key
+        return new ArrayList<>(map.values());
     }
 
     public static void main(String[] args) {
@@ -19,13 +30,15 @@ public class groupAnag {
     }
 }
 /*
+
 For each word,
-change word to charArray
-sort the word
-stringify the word
+change word to charArray, sort the word, stringify the word
+it will be the key and will have a corresponding list
+
 if the map does not contain the word, put it: word, new ArrayList
 get the sortedWord, add word
-return arrayList
+return arrayList's values
+
  * https://leetcode.com/problems/group-anagrams/description/
  * Given an array of strings strs, group the anagrams together. 
  * You can return the answer in any order.
