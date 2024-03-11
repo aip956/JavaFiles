@@ -1,8 +1,15 @@
+import java.util.HashMap;
 import java.util.List;
 
 public class groupAnag {
     public static List<List<String>> groupAnagrams(String[] strs) {
-        
+        HashMap<String,List<String>> map = new HashMap<>();
+        for (String word : strs) {
+            chars[] wordArr = word.toCharArray();
+            Arrays.sort(wordArr);
+            String sortedWord = wordArr.toString();
+
+        }
     }
 
     public static void main(String[] args) {
@@ -12,6 +19,13 @@ public class groupAnag {
     }
 }
 /*
+For each word,
+change word to charArray
+sort the word
+stringify the word
+if the map does not contain the word, put it: word, new ArrayList
+get the sortedWord, add word
+return arrayList
  * https://leetcode.com/problems/group-anagrams/description/
  * Given an array of strings strs, group the anagrams together. 
  * You can return the answer in any order.
