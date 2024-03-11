@@ -26,7 +26,10 @@ public class groupAnag {
     public static void main(String[] args) {
         String[] strs1 = {"eat","tea","tan","ate","nat","bat"};
         System.out.println("Output1: " + groupAnagrams(strs1));
-
+        String[] strs2 = {""};
+        System.out.println("Output2: " + groupAnagrams(strs2));
+        String[] strs3 = {"a"};
+        System.out.println("Output3: " + groupAnagrams(strs3));
     }
 }
 /*

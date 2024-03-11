@@ -1,17 +1,20 @@
 import java.util.*;
 
-public static class groupAnagCopy {
-    public List<List<String>> groupAnagrams(String[] strs) {
+public class groupAnagCopy {
+    public static List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String,List<String>> map = new HashMap<>();
 
         for (String word : strs) {
             char[] wordArr = word.toCharArray();
             Arrays.sort(wordArr);
-            String sortedWord = wordArr.toString();
+            // create new string; don't use toString()
+            String sortedWord = new String(wordArr);
+            System.out.println("11sorted: " + sortedWord);
             if (!map.containsKey(sortedWord)) {
                 map.put(sortedWord, new ArrayList<>());
             }
             map.get(sortedWord).add(word);
+            System.out.println("15: Map" + map);
         }
         return new ArrayList<>(map.values());
     }
@@ -19,6 +22,10 @@ public static class groupAnagCopy {
     public static void main(String[] args) {
         String[] strs1 = {"eat","tea","tan","ate","nat","bat"};
         System.out.println("Output1: " + groupAnagrams(strs1));
+        String[] strs2 = {""};
+        System.out.println("Output2: " + groupAnagrams(strs2));
+        String[] strs3 = {"a"};
+        System.out.println("Output3: " + groupAnagrams(strs3));
 
     }
 }
