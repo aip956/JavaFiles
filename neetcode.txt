@@ -4,7 +4,7 @@ Arrays & Hashing
 Contains Duplicate	X
 Valid Anagram	OK
 Two Sum	    OK
-Group Anagrams	
+Group Anagrams	OK
 Top K Frequent Elements	
 Product of Array Except Self	
 Encode and Decode Strings   	

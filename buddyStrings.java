@@ -11,6 +11,9 @@ public class buddyStrings {
         // 2.
         if (s.equals(goal)) {
             for (int i = 0; i < s.length(); i++) {
+                // looks for the char at i, and 
+                // java lastIndexOf = last ind of the char at i
+                // this says the last ind of char at i is not i; there's another 
                 if (s.lastIndexOf(s.charAt(i)) != i) {
                     return true;
                 }
