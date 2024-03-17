@@ -5,7 +5,7 @@ Contains Duplicate	X
 Valid Anagram	OK
 Two Sum	    OK
 Group Anagrams	OK
-Top K Frequent Elements	
+Top K Frequent Elements: adding to priority queue, and extracting from heap
 Product of Array Except Self	
 Encode and Decode Strings   	
 Longest Consecutive Sequence	
