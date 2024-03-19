@@ -1,20 +1,35 @@
 class validPalin {
-    public boolean isPalindrome(String s) {
-        char[] s_arr = s.toCharArray();
-        s_arr = s_arr.downcase();
-        for (int i = 0; i < s_arr.length; i++ )  {
-            if (Character.toLowerCase(s_arr[i]) >= 'a' && Character.toLowerCase(s_arr[i]) <= 'z') {
-                
-            }
-            for (int j = s_arr.length-1; j >= 0; j--) {
-
+    public static boolean isPalindrome(String s) {
+        // convert to lower case
+        s = s.toLowerCase();
+        // build a string with solely char or dig
+        StringBuilder sb = new StringBuilder();
+        for (char elem : s.toCharArray()) {
+            if (Character.isLetterOrDigit(elem)) {
+                sb.append(elem);
             }
         }
+        String alNumString = sb.toString();
+
+
+        int r = alNumString.length() - 1;
+        int l = 0;
+        while (r > l) {
+            if (alNumString.charAt(l) != alNumString.charAt(r)) {
+                return false;
+            }
+            r--;
+            l++;
+        }
+        return true;
     }
-
-
     public static void main(String[] args) {
-
+        String s1 = "A man, a plan, a canal: Panama";
+        System.out.println("Output1: " + isPalindrome(s1));
+        String s2 = "race a car";
+        System.out.println("Output2: " + isPalindrome(s2));
+        String s3 = " ";
+        System.out.println("Output3: " + isPalindrome(s3));
     }
 }
 

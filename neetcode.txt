@@ -12,7 +12,7 @@ Longest Consecutive Sequence
 
 
 Two Pointers
-Valid Palindrome	
+Valid Palindrome: OK, tricky with stringBuilder, etc.	
 3Sum	
 Container With Most Water
 
