@@ -1,4 +1,8 @@
 /* https://leetcode.com/problems/product-of-array-except-self/
+create array result; first add pre-result is the product array from left, starting with 1; 
+the NEXT element is result[i]*i
+then iterate from right to left, starting with post = 1; NEXT element
+is result[i]*i
 
 
 */
