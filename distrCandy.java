@@ -9,6 +9,7 @@ public class distrCandy {
         }
         // map size; number of candies
         int numTypes = candyTypes.keySet().size();
+        System.out.println("12size; " + candyTypes.size());
         return Math.min(numTypes, candyType.length/2);
     }
     public static void main(String[] args) {
