@@ -1,0 +1,6 @@
+
+Hello, world!
+This is a sample text file.
+We will use sed for text manipulation.
+I'm a little teapot
+short and stout
