@@ -260,7 +260,9 @@
 3/26: Datadog interview 
     Number of Recent Calls 
 3/28: Graph Data Sci class  
-    
+    HackerRank 
+    Onboarding paperwork and verification
+
 
 
 
