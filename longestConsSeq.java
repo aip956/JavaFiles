@@ -31,7 +31,7 @@ public class longestConsSeq {
         Set<Integer> numSet = new HashSet<>();
         for (Integer num : nums) {
             numSet.add(num);
-            System.out.println("33: " + numSet);
+            System.out.println("33set: " + numSet);
         }
         for (Integer num : numSet) {
             System.out.println("36 num: " + num);
@@ -55,8 +55,8 @@ public class longestConsSeq {
     public static void main(String[] args) {
         int[] nums1 = {100,4,200,1,3,2};
         System.out.println("Output1: " + (longestConsecutive(nums1)));
-        int[] nums2 = {0,3,7,2,5,8,4,6,0,1};
-        System.out.println("Output2: " + (longestConsecutive(nums2)));
+        // int[] nums2 = {0,3,7,2,5,8,4,6,0,1};
+        // System.out.println("Output2: " + (longestConsecutive(nums2)));
     }
 
 }

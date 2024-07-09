@@ -76,6 +76,12 @@ class reverseInteger {
     * Input: 120
     * Output: 21
     * 
+    120 % 10 = 0
+    120 / 10 = 12
+    12 % 10 = 2
+    12 / 10 = 1
+    1 % 10 = 1
+    1 / 10 = 0
     * Note:
     * 
     * Assume we are dealing with an environment which could only store integers
