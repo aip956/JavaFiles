@@ -35,8 +35,10 @@ public class longestConsSeq {
         }
         for (Integer num : numSet) {
             System.out.println("36 num: " + num);
+            // Check for start of sequence
             if (!numSet.contains(num - 1)) {
                 int length = 1;
+                // Check if next number is in set
                 while (numSet.contains(num + 1)) {
                     length++;
                     System.out.println("41 length: " + length);
