@@ -34,12 +34,21 @@ public class validAnagram {
         if (s.length() != t.length()) {
             return false;
         }
+        // if (s.length() != t.length()) {
+        //     return false;
+        // }
+        // a:1, n:1, g:1, r:1, m:1
         Map<Character, Integer> freqMapS = new HashMap<>();
         for (Character letter : s.toCharArray()) {
             freqMapS.put(letter, freqMapS.getOrDefault(letter, 0) +1);
-
         }
+        // Map<Character, Integer> freqMapS = new HashMap<>();
+        // for (Character letter : s.toCharArray()) {
+        //     freqMapS.put(letter, freqMapS.getOrDefault(letter, 0) +1);
+
+        // }
         // iterate through t
+        Map<Character, Integer> freqMapT = new HashMap<>();
         for (Character letter : t.toCharArray()) {
             if (!freqMapS.containsKey(letter)) {
                 return false;
