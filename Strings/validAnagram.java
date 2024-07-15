@@ -48,16 +48,25 @@ public class validAnagram {
 
         // }
         // iterate through t
-        Map<Character, Integer> freqMapT = new HashMap<>();
         for (Character letter : t.toCharArray()) {
-            if (!freqMapS.containsKey(letter)) {
+            if (!freqMapS.contansKey(letter)) {
                 return false;
             }
-            int count = freqMapS.get(letter);
-            if (count <= 0) {
+
+        // for (Character letter : t.toCharArray()) {
+        //     if (!freqMapS.containsKey(letter)) {
+        //         return false;
+        //     }
+            int count = freqMapS.get(letter); // get the value of the key
+            // int count = freqMapS.get(letter);
+            if (count <= 0) { // if the count is already 0, then there's an extra letter in t
                 return false;
             }
-            freqMapS.put(letter, count-1);
+            // if (count <= 0) {
+            //     return false;
+            // }
+            freqMapS.put(letter, count-1); // reduce the value/count by 1
+            // freqMapS.put(letter, count-1);
         }
         return true;
     }
