@@ -9,14 +9,18 @@ public class LargNumAftSwap {
         for (char digit : num.toCharArray()) {
             if ((digit - '0') % 2 == 0) {
                 evenDigits.add(digit);
+                System.out.println("evenDigits: " + evenDigits);
             } else {
                 oddDigits.add(digit);
+                System.out.println("oddDigits: " + oddDigits);
             }
         }
 
         // Sort the digits in descending order
         Collections.sort(oddDigits, Collections.reverseOrder());
+        System.out.println("oddDigits sorted: " + oddDigits);
         Collections.sort(evenDigits, Collections.reverseOrder());
+        System.out.println("evenDigits sorted: " + evenDigits);
 
         // Initialize the result
         StringBuilder result = new StringBuilder();
@@ -29,9 +33,11 @@ public class LargNumAftSwap {
         for (char digit : num.toCharArray()) {
             if ((digit - '0') % 2 == 0) {
                 result.append(evenDigits.get(evenIndex));
+                System.out.println("result36: " + result);
                 evenIndex++;
             } else {
                 result.append(oddDigits.get(oddIndex));
+                System.out.println("result40: " + result);
                 oddIndex++;
             }
         }
