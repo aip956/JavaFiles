@@ -1,39 +1,34 @@
 import java.util.*;
 
 public class test {
-    public static int[] twoSum(int[] nums, int target) {
-//         // create a hashmap to store the compliment and index
-//         // for 2, look for 9 - 2 = 7, if not in hashmap, add key, value as 2, 0
-//         // for 7, look for 9 - 7 = 2, if in hashmap, return index of 2 and 7
-        Map<Integer, Integer> compHash = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            int comp = target - nums[i];
-            if (compHash.containsKey(comp)) {
-                return new int[] {compHash.get(comp), i};
+    public static List<List<String>> groupAnagrams(String[] strs) {
+        // for each word, 
+        // sort it
+        // if sorted word is not in map, put it
+        HashMap<String, List<String>> map = new HashMap<>();
+        for (String word : strs) {
+            char[] wordArr = word.toCharArray();
+            Arrays.sort(wordArr);
+            String sortedWord = new String(wordArr);
+            if (!map.containsKey (sortedWord)) {
+                map.put(sortedWord, new ArrayList<>());
+                System.out.println("15map: " + map);
             }
-            compHash.put(nums[i], i);
-            System.out.println("compHash: " + compHash);
+        // Add word to the sortedWords's list
+        map.get(sortedWord).add(word);
+        System.out.println("20map: " + map);
         }
-        return new int[] {};
+        // return the values of the map without key
+        return new ArrayList<>(map.values()); 
     }
 
 
 
 
     public static void main(String[] args) {
-        int[] nums1 = {2,7,11,15};
-        int target1 = 9; // should return [0,1]
-        int[] result1 = twoSum(nums1, target1);
-        System.out.print("Output1: [");
-        for (int i = 0; i < result1.length; i++) {
-            System.out.print(result1[i]);
-            if (i < result1.length - 1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println("]");  
-        
-        
-        // Output: 87655
+        String[] str1 = {"eat","tea","tan","ate","nat","bat"};
+        System.out.println("Output1: " + groupAnagrams(str1));
+        String[] str2 = {""};
+        System.out.println("Output2: " + groupAnagrams(str2));
     }
 }
