@@ -13,10 +13,12 @@ public class test {
 
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         for (int num : freqMap.keySet()) {
-            if (pq.size() < k)
-                pq.offer(num);   
+            pq.offer(num);  
+            if (pq.size() > k) {
+                pq.poll();
+            }
         }
-        
+
         System.out.println("pq: " + pq);
         int[] result = new int[k];
         int index = 0;
@@ -27,7 +29,7 @@ public class test {
     }
 
     public static void main(String[] args) {
-        int[] nums1 = {1,1,1,2,2,3};
+        int[] nums1 = {1,1,1,2,2,3, 3, 3, 3};
         int k1 = 2;
         System.out.println("Output1: " + topKFrequent(nums1, k1));
     }
