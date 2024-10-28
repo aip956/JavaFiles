@@ -20,16 +20,29 @@ public class groupAnag {
         // word in the strs array, sorted word
         // create charArray for each word => sorted word
         // if sorted word is in the wordMap, add based on sorted version
-
+   // for each string in array
+        // sort the word, 
+        // if sorted word is not a map key, add sorted word as key, empty array as value
+        // add word to map with sorted word as key
+        // return map
         Map<String, List<String>> strMap = new HashMap<>();
         for (String word : strs) {
-            char[]charArrWord = word.toCharArray();
-            Arrays.sort(charArrWord);
-            String sortedWord = new String(charArrWord);
-            if (!strMap.containsKey(sortedWord)) {
-                strMap.put(sortedWord, new ArrayList<>());
-            }
-            strMap.get(sortedWord).add(word);
+            
+        }
+
+
+
+        // Map<String, List<String>> strMap = new HashMap<>();
+
+
+        // for (String word : strs) {
+        //     char[]charArrWord = word.toCharArray();
+        //     Arrays.sort(charArrWord);
+        //     String sortedWord = new String(charArrWord);
+        //     if (!strMap.containsKey(sortedWord)) {
+        //         strMap.put(sortedWord, new ArrayList<>());
+        //     }
+        //     strMap.get(sortedWord).add(word);
         }
         return new ArrayList<>(strMap.values());
         // Map<String, List<String>> strsMap = new HashMap<>();
