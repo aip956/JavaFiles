@@ -34,9 +34,8 @@ public class groupAnag {
                 strMap.put(sorted_word, new ArrayList<>());
             }
             strMap.get(sorted_word).add(word);
-
-
         }
+        return new ArrayList<>(strMap.values());
 
 
 
