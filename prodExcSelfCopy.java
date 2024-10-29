@@ -20,21 +20,26 @@ public class prodExcSelfCopy {
         suffix *= nums[1] = 12 * 2 = 24
         answer[0] = answer[0] * suffix = 1 * 24 = 24
         answer = [24, 12, 8, 6]
-
-
-
-
-
-
         */
+        int n = nums.length;
+        int[] answer = new int[n];
 
+        // Prefix products
+        answer[0] = 1;
+        for (int i = 1; i < n; i++) {
+            answer[i] = answer[i - 1] * nums[i - 1];
+        }
 
+        // Suffix products
+        int suffix = 1;
+        for (int i = n - 1; i >= 0; i--) {
+            answer[i] *= suffix;
+            suffix *= nums[i];
+        }
 
+        return answer;
 
-
-
-
-        int[] result = new int[nums.length];
+        // int[] result = new int[nums.length];
         // int pre = 1;
         // for (int i = 0; i < nums.length; i++) {
         //     result[i] = pre;
@@ -53,9 +58,9 @@ public class prodExcSelfCopy {
     }
 
     public static void main(String[] args) {
-        // int[] nums1 = {2, 3, 4, 5, 6};
-        // System.out.println("Output: " + Arrays.toString(productExceptSelf(nums1)));
-        int[] nums2 = {-1,1,0,-3,3};
-        System.out.println("Output: " + Arrays.toString(productExceptSelf(nums2)));
+        int[] nums1 = {1, 2, 3, 4};
+        System.out.println("Output: " + Arrays.toString(productExceptSelf(nums1)));
+        // int[] nums2 = {-1,1,0,-3,3};
+        // System.out.println("Output: " + Arrays.toString(productExceptSelf(nums2)));
     }
 }
