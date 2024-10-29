@@ -3,6 +3,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.PriorityQueue;
 /*
  * Create a hashmap to store the frequency of each number
@@ -20,9 +21,30 @@ public class topKFreqElem {
        for (int num : nums) {
         freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
        }
-       System.out.println("FreqMap: ", freqMap);
+       System.out.println("FreqMap: " + freqMap);
 
-       PriorityQueue<Integer> pq = new PriorityQueue<>()
+       // add to pq and sort ascending
+       PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>(
+        (a, b) -> a.getValue() - b.getValue()
+       );
+
+       // add to heap and maintain only k vals
+       for (Map.Entry<Integer, Integer> entry : freqMap.entrySet()) {
+            pq.offer(entry);
+            if (pq.size() > k) {
+                pq.poll(); // remove entry with the lower freq
+            }
+       }
+
+       // Extract elements from heap
+       int[] result = new int[k];
+       int index = 0;
+       while (!pq.isEmpty()) {
+        result[index++] = pq.poll().getKey();
+       }
+
+       return result;
+
 
 
 
