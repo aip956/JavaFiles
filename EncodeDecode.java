@@ -7,13 +7,14 @@
 Please implement encode and decode
  */
 
- public class Solution {
+ public class EncodeDecode {
     /*
      * @param strs: a list of strings
      * @return: encodes a list of strings to a single string.
      */
     public String encode(List<String> strs) {
         // write your code here
+        StringBuilder encodedString = new StringBuilder();
     }
 
     /*
