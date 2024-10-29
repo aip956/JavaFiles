@@ -6,6 +6,7 @@ Valid Anagram	OK
 Two Sum	    OK
 Group Anagrams	OK
 Top K Frequent Elements: adding to priority queue, and extracting from heap
+Top K Frequent Words: Tough; need to sort by freq and lex
 Product of Array Except Self: OK	
 Encode and Decode Strings   	
 Longest Consecutive Sequence	
