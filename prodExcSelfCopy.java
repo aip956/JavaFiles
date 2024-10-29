@@ -12,9 +12,15 @@ public class prodExcSelfCopy {
         answer[3] = nums[0] * nums[1] * nums[2] = 1 * 2 * 3 = 6
         answer = [1, 1, 2, 6]
         suffix = 1
-        answer [3] = answer[3] * suffix = 6 * 1 = 6
+        answer[3] = answer[3] * suffix = 6 * 1 = 6
         suffix *= nums[3] = 1 * 4 = 4
-        
+        answer[2] = answer[2] * suffix = 2 * 4 = 8
+        suffix *= nums[2] = 4 * 3 = 12
+        answer[1] = answer[1] * suffix = 1 * 12 = 12
+        suffix *= nums[1] = 12 * 2 = 24
+        answer[0] = answer[0] * suffix = 1 * 24 = 24
+        answer = [24, 12, 8, 6]
+
 
 
 
