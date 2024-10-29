@@ -15,7 +15,11 @@ Please implement encode and decode
     public String encode(List<String> strs) {
         // write your code here
         StringBuilder encodedString = new StringBuilder();
-    }
+        for (String str : strs) {
+            encodedString.append(str.length()).append("#").append(str);
+        }
+        return encodedString.toString();
+    }   
 
     /*
      * @param str: A string
