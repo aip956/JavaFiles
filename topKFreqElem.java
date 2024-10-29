@@ -7,6 +7,11 @@ import java.util.PriorityQueue;
 
 public class topKFreqElem {
     public static int[] topKFrequent(int[] nums, int k) {
+       
+
+
+
+
         HashMap<Integer, Integer> freqMap = new HashMap<>();
         // add to Hash the number, freq
         for (int number : nums) {
