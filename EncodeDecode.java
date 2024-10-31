@@ -21,12 +21,19 @@ Please implement encode and decode
         return encodedString.toString();
     }   
 
+
     /*
      * @param str: A string
      * @return: decodes a single string to a list of strings
      */
     public List<String> decode(String str) {
         // write your code here
+        List<String> decodedStrings = new ArrayList<>();
+        int i = 0;
+        while (i < str.length()) {
+            // Find position of delimiter '#'
+            int delimiterIndex = str.indexOf('#', i);
+        }
     }
 
 
