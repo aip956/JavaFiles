@@ -6,7 +6,7 @@
 
 Please implement encode and decode
  */
-
+import java.util.*;
  public class EncodeDecode {
     /*
      * @param strs: a list of strings
