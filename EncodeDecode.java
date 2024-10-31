@@ -33,14 +33,19 @@ import java.util.*;
         while (i < str.length()) {
             // Find position of delimiter '#'
             int delimiterIndex = str.indexOf('#', i);
+            System.out.println("delimiterIndex: " + delimiterIndex);
             // Extract the length of the string
             int length = Integer.parseInt(str.substring(i, delimiterIndex));
+            System.out.println("length: " + length);
             // Move i to the start of the string
             i = delimiterIndex + 1;
+            System.out.println("i: " + i);
             // Extract the string of the specified length and add it to the list
             decodedStrings.add(str.substring(i, i + length));
+            System.out.println("DecodedString: " + decodedStrings);
             // Move i past the curent string
             i += length;
+            System.out.println("i: " + i);
         }
         return decodedStrings;
     }
