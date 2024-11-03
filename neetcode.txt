@@ -18,8 +18,20 @@ Valid Palindrome:
     - change string to lowercase
     - stringbuild with only letters and nums
     - left, right pointers; stribuild left & right need to equal
-3Sum	
+3Sum
+    - sort the array
+    - for each element of array, fix one element
+    - 2 pointers left (i+1) and right
+    - calc sum of nums[i], nums[l], nums[r]
+    - if sum = 0, add trio to the result; move both pointers in
+    - if sum < 0; move left forward
+    - if sum > 0; move right Back
+    
 Container With Most Water
+    - 2 pointers l and r
+    - calc wall height at 2 pointers; take shorter
+    - calc volume at 2 pointers; take max volume
+    - move the shorter wall
 
 Sliding Window
 Best Time to Buy And Sell Stock	
