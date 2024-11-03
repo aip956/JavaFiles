@@ -14,7 +14,10 @@ Longest Consecutive Sequence
 
 
 Two Pointers
-Valid Palindrome: OK, tricky with stringBuilder, etc.	
+Valid Palindrome:
+    - change string to lowercase
+    - stringbuild with only letters and nums
+    - left, right pointers; stribuild left & right need to equal
 3Sum	
 Container With Most Water
 
