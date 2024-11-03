@@ -9,7 +9,7 @@ class validPalin {
                 sb.append(elem);
             }
         }
-        String alNumString = sb.toString();
+        String alNumString = sb.toString(); // redundant
 
 
         int r = alNumString.length() - 1;
