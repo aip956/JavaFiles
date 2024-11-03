@@ -2,14 +2,17 @@ import java.util.*;
 
 class containerWater {
     public static int maxArea(int[] height) {
-        int maxVol = 0;
-        int left = 0;
-        int right = height.length - 1;
+        int maxVol = 0; // keep track of the max Volume
+        int left = 0; // left pointer
+        int right = height.length - 1; // right pointer
         while (right > left) {
+            // tallness of container is min of 2 walls
             int tall = Math.min(height[left], height[right]);
             int width = right - left;
+            // volume
             int vol = tall * width;
             maxVol = Math.max(vol, maxVol);
+            // move in the pointer of the shorter side
             if (height[left] < height[right]) {
                 left++;
             } else right--;
