@@ -9,3 +9,11 @@ class containerWater {
         System.out.println(maxArea(height));
     }
 }
+
+/*
+ * Create a var to return final number
+ * 2 pointers at each end of array
+ * maxArea = height * length
+ * find smaller side/height; min of 2 heights
+ * length = length of array - 1
+ */
