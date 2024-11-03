@@ -1,12 +1,18 @@
 import java.util;
 
 class threeSum {
+    /*
+     * sort the array
+     * iterate through the array; fix one elem at a time
+     * two pointers, left (i + 1) and right
+     * calc sum of nums-i, nums-l and nums-r
+     */
     public List<List<Integer>> threeSum(int[] nums) {
         
     }
 
     public static void main(String[] args) {
-        
+
     }
 
 }
