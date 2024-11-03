@@ -1,7 +1,21 @@
+import java.util.*;
 
 class containerWater {
     public static int maxArea(int[] height) {
-        
+        int maxVol = 0;
+        int left = 0;
+        int right = height.length - 1;
+        while (right > left) {
+            int tall = Math.min(height[left], height[right]);
+            int width = right - left;
+            int vol = tall * width;
+            maxVol = Math.max(vol, maxVol);
+            if (height[left] < height[right]) {
+                left++;
+            } else right--;
+        }
+
+        return maxVol;
     }
 
     public static void main(String[] args) {
