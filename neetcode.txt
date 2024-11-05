@@ -26,7 +26,7 @@ Valid Palindrome:
     - if sum = 0, add trio to the result; move both pointers in
     - if sum < 0; move left forward
     - if sum > 0; move right Back
-    
+
 Container With Most Water
     - 2 pointers l and r
     - calc wall height at 2 pointers; take shorter
@@ -134,3 +134,16 @@ Counting Bits
 Reverse Bits	
 Missing Number	
 Sum of Two Integers
+
+
+
+
+Deque: Double-ended; can add and remove from both sides
+Queue: FIFO
+Stack: LIFO
+
+add: part of the Collections interface; throws an exception if the operation fails
+Collections is parent intfc for List, Set, Queue  
+offer: Part of Queue interface; returns false (not excep) if fails
+Queue extends Collection, so only available for class implementing queue (so not in set or list)
+Deque extends Queue
