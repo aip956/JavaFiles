@@ -10,7 +10,7 @@ class LongSubWORepChar {
 
             // If currentChar is a dup in the window, move left
             if (map.containsKey(currentChar)) {
-                left = Math.max(left, map.get(currentChar) + 1)
+                left = Math.max(left, map.get(currentChar) + 1);
             } 
             // Update the char's laatest index
             map.put(currentChar, right);
@@ -23,7 +23,7 @@ class LongSubWORepChar {
 
 
     public static void main(String[] args) {
-        s = "abcabcbb"; // 3
+        String s = "abcabcbb"; // 3
         System.out.println(lengthOfLongestSubstring(s));
     }
 }
