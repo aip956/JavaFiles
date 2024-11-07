@@ -2,6 +2,7 @@ import java.util.*;
 class LongSubWORepChar {
     public static int lengthOfLongestSubstring(String s) {
         
+        
     }
 
 
@@ -12,11 +13,18 @@ class LongSubWORepChar {
 }
 
 /*
+Sliding window
 - 2 pointers, left and right, to represent the current window
 - Expand the right pointer to include new chars
 - If a duplicate is found, move the left pointer to the right of the last 
 occurrence of the dup char to remove it from the window
+Use a HashMap to Track Chars
 - Use a hash to store the most recent index of each char
+- If a char is already in the map (indicating a dup in the window),
+move the left pointer to map.get(char) + 1 to skip over the prev occurrence
+Updated the Max Length
+- After each addition of a char to the window, calc the length of the 
+current substring as right-left+1
 
 
  * Given a string s, find the length of the longest 
