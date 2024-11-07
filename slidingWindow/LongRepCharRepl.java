@@ -17,13 +17,15 @@ class LongRepCharRepl {
                 count[s.charAt(left) - 'A']--; // remove leftmost char in win
                 left++; // shrink win
             }
+            // Update max length of valid win
+            maxLength = Math.max(maxLength, right - left + 1);
         }
         return maxLength;
     }
 
     public static void main(String[] args) {
         String s = "AABABBA";
-        Int k = 1;
+        int k = 1;
         System.out.println(characterReplacement(s, k));
     }
 }
