@@ -12,6 +12,13 @@ class LongSubWORepChar {
 }
 
 /*
+- 2 pointers, left and right, to represent the current window
+- Expand the right pointer to include new chars
+- If a duplicate is found, move the left pointer to the right of the last 
+occurrence of the dup char to remove it from the window
+- Use a hash to store the most recent index of each char
+
+
  * Given a string s, find the length of the longest 
 substring
  without repeating characters.
