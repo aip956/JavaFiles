@@ -1,7 +1,20 @@
 import java.util.*;
 class LongSubWORepChar {
     public static int lengthOfLongestSubstring(String s) {
-        
+        Map<Character, Integer> map = new HashMap<>();
+        int maxLength = 0;
+        int left = 0;
+
+        for (int right = 0; right < s.length(); right++) {
+            char currentChar = s.charAt(right);
+
+            // If currentChar is a dup in the window, move left
+            if (map.containsKey(currentChar)) {
+                left = Math.max(left, map.get(currentChar) + 1)
+            } 
+            // Update the char's laatest index
+            map.put(currentChar, right);
+        }
         
     }
 
