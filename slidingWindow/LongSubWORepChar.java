@@ -14,8 +14,11 @@ class LongSubWORepChar {
             } 
             // Update the char's laatest index
             map.put(currentChar, right);
+
+            // Calc max length of the current window
+            maxLength = Math.max(maxLength, right - left + 1);
         }
-        
+        return maxLength;
     }
 
 
