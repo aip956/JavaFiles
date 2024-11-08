@@ -30,8 +30,27 @@ class minWinSub {
             }
 
             // Contract the win from left
-            while
+            while (left <= right && formed == requird) {
+                char leftChar = s.charAt(left);
+
+                // Update the result if this win is smaller
+                if (right - left + 1 < minLen) {
+                    minLen = right - left + 1;
+                    start = left;
+                }
+
+                // Decrease freq of the left char
+                windowFreq.put(leftChar, windowFreq.get(leftChar) - 1);
+                if (tFreq.containsKey(leftChar) && windowFreq.get(leftChar) < tFreq.get(leftChar)) {
+                    formed --;
+                }
+                left ++;
+            }
+            // Expand the right
+            right ++;
         }
+        // Return the min win or empty string if no win found
+        return minLen == Integer.MAX_VALUE ? "" : s.substring(start, start + minLen);
     }
 
 
