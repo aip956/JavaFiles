@@ -13,7 +13,10 @@ public class ValidParen {
                     return false;
                 }
             
+            // Pop the last char from stack
             char top = stack.pop();
+
+            // check it matches the current closing
             if ((c == ')' && top != '(') ||
                 (c == '}' && top != '{') ||
                 (c == ']' && top != '[')) {
