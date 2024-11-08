@@ -6,12 +6,13 @@ class minWinSub {
         // Freq map for t
         Map<Character, Integer> tFreq = new HashMap<>();
         for (char c : t.toCharArray()) {
-            t.Freq.put(c, tFreq.getOrDefault(c, 0) +1);
+            tFreq.put(c, tFreq.getOrDefault(c, 0) +1);
         }
 
         // Slid win freq map
         Map<Character, Integer> winFreq = new HashMap<>();
-        int left = 0; right = 0;
+        int left = 0; 
+        int right = 0;
         int minLen = Integer.MAX_VALUE;
         int start = 0; // Start ind of min win
         int formed = 0; // Count of unique chars in win matching required freq
@@ -30,7 +31,7 @@ class minWinSub {
             }
 
             // Contract the win from left
-            while (left <= right && formed == requird) {
+            while (left <= right && formed == required) {
                 char leftChar = s.charAt(left);
 
                 // Update the result if this win is smaller
@@ -40,8 +41,8 @@ class minWinSub {
                 }
 
                 // Decrease freq of the left char
-                windowFreq.put(leftChar, windowFreq.get(leftChar) - 1);
-                if (tFreq.containsKey(leftChar) && windowFreq.get(leftChar) < tFreq.get(leftChar)) {
+                winFreq.put(leftChar, winFreq.get(leftChar) - 1);
+                if (tFreq.containsKey(leftChar) && winFreq.get(leftChar) < tFreq.get(leftChar)) {
                     formed --;
                 }
                 left ++;
