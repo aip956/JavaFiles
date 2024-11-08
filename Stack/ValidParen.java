@@ -13,3 +13,50 @@ public class ValidParen {
     }
     
 }
+
+
+
+/*
+https://leetcode.com/problems/valid-parentheses/
+1. Use a stack
+push each opening bracket onto the stack
+for a closing brack, check if it matches a top elem of stack
+if so, pop the top elem
+if not or stack is empty, string invalid
+after processing; the stack needs to be empty
+
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Every close bracket has a corresponding open bracket of the same type.
+ 
+
+Example 1:
+
+Input: s = "()"
+
+Output: true
+
+Example 2:
+
+Input: s = "()[]{}"
+
+Output: true
+
+Example 3:
+
+Input: s = "(]"
+
+Output: false
+
+Example 4:
+
+Input: s = "([])"
+
+Output: true
+
+
+ */
