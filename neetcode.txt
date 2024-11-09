@@ -35,12 +35,21 @@ Container With Most Water
 
 Sliding Window
 Best Time to Buy And Sell Stock	
+    - left & right index, calc prof and maxProf
 Longest Substring Without Repeating Characters	
 Longest Repeating Character Replacement	
 Minimum Window Substring
 
 Stack
 Valid Parentheses
+    - Stack; for each char, add to stack if an open par
+    - else 
+        - check top of stack; char top = stack.pop
+        - if stack is empty, return false
+        - if top of stack doesn't match current closing brack, return false
+        - else pop the stack to remove the matching opening brack
+    - after the loop, return if stack is empty
+
 
 
 Binary Search
