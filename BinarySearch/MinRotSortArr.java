@@ -2,9 +2,22 @@ import java.util.*;
 
 class MinRotSortArr {
     public static int findMin(int[] nums) {
-        
+        int left = 0;
+        int right = nums.length - 1;
 
-        return
+        while (left < right) {
+            int mid = (right + left) / 2;
+
+            // Check if mid is in the rotated part or sorted part
+            if (nums[mid] > nums[right]) {
+                // Min must be in right half
+                left = mid + 1;
+            } else {
+                // Min could be mid or in the left half
+                right = mid;
+            }
+        }
+        return nums[left];
     }
 
     public static void main(String[] args) {
