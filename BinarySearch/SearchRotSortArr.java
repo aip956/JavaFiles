@@ -5,7 +5,7 @@ class SearchRotSortArr {
         int left = 0;
         int right = nums.length - 1;
 
-        while(left < right) {
+        while(left <= right) {
             int mid = (right + left) / 2;
 
             // Check if mid elem is the target
@@ -40,9 +40,9 @@ class SearchRotSortArr {
 
     public static void main(String[] args) {
         int[] nums1 = {4,5,6,7,0,1,2};
-        int target1 = 0; // 0
+        int target1 = 0; // 4
         int[] nums2 = {4,5,6,7,0,1,2};
-        int target2 = 3; // 3
+        int target2 = 3; // -1
         System.out.println(search(nums1, target1));
         System.out.println(search(nums2, target2));
     }
