@@ -19,6 +19,18 @@ class SearchRotSortArr {
 /*
 https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 
+1. Binary Search with Condition Checks
+Two pointers, left and right, for start and end of search range
+Calc middle index, mid
+
+2. ID sorted halves
+Since the array is rotated, either the left half or the right half of the array, 
+relative to mid, will be sorted
+If nums[left] <= nums[mid]: left half, from left to mid, is sorted
+If nums[mid] <= nums[right]: right half, from mid to right, is sorted
+
+
+
 There is an integer array nums sorted in ascending order (with distinct values).
 
 Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].
