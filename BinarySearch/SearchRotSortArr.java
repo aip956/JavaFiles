@@ -2,7 +2,40 @@ import java.util.*;
 
 class SearchRotSortArr {
     public static int search(int[] nums, int target) {
-        
+        int left = 0;
+        int right = nums.length - 1;
+
+        while(left < right) {
+            int mid = (right + left) / 2;
+
+            // Check if mid elem is the target
+            if (nums[mid] == target) {
+                return mid;
+            }
+
+            // Determine which half is sorted
+            if (nums[left] <= nums[mid]) {
+                // left half is sorted
+                if (nums[left] <= target && target < nums[mid]) {
+                    // Target is in the left half
+                    right = mid - 1;
+                } else {
+                    // target is in right half
+                    left = mid + 1;
+                }
+            } else {
+                // Right is sorted
+                if (nums[mid] < target && target <= nums[right]) {
+                    // Target is in the right half
+                    left = mid + 1;
+                } else {
+                    // Target is in the left half
+                    right = mid - 1;
+                }
+            }
+        }
+        // Target not found
+        return -1;
     }
 
     public static void main(String[] args) {
@@ -42,15 +75,14 @@ You must write an algorithm with O(log n) runtime complexity.
  
 
 Example 1:
-
 Input: nums = [4,5,6,7,0,1,2], target = 0
 Output: 4
-Example 2:
 
+Example 2:
 Input: nums = [4,5,6,7,0,1,2], target = 3
 Output: -1
-Example 3:
 
+Example 3:
 Input: nums = [1], target = 0
 Output: -1
 
