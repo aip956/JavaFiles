@@ -56,6 +56,19 @@ Binary Search - when looking for Time complex log(n) or better than linear => bi
     - Left, mid, right pointer; left <= right 
 Find Minimum In Rotated Sorted Array	
 Search In Rotated Sorted Array
+    - Left, mid, right;
+    - while left < right, calc mid
+    - check if mid = targ; return mid
+    - are we in left sorted? nums[left] <= nums[mid]
+        -if targ > nums[mid] or targ < nums[left]
+            search right: left = mid + 1
+        -else search left; r = mid - 1
+    - else we're in the right sorted portion
+        - if targ < nums[mid] or targ > nums[r]
+            r = mid - 1
+        - else search right; l = mid + 1
+    return -1
+
 
 
 Linked List	

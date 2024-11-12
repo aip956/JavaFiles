@@ -55,6 +55,14 @@ class SearchRotSortArr {
 /*
 https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 
+[4,5,6,7,0,1,2]; target = 0
+Targ < 7; could be on either side of 7
+Look at right; targ < 4, so search to right of mid
+new left is mid + 1, nums[4] = 0 => [0,1,2]
+nums[mid] = 1; targ < 1;; check to left, which is = targ
+
+
+
 1. Binary Search with Condition Checks
 Two pointers, left and right, for start and end of search range
 Calc middle index, mid
