@@ -52,9 +52,11 @@ Valid Parentheses
 
 
 
-Binary Search
+Binary Search - when looking for Time complex log(n) or better than linear => binary
+    - Left, mid, right pointer; left <= right 
 Find Minimum In Rotated Sorted Array	
 Search In Rotated Sorted Array
+
 
 Linked List	
 Reverse Linked List	
