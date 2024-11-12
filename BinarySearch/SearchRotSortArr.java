@@ -4,7 +4,8 @@ class SearchRotSortArr {
     public static int search(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
-
+        // {4,5,6,7,0,1,2}; t = 3
+        // nums[left] = 4; nums[right] = 2; nums[mid] = 7
         while(left <= right) {
             int mid = (right + left) / 2;
 
@@ -17,10 +18,12 @@ class SearchRotSortArr {
             if (nums[left] <= nums[mid]) {
                 // left half is sorted
                 if (nums[left] <= target && target < nums[mid]) {
+                    // 4 <= 3 && 3 < 7? No
                     // Target is in the left half
                     right = mid - 1;
-                } else {
+                } else { // 4 <= 3 && 3 < 7 => {7,0,1,2}
                     // target is in right half
+                    // nums[left] = 0
                     left = mid + 1;
                 }
             } else {
