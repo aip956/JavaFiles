@@ -11,12 +11,13 @@ class MinRotSortArr {
             int mid = (right + left) / 2;
             System.out.println("12mid: " + nums[mid]);
             // Check if mid is in the rotated part or sorted part
+            // {4,5,1,2,3}; n[l] = 4; n[r] = 3; n[m] = 1
             if (nums[mid] > nums[right]) {
-                // Min must be in right half
+                // Min must be in right half; search the right; move left to mid + 1
                 left = mid + 1;
                 System.out.println("17L: " + nums[left]);
             } else {
-                // Min could be mid or in the left half
+                // Min could be mid or in the left half; move right to mid => {4,5,1}
                 right = mid;
                 System.out.println("21R: " + nums[right]);
             }
