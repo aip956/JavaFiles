@@ -72,7 +72,7 @@ Search In Rotated Sorted Array
 
 
 Linked List	
-Reverse Linked List	
+Reverse Linked List: Good for understanding class structures
 Merge Two Sorted Lists	
 Reorder List	
 Remove Nth Node From End of List	
