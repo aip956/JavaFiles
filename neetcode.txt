@@ -95,6 +95,7 @@ Serialize And Deserialize Binary Tree
 
 
 Tries
+Tree-like DS; used to store dynamic set of strings
 Implement Trie Prefix Tree	
 Design Add And Search Words Data Structure	
 Word Search II
