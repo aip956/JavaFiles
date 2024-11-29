@@ -1,8 +1,10 @@
 
 
 Arrays & Hashing
-Contains Duplicate	X
+Contains Duplicate
+    - Make a set; if set.size() != array.length, return true
 Valid Anagram	OK
+    - Add s to freq hash, subtract t from it
 Two Sum	    OK
 Group Anagrams	OK
 Top K Frequent Elements: adding to priority queue, and extracting from heap
