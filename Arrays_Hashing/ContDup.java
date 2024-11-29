@@ -1,18 +1,18 @@
-import java.utill.*;
+import java.util.*;
 class ContDup {
-    public boolean containsDuplicate(int[] nums) {
-        HashSet <integer> mySet = new HashSet<>();
+    public static boolean containsDuplicate(int[] nums) {
+        HashSet <Integer> mySet = new HashSet<>();
         for (int num : nums) {
             mySet.add(num);
         }
-        if (mySet.size() == nums.size) {
+        if (mySet.size() == nums.length) {
             return false;
         }
      return true;  
     }
 
     public static void main(String[] args) {
-        int nums = {1,2,3,1};
+        int[] nums = {1,2,3,1};
         System.out.println(containsDuplicate(nums));
     }
 }
