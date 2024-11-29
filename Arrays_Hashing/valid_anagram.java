@@ -30,5 +30,8 @@ class valid_anagram {
  * https://leetcode.com/problems/valid-anagram/description/
  * check if = length()
  * Make a freq map of s
+ * check if letter in t is sFreq
+ * int count = sFreq.get(letter); if count <= 0 retn false
+ * subtract one from count: sFreq.put(letter, count - 1)
  * 
  */
