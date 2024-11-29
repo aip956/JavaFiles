@@ -5,7 +5,14 @@ Contains Duplicate
     - Make a set; if set.size() != array.length, return true
 Valid Anagram	OK
     - Add s to freq hash, subtract t from it
+    - need to check s and t = length
+    - for letter in t, if not in sFreq, retn false
+    - and if count <= 0, return false
+    - subtract count; sFreq.put(letter, count - 1)
 Two Sum	    OK
+    - create a hash
+    - for each num, check if compl is a value in hash; yes return [i, hash.get(compl)]
+    - or put in hash; hash.put(nums[i], i)
 Group Anagrams	OK
 Top K Frequent Elements: adding to priority queue, and extracting from heap
 ** Need to work on Top K with PQs **
