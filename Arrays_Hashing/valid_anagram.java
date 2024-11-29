@@ -11,9 +11,10 @@ class valid_anagram {
         for (char letter : t.toCharArray()) {
             // if letter not in sFreq, return false
             if (!sFreq.containsKey(letter)) return false;
-            
+            int count = sFreq.get(letter);
+            if (count <= 0) return false;
+            sFreq.put(letter, count - 1);
         }
-
         return true;
     }
 
