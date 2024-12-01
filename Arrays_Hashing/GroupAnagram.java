@@ -3,10 +3,15 @@ class GroupAnagram {
     public static List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String, List<String>> map = new HashMap<>();
         for (String word : strs) {
-            word = word.toCharArray();
-            word = word.Sort();
-            
+            char[] word_char_arr = word.toCharArray();
+            Arrays.sort(word_char_arr);
+            String sorted_word = new String(word_char_arr);
+            if (!map.containsKey(sorted_word)) {
+                map.put(sorted_word, new ArrayList<>());
+            }
+            map.get(sorted_word).add(word);
         }
+        return new ArrayList<>(map.values());
     }
 
     public static void main(String[] args) {
