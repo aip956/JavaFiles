@@ -13,7 +13,8 @@ Two Sum	    OK
     - create a hash
     - for each num, check if compl is a value in hash; yes return [i, hash.get(compl)]
     - or put in hash; hash.put(nums[i], i)
-Group Anagrams	OK
+Group Anagram
+    - needs work
 Top K Frequent Elements: adding to priority queue, and extracting from heap
 ** Need to work on Top K with PQs **
 Top K Frequent Words: Tough; need to sort by freq and lex
