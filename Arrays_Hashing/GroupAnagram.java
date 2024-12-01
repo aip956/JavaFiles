@@ -3,6 +3,8 @@ class GroupAnagram {
     public static List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String, List<String>> map = new HashMap<>();
         for (String word : strs) {
+            word = word.toCharArray();
+            word = word.Sort();
             
         }
     }
