@@ -1,12 +1,12 @@
 import java.util.*;
 
-class Solution {
+class TopK {
     public static int[] topKFrequent(int[] nums, int k) {
         HashMap<Integer, Integer> freq = new HashMap<>();
         
 
         for (int num : nums) {
-            hash.put(num, freq.getOrDefault(num, 0) + 1);
+            freq.put(num, freq.getOrDefault(num, 0) + 1);
         }
         
         PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>(
