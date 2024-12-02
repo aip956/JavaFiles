@@ -10,8 +10,9 @@ public class productExceptSelf {
         }
         int postfix = 1;
         for (int i = nums.length - 1; i >= 0; i--) {
-            System.out.println
-            
+            System.out.println("Postfix: " + postfix);
+            System.out.println("i: " + i);
+            System.out.println("result: " + result);
             result[i] *= postfix;
             postfix *= nums[i];
         }
