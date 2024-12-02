@@ -6,8 +6,14 @@ public class productExceptSelf {
         int prefix = 1;
         for (int i = 0; i < nums.length; i++) {
             result[i] = prefix;
-            prefix 
+            prefix *= nums[i];
         }
+        int postfix = 1;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            result[i] *= postfix;
+            postfix *= nums[i];
+        }
+        return result;
     }
 
     public static void main(String[] args) {
@@ -18,5 +24,14 @@ public class productExceptSelf {
 }
 
 /*
+ * multiply values before and after element
+ * prefix: mult from left
+ * postfix: mult from right
+ * for each elem, mult pref i-1, post of i+1
+ * store prefix, then mult by post
+ * {1, 2, 3, 4}
+ * pref: 1, 1, 2, 6
+ * post: 24*1, 1*12, 4*2, 1*6
+ * 
  * 
  */
