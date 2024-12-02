@@ -2,15 +2,38 @@ import java.util.*;
 
 class Solution {
     public static int[] topKFrequent(int[] nums, int k) {
-        HashMap<Integer, Integer> hash = new HashMap<>();
-        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>();
-
+        HashMap<Integer, Integer> freq = new HashMap<>();
         
+
+        for (int num : nums) {
+            hash.put(num, freq.getOrDefault(num, 0) + 1);
+        }
+        
+        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>(
+        (a, b) -> a.getValue() - b.getValue()
+        );
+
+        // add to heap
+        for (Map.Entry<Integer, Integer> entry : freq.entrySet()) {
+            pq.offer(entry);
+            if (pq.size() > k) {
+                pq.poll(); // remove entry of lowest freq
+            }
+        }
+        // Extract elements from heap
+        int[] result = new int[k];
+        int index = 0;
+        while(!pq.isEmpty()) {
+            result[index++] = pq.poll().getKey();
+        }
+        return result;
     }
 
     public static void main(String[] args) {
         int[] nums = {1,1,1,2,2,3};
         int k = 2;
+        int[] output = topKFrequent(nums, k);
+        System.out.println(output);
     }
 }
 
