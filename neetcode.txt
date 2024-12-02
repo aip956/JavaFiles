@@ -15,7 +15,10 @@ Two Sum	    OK
     - or put in hash; hash.put(nums[i], i)
 Group Anagram
     - needs work
-Top K Frequent Elements: adding to priority queue, and extracting from heap
+Top K Frequent Elements: 
+    - make freq map 
+    - add to priority queue, sort ascending
+    - and extracting from heap; remove if size > k
 ** Need to work on Top K with PQs **
 Top K Frequent Words: Tough; need to sort by freq and lex
 Product of Array Except Self: OK	

@@ -33,7 +33,7 @@ class TopK {
         int[] nums = {1,1,1,2,2,3};
         int k = 2;
         int[] output = topKFrequent(nums, k);
-        System.out.println(output);
+        System.out.println(Arrays.toString(output));
     }
 }
 
