@@ -2,6 +2,9 @@ import java.util.*;
 
 class Solution {
     public static int[] topKFrequent(int[] nums, int k) {
+        HashMap<Integer, Integer> hash = new HashMap<>();
+        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>();
+
         
     }
 
