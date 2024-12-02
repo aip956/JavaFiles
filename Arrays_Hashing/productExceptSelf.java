@@ -12,7 +12,8 @@ public class productExceptSelf {
         for (int i = nums.length - 1; i >= 0; i--) {
             System.out.println("Postfix: " + postfix);
             System.out.println("i: " + i);
-            System.out.println("result: " + result);
+            System.out.println("nums[i]: " + nums[i]);
+            System.out.println("result: " + Arrays.toString(result));
             result[i] *= postfix;
             postfix *= nums[i];
         }
@@ -32,7 +33,7 @@ public class productExceptSelf {
  * postfix: mult from right
  * for each elem, mult pref i-1, post of i+1
  * store prefix, then mult by post
- * {1, 2, 3, 4}
+ * nums: {1, 2, 3, 4}
  * pref result: 1, 1*1, 1*2, 1*2*3=6
  * post result: 24*1, 1*12, 4*2, 1*6
  * 
