@@ -1,6 +1,14 @@
 import java.util.*;
 class ContDup {
     public static boolean containsDuplicate(int[] nums) {
+        // Create set; if size of set = size of nums, no dups
+        HashSet <Integer> set = new HashSet<>();
+        for (int num : nums) {
+            set.add(num);
+        }
+        if (nums.length == set.size()) return false;
+        return true;
+
     //     HashSet <Integer> mySet = new HashSet<>();
     //     for (int num : nums) {
     //         mySet.add(num);
