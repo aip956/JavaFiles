@@ -10,3 +10,7 @@ class prodExcSelf {
         System.out.println("Result: " + result);
     }
 }
+
+/*
+ * [1, 2, 3, 4], from left: 
+ */
