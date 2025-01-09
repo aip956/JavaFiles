@@ -37,5 +37,6 @@ public class productExceptSelf {
  * pref result: 1, 1*1, 1*2, 1*2*3=6
  * post result: 24*1, 1*12, 4*2, 1*6
  * 
+ * editing to test
  * 
  */
