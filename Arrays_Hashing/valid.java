@@ -9,15 +9,21 @@ class valid {
         for (Character c : s.toCharArray()) {
             sFreq.put(c, sFreq.getOrDefault(c, 0) + 1);
         }
-        // minus t chars
+        // minus t chars, check if sFreq contains c, no -> false
+        // count = c's freq
+        // put(letter, count-1)
         for (Character c : t.toCharArray()) {
-            sFreq.put(c, sFreq.getOrDefault(sFreq, 0) - 1);
+            if (!sFreq.containsKey(c)) return false;
+            int count = sFreq.get(c);
+            sFreq.put(c, count - 1);
         }
-        
-        return false;
+        return true;
     }
 
     public static void main(String[] args) {
+        String s = "car";
+        String t = "rat";
+        System.out.println(isAnagram(s, t));
 
     }
 
