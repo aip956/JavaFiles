@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-class valid {
+class validAnagram {
     public static boolean validAnagram(String s, String t) {
         // make freq map of s
         // for each char in t, check if in s
