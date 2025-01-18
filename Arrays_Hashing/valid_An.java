@@ -13,9 +13,10 @@ class valid_An {
         // is c in sfreq? yes: add c, count-1 to sfreq
         for (Character c : t.toCharArray()) {
             int count = 0;
-            if (!sFreq.containsKey(t)) return false;
-            
+            if (!sFreq.containsKey(c)) return false;
+            sFreq.put(c, count - 1);
         }
+        return true;
 
     }
 
