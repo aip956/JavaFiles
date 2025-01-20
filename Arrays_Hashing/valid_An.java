@@ -6,10 +6,11 @@ class valid_An {
         // make s freq map
         HashMap <Character, Integer> sFreq = new HashMap<>();
         for (Character c : s.toCharArray()) {
-            sFreq.put(c, )
+            sFreq.put(c, sFreq.getOrDefault(c, 0) + 1);
         }
 
         // subtract s from t
+        
 
         
     }
