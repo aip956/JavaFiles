@@ -7,7 +7,7 @@ class validAnagram {
         // create count, subtract 
         HashMap<Character, Integer> sFreq = new HashMap<>();
         for (Character c : s.toCharArray()) {
-            sFreq.put(c, sFreq.getOrDefault(sFreq, 0) +1);
+            sFreq.put(c, sFreq.getOrDefault(c, 0) +1);
         }
         System.out.println("sFreq: " + sFreq);
 

@@ -7,7 +7,7 @@ class valid_An {
         // add s to freq map
         HashMap <Character, Integer> sfreq = new HashMap<>();
         for (Character c : s.toCharArray()) {
-            sfreq.put(c, sfreq.getOrDefault(sfreq, 0) + 1);
+            sfreq.put(c, sfreq.getOrDefault(c, 0) + 1);
         }
         // subt t from freq map
         for (Character c : t.toCharArray()) {
