@@ -16,6 +16,7 @@ class validAnagram {
             if (!sFreq.containsKey(c)) return false;
             // get the freq of c in the hash
             int count = sFreq.get(c);
+            if (count <= 0) return false;
             // subtract c from the hash
             sFreq.put(c, count - 1);
         }
