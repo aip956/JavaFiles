@@ -10,8 +10,12 @@ class valid_An {
         }
 
         // subtract s from t
-        
-
+        for (Character c : t.toCharArray()) {
+            if (!sFreq.containsKey(c)) return false;
+            int count = sFreq.get(c);
+            sFreq.put(c, count - 1);
+        }
+        return true;
         
     }
 
