@@ -2,27 +2,16 @@ import java.util.HashMap;
 
 class valid_An {
     public static boolean validAnagram(String s, String t) {
-        // same length
+        // lengths equal
         if (s.length() != t.length()) return false;
-        // add to freq map
+        // add s to freq map
+        HashMap <Character, Integer> sfreq = new HashMap<>();
         
-        for (Character c : s.toCharArray()) {
-
-        }
-
-        // subtract from map
-        
-        }
-
-        // subtract s from t
-        for (Character c : t.toCharArray()) {
-            if (!sFreq.containsKey(c)) return false;
-            int count = sFreq.get(c);
-            sFreq.put(c, count - 1);
-        }
+        // subt t from freq map
         return true;
-        
     }
+
+
 
     public static void main(String[] args) {
         String s = "abcd";
