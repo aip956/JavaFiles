@@ -6,8 +6,15 @@ class valid_An {
         if (s.length() != t.length()) return false;
         // add s to freq map
         HashMap <Character, Integer> sfreq = new HashMap<>();
-        
+        for (Character c : s.toCharArray()) {
+            sfreq.put(c, sfreq.getOrDefault(sfreq, 0) + 1);
+        }
         // subt t from freq map
+        for (Character c : t.toCharArray()) {
+            if (!sfreq.containsKey(c)) return false;
+            int count = sfreq.get(c);
+            sfreq.put(c, count - 1);
+        }
         return true;
     }
 
