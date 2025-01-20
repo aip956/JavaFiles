@@ -2,11 +2,8 @@ import java.util.HashMap;
 
 class valid_An {
     public static boolean validAnagram(String s, String t) {
-        if (s.length() != t.length()) return false;
-        // make s freq map
-        HashMap <Character, Integer> sFreq = new HashMap<>();
-        for (Character c : s.toCharArray()) {
-            sFreq.put(c, sFreq.getOrDefault(c, 0) + 1);
+        
+        
         }
 
         // subtract s from t
