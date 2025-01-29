@@ -3,6 +3,7 @@
 Arrays & Hashing
 Contains Duplicate
     - Make a set; if set.size() != array.length, return true
+    - sets and hashes use size(); arrays use length()
 Valid Anagram	OK
     - Add s to freq hash, subtract t from it
     - need to check s and t = length
