@@ -6,13 +6,16 @@ class maxProdSubarray {
         int maxGlob = nums[0];
         for (int i = 1; i < nums.length; i++){
             if (nums[i] == 0) {
-                minLoc = 1;
-                maxLoc = 1;
+                minLoc = 0;
+                maxLoc = 0;
+                maxGlob = Math.max(0, maxGlob);
             }
             else {
-                minLoc = Math.min(nums[i], Math.min(maxLoc * nums[i], minLoc * nums[i]));
+                int temp = maxLoc;
                 maxLoc = Math.max(nums[i], Math.max(maxLoc * nums[i], minLoc * nums[i]));
+                minLoc = Math.min(nums[i], Math.min(temp * nums[i], minLoc * nums[i]));
                 maxGlob = Math.max(maxLoc, maxGlob);
+            }
         }
         return maxGlob;
     }
