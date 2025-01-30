@@ -4,7 +4,7 @@ class houseRobber {
          * total loot of n-2 + n, vs. n-1; nums=2,7,9,3,1
          * total array: [2, 7, ]
          */
-        // without the whole array
+        // without the whole array [p2, p1, max(num+p2, p1)] -> [p2,temp=p1]
         if (nums.length < 2 || nums == null) return nums[0];
         if (nums.length == 1) return nums[0];
         int prev2 = 0; // dp[i-2]
