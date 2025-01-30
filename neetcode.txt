@@ -136,7 +136,7 @@ Alien Dictionary
 1-D Dynamic Programming
 Climbing Stairs: It's a fibbonaci seq; n = (n-1) + (n-2)	
 House Robber: Create dp array to store total loot; max(dp[n-2] + nums[i], dp[n-1])
-House Robber II	
+House Robber II: Create arrays of 0-length-2, 1-length-1; run through HR1, get max of these
 Longest Palindromic Substring	
 Palindromic Substrings	
 Decode Ways	
