@@ -23,18 +23,15 @@ class houseRobber {
         
         for (int i = 2; i < nums.length; i++) {
             dp[i] = Math.max(dp[i-2] + nums[i], dp[i-1]);
-            int loot = Math.max(n_2 + nums[i], n_1);
-            total_loot = Math.max(loot, total_loot);
-            n_2 = total_loot;
-            n_1 = nums[i];
+
             System.out.println("i: " + i);
             System.out.println("nums[i]: " + nums[i]);
-            System.out.println("loot: " + loot);
-            System.out.println("total: " + total_loot);
-            System.out.println("n2: " + n_2);
-            System.out.println("n1: " + n_1);
+            System.out.println("dp_i2: " + dp[i-2]);
+            System.out.println("dp_i1: " + dp[i-1]);
+            System.out.println("dp_i: " + dp[i]);
+
         }
-        return total_loot;
+        return dp[nums.length - 1];
     }
 
     public static void main(String[] args) {
