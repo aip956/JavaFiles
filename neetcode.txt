@@ -134,7 +134,7 @@ Advanced Graph
 Alien Dictionary
 
 1-D Dynamic Programming
-Climbing Stairs	
+Climbing Stairs: It's a fibbonaci seq; n = (n-1) + (n-2)	
 House Robber	
 House Robber II	
 Longest Palindromic Substring	
