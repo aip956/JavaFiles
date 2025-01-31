@@ -140,7 +140,7 @@ House Robber II: Create arrays of 0-length-2, 1-length-1; run through HR1, get m
 Longest Palindromic Substring: start in middle and iterate out
 Palindromic Substrings	
 Decode Ways	
-Coin Change	
+Coin Change: Make dp arr of coins for amounts 0-amount	
 Maximum Product Subarray	
 Word Break	
 Longest Increasing Subsequence
