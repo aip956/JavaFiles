@@ -1,12 +1,35 @@
+
 class decode {
-    public int numDecodings(String s) {
-        
+    public static int numDecodings(String s) {
+        // 122016; 0th can only dec 1, at i = 4, not val, but 20 val
+        // arr: 1 if > 0, [1, 1, 1+1, 2+1, 2, 2+, 2+2]
+        // i=3, for2, 2 is valid, 1, 12 is val, 1
+        // is num valid; is num and prev valid?
+         int n = s.length();
+         if (n == 0) return 0;
+         int[] dp = new int[n + 1];
+         dp[0] = 1;
+         dp[1] = s.charAt(0) == '0' ? 0 : 1;
+        // [1, 1, ]
+        for (int i = 2; i <= n; i++) {
+            int oneDig = Integer.valueOf(s.substring(i-1, i));
+            int twoDig = Integer.valueOf(s.substring(i-2, i));
+
+            if (oneDig >= 1) dp[i] += dp[i-1];
+            if (twoDig >= 10 && twoDig <= 26) dp[i] += dp[i-2];
+        }
+        return dp[n];
     }
 
     public static void main(String[] args) {
-        String s1 = "12"
-
-        String s2 = "226"
+        String s1 = "12";
+        System.out.println(numDecodings(s1));
+        System.out.println();
+        String s2 = "226";
+        System.out.println(numDecodings(s2));
+        System.out.println();
+        String s3 = "06";
+        System.out.println(numDecodings(s3));
     }
 }
 /*
@@ -63,4 +86,8 @@ not a valid encoding, so return 0.
 606? 1?
 
 1 2 2 0 1 6
+if last 2 digs are valid, then it's value up to 2 before plus last 2 digs
+ways[i] = ways[i-1] (if new single dig is valid) +
+    ways[i-2] (if last 2 digs val)
+
  */
