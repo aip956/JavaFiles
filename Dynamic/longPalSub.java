@@ -1,25 +1,40 @@
+import java.util.*;
+
 class longPalSub {
-    public static String longestPalindrome(String string) {
-        // iterate through string and track pal length
-        // check odd and even len pal
+    public static String longestPalindrome(String s) {
+        if (s == null || s.length() < 1) return "";
+        int start = 0, end = 0;
 
-        int len = string.length();
-        int l = len/2;
-        int r = len/2;
-        for (Character s : string.toCharArray()) {
-            // Odd, left and right pointer; init at center
-            
-            while (l >= 0 && r < len && s[l] == s[r]) {
-
+        for (int i = 0; i < s.length(); i++) {
+            int left = i, right = i;
+            while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+                if (right - left >= end - start) { // Check if longest pal
+                    start = left;
+                    end = right;
+                }
+                left --;
+                right ++;
+            }
+            // Even-length pali
+            left = i;
+            right = i + 1;
+            while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+                if (right - left >= end - start) {
+                    start = left;
+                    end = right;
+                }
+                left --;
+                right ++;
             }
         }
-
+        return s.substring(start, end + 1);
     }
 
 
     public static void main(String[] args) {
-        String s1 = "babad";
+        String s1 = "abcdefedc";
         System.out.println(longestPalindrome(s1));
+        System.out.println();
         String s2 = "abrbadaadab";
         System.out.println(longestPalindrome(s2));
 
