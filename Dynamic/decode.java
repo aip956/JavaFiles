@@ -59,6 +59,8 @@ Explanation:
 not a valid encoding, so return 0.
 
 
-60
- 
+60: 1?
+606? 1?
+
+1 2 2 0 1 6
  */
