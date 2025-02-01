@@ -1,5 +1,7 @@
 class uniquePaths {
     public static int unique(int m, int n) {
+        if (m < 1 || n < 1) return 0;
+        
         
     }
 
