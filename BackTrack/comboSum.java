@@ -11,6 +11,17 @@ class Solution {
     }
 }
 /*
+[2,3,5], targ = 8
+iterate over array, but do not include previous elements
+(they will repeat if so)
+2
+2,2 => starts w 2
+2,2,2 => starts w 2,2
+2, 2, 2, 2 = valid, 
+2,2,2,3; too big, now backtrack
+2,3
+
+2,2,2,2
  https://leetcode.com/problems/combination-sum/
 
 
