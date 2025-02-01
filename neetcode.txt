@@ -147,7 +147,7 @@ Longest Increasing Subsequence
 
 
 2-D Dynamic Programming
-Unique Paths	
+Unique Paths: Grid of paths; if i or j = 0, cell = 1; cell[i][j] = cell[i-1][j] + cell[i][j-1];
 Longest Common Subsequence
 
 
