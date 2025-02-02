@@ -1,24 +1,29 @@
 import java.util.*;
 
-class Solution {
+class comboSum {
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(candidates);
-        backtrack(candidates, target, 0, new ArrayList<>());
+        backtrack(candidates, target, 0, new ArrayList<>(), result);
         return result;
+        // result stores all valid combos
+        // backtrack called to recursively explore all  combos from candidates to reach target
     }
 
-    private void backtrack(int[] candidates, int target, int s, List<Integer> current, List<List<Integer>> result) {
-        if(target == 0) {
+    private static void backtrack(int[] candidates, int target, int s, List<Integer> current, List<List<Integer>> result) {
+        if(target == 0) { // current combo is valid; add to result
         result.add(new ArrayList<>(current));
         return;
-    }
-    if (target < 0) return;
-    for(int i = s; i < candidates.length; i++) {
-        if(candidates[i] < target) break;
-        current.add(candidates[i]);
-        backtrack(candidates, target - candidates[i], i, current, result);
-        current.remove(current.size() - 1);
+        }
+        if (target < 0) return; // current combo not valid; explore further
+        // above are stopping conditions
+        // explore combos below
+        for(int i = s; i < candidates.length; i++) {
+            // if(candidates[i] < target) break;
+            current.add(candidates[i]); // choose curr num
+            backtrack(candidates, target - candidates[i], i, current, result); // explore
+            current.remove(current.size() - 1); // undo choice (backtrack)
+        }
     }
 
 
