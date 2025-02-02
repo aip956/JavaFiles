@@ -38,8 +38,8 @@ public class interview {
     }
 
     public static void main(String[] args) {
-        // int[] array = {1,2,3,-5,0,1,2};
-        int[] array = {-2,1,-3,4,-1,2,1,-5,4}; // 4,-1,2,1
+        int[] array = {1,2,3,-5,0,1,2};
+        // int[] array = {-2,1,-3,4,-1,2,1,-5,4}; // 4,-1,2,1
 
         int [] output = result(array);
         System.out.print("Output: ");
