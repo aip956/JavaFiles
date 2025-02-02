@@ -15,7 +15,7 @@ public class int2 {
         for (int i = 1; i < arr.length; i++) {
             int n = arr[i];
             int old_mGl = mGl;
-            if (n > mLoc + n) start_i++;
+            if (n > mLoc + n) start_i = i;
             mLoc = Math.max(n, n + mLoc);
             mGl = Math.max(mLoc, mGl);
             if (mLoc > old_mGl) end_i = i;
