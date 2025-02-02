@@ -1,7 +1,7 @@
 
 class maxSubArray {
     public static int maxSubArray(int[] nums) {
-        // {-2,1,-3,4,-1,2,1,-5,4}
+        // {-2,1,-3,4,-1,2,1,-5,4} => {4,-1,2,1}, i= 3->6
         /* mL= n vs. n+mL; mG=mL vs. mG
         i=0, n=-2, mL[0] = -2, mG=-2, 
         i=1, n=1, mL[1]= 1 or -1 = 1, mG=1
