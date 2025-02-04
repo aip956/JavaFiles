@@ -7,10 +7,10 @@ end_i: mL > old mG
 i=0,n=-2, mL:-2v(-2+0)=-2, mG:-2, s:0
 i=1,n=1, mL:1 v (-2+1)=1, mG:1, s:1
 i=2,n=-3, mL:-3 v(-3+1)=-2, mG:1,s:1,e:1
-i=3,n=4, mL:4 v (-3+4)=4, mG:4; s:2s: n>n+mL
-i=4,n=-1, mL:-1 v (-1+4)=3, mG:4
-i=5,n=2, mL:2 v (2+3)=5, mG:5
-i=6,n=1, mL:1 v (1+5)=6, mG:6; e: mL > old mG
+i=3,n=4, mL:4 v (-3+4)=4, mG:4; s:2s: n>n+mL; n became positive and greater than the preceding max Local
+i=4,n=-1, mL:-1 v (-1+4)=3, mG:4; not end; n decreased the mLoc
+i=5,n=2, mL:2 v (2+3)=5, mG:5, end: mL > old mG; n increased mL and mG
+i=6,n=1, mL:1 v (1+5)=6, mG:6; end: mL > old mG; n increased mL and mG
 i=7,n=-5, mL:-5 v (-5+6)=1, mG:6
 i=8,n=4, mL:4 v (4+1)=35, mG:6
 
