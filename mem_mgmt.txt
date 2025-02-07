@@ -1,0 +1,9 @@
+Old days: Single User Memory System
+Needed to evacuate memory prior to a program using memory
+But program could be bigger than memory
+Simple, less memory used by the OS
+One program at a time
+
+Fixed Partition Size
+Could load a second program with sufficient space in RAM
+If you filled memroy, could not run any more programs and had to reboot to free up RAM
