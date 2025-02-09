@@ -27,3 +27,22 @@ map pieces in use with pieces that can be put in RAM
 Can have a bigger program than RAM
 
 32bit vs 64bit
+bits = number of pins in the chip
+CPU with more bits = higher throughput
+
+Max number represented by bits
+1 bit number = 2 combos (0, 1)
+2 bit number = 4 combos (00, 01, 10, 11)
+3 bits = 8 combos
+2^n (n=num of bits)
+32 bits = 4GB RAM
+64 bits = can access "unlimited" quantites of RAM
+
+Processor:
+4 -> 8bit -> 16 bit -> 32 bit (386) -> 64 bit Xeon
+Bits processor can access
+
+ReadyBoost VM; could use USB as RAM
+
+On Demand Paging
+Load partial part of program
