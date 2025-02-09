@@ -45,4 +45,14 @@ Bits processor can access
 ReadyBoost VM; could use USB as RAM
 
 On Demand Paging
-Load partial part of program
+Load partial part of program into RAM
+Page Replacement: FIFO, Least recently used, Least freq used, most recently used
+
+Segments vs. Pages
+To split program; pages same length
+Segment: method in my class; code chunk; logical unit
+
+Thrashing
+RAM swapped out from HD to memory and back; slows down
+More memory or close programs
+limit for practical for multi programming
