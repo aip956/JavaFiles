@@ -6,4 +6,15 @@ One program at a time
 
 Fixed Partition Size
 Could load a second program with sufficient space in RAM
-If you filled memroy, could not run any more programs and had to reboot to free up RAM
+If you filled memroy, could not run any more programs and 
+had to reboot to free up RAM
+
+Memory Management System
+Process size, kB requirements, and Process time, fragments
+But not dynamic; can't readjust size of blocks
+
+Dynamic, Adjustable Blocks
+Allows use of multiple apps, but limited program size if more
+RAM needed
+
+Virtual Memory
