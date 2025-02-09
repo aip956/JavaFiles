@@ -18,3 +18,12 @@ Allows use of multiple apps, but limited program size if more
 RAM needed
 
 Virtual Memory
+Can split memory into slices; pages
+Page frames; segments of memory
+Can store out of sequence
+Page number vs. memory address
+Memory Map: more virtual memory than physical memory
+map pieces in use with pieces that can be put in RAM
+Can have a bigger program than RAM
+
+32bit vs 64bit
