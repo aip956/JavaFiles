@@ -1,6 +1,18 @@
+import java.util.*;
 
+public class findFirst {
 
+    public static int findBoundary(List<Boolean> arr) {
+            
+        return 0;
 
+    }
+
+    public static void main(String[] args) {
+        List<Boolean> arr = Arrays.asList(false, false, true, true, true);
+        System.out.println(findBoundary(arr));
+    }
+}
 
 
 
