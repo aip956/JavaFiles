@@ -6,6 +6,7 @@ public class findFirst {
         // go to mid; if == true, dump right side 
         int right = arr.size() - 1; // 4
         int left = 0;    
+        int boundaryInd = -1;
         
         while (right >= left) {
             int mid = left + (right - left) / 2;
@@ -13,21 +14,15 @@ public class findFirst {
                 // f, t, t, t, t
                 // t, t, t, /t, t
                 // f, f, t, / t, t
-                right = mid;
-                if (arr.get(right - 1) == false) {
-                    return right;
-                } 
-                mid = (right - left) / 2;
+                boundaryInd = mid; // store potential first true
+                right = mid - 1; // Look for earlier true
             } else {
                 // f, f,/ f, t, t
                 // f, f,/ f, f, f
-                left = mid;
-                mid = (right - left) / 2;
-                if (arr.get(left + 1) == true) return left + 1;
+                left = mid + 1; // Move right to search
             }
-            return -1;
         }
-    return right;
+    return boundaryInd;
     }
 
     public static void main(String[] args) {
