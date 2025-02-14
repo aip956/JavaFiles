@@ -1,0 +1,20 @@
+Types of Coding in Hedge Funds
+1. Quant Dev
+- Implement mathematical models for trading strategies
+- Python, C++, R, Matlab, Java
+- Statistical arbitrage, time-series analysis, Matlab
+- Monte Carlo simulations, stochastic calculus, optimization algos
+
+2. Algorithmic Trading & High Freq Trading
+- Low-latency algos; execute in microsecs
+- C++, some Java or Rust
+- Direct Market Access (DMA, order book analysis, real time data processing)
+
+3. Data Engineering and Infra Development
+- Support quant teams by handling large-scale financial data processing
+- Python, SQL, Spark, cloud comp (AWs, Google Cloud)
+- Building data pipelines, cleaning data, efficient storage and retreival
+
+4. Backtesting and simulations
+- Code that tests trading strategies on historical data before deploy
+- 
