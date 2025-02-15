@@ -1,10 +1,13 @@
 Programming for Finance
 https://www.youtube.com/watch?v=2BrpKpWwT2A&list=PLQVvvaa0QuDcOdF96TBtRtuQksErCEBYZ
+pythonprogramming.net for explanations
 
 Pandas -datareader
 matplotlib
 beautifulsoup4
 scikit-learn / sklearn
+
+
 
 
 
