@@ -1,3 +1,15 @@
+Programming for Finance
+https://www.youtube.com/watch?v=2BrpKpWwT2A&list=PLQVvvaa0QuDcOdF96TBtRtuQksErCEBYZ
+
+
+
+
+
+
+
+
+
+
 Types of Coding in Hedge Funds
 1. Quant Dev
 - Implement mathematical models for trading strategies
