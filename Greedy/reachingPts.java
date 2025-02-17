@@ -40,7 +40,10 @@ else ty > tx: ty -=tx
 19, 12: tx > ty -> tx -= ty -> 19-12, 12 -> 7,12
 7, 12: ty > tx -> ty -= tx -> 7, 12-7 -> 7,5
 7, 5: tx>ty -> tx -= ty -> 2, 5
-
+But this is time long
+Could instead:
+if tx > ty: tx %= ty -> 19 %= 12 = 7
+else ty > tx: ty -=tx
 
 Example 1:
 Input: sx = 1, sy = 1, tx = 3, ty = 5
