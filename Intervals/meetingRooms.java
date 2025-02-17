@@ -13,8 +13,11 @@ class Interval {
 class meetingRooms {
     public static boolean canAttend(List<Interval> intervals) {
         // System.out.println(intervals.size());
+        // I need to sort the intervals based on start time
+        intervals.sort(Comparator.comparingInt(a -> a.start));
+
         for (int i = 1; i < intervals.size(); i++) {
-            if (intervals.get(i).start > intervals.get(i-1).start && (intervals.get(i).start < intervals.get(i-1).end)) {
+            if (intervals.get(i).start < intervals.get(i-1).end) {
                 return false;
             }
         }
