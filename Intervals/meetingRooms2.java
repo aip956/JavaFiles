@@ -42,12 +42,27 @@ class Interval {
 
 /*
  * Meeting Rooms II
+ * When is the earliest a meeting ends
+ * Use minHeap
+ * 
+ * 
+ * 
+ * 
+ * 
  * Sort the intervals
  * Create start and end arrays
  * Compare start vs. end; if start < end, increment rooms
  * result and count vars
  * s and e pointers
- * 
+ * while s < len(intervals)
+ * if start[s] < end[e]
+ *  s += 1
+ *  count += 1
+ * else:
+ *  e += 1
+ *  count -= 1
+ * result = Max(res, count)
+ * return result
 Given an array of meeting time interval objects 
 consisting of start and end times [[start_1,end_1],
 [start_2,end_2],...] (start_i < end_i), find the 
