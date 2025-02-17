@@ -2,29 +2,27 @@ class reachingPts {
     public static boolean reachingPoints(int sx, int sy, int tx, int ty) {
         while (tx >= sx && ty >= sy) {
             if (tx == sx && ty == sy) return true;
-        }
-        if (tx > ty) {
-            if (ty > sy) {
-                tx %= ty;
+        
+            if (tx > ty) {
+                if (ty > sy) {
+                    tx %= ty;
+                } else {
+                    return (tx - sx) % ty == 0;
+                }
             } else {
-                return (tx - sx) % ty == 0;
-            }
-        } else {
-            if (tx > sx) {
-                ty %= tx;
-            } else {
-                return (ty - sy) % tx == 0;
+                if (tx > sx) {
+                    ty %= tx;
+                } else {
+                    return (ty - sy) % tx == 0;
+                }
             }
         }
         return false;
     }
 
     public static void main(String[] args) {
-        int sx = 1;
-        int sy = 1;
-        int tx = 3;
-        int ty = 5;
-        System.out.println("Output: " + reachingPoints(sx, sy, tx, ty));
+        System.out.println("Output1: " + reachingPoints(1, 1, 3, 5)); // true
+        System.out.println("Output2: " + reachingPoints(1, 1, 100, 200)); // false
     }
 }
 
