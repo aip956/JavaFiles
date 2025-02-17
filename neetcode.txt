@@ -160,7 +160,7 @@ Insert Interval
 Merge Intervals	
 Non Overlapping Intervals	
 Meeting Rooms   	
-Meeting Rooms II   
+Meeting Rooms II: Use a PriorityQueue (sorts by min; peek gives min; poll removes min) 
 
 Math & Geometry
 Rotate Image	
@@ -180,6 +180,9 @@ Sum of Two Integers
 Deque: Double-ended; can add and remove from both sides
 Queue: FIFO
 Stack: LIFO
+
+Priority Queue:
+Sorts minimum; peek() for min val; poll() to remove; MeetingRooms2
 
 add: part of the Collections interface; throws an exception if the operation fails
 Collections is parent intfc for List, Set, Queue  

@@ -12,20 +12,24 @@ class Interval {
 
  class meetingRooms2 {
     public static int minMeetingRooms(List<Interval> intervals) {
+        // error checking
+        if (intervals == null || intervals.size() == 0) return 0;
+        // sort by start time
         intervals.sort(Comparator.comparingInt(a -> a.start));
-        int rooms = 0;
-        // while start < end, add room
-        for (int i = 1; i < intervals.size(); i++) {
-            int j = i;
-            if (intervals.get(i).start < intervals.get(i-1).end) {
-                
-                while (intervals.get(j).start < intervals.get(i - 1).end) {
-                    rooms ++;
-                    j ++;
-                }
-                
+        
+        // create heap structure
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        // iterate through intervals; if curr meeting starts after or when earliest meeting ends,
+        // remove the ending meeting; free up room
+        for (Interval meeting : intervals) {
+            // remove room
+            if (!minHeap.isEmpty() && minHeap.peek() <= meeting.start) {
+                minHeap.poll();
             }
+            // Add curr meeting end time to heap
+            minHeap.add(meeting.end);
         }
+        return minHeap.size();
     }
 
     public static void main(String[] args) {
@@ -34,7 +38,7 @@ class Interval {
             new Interval(5,10), // intervals.get(1).start, .end
             new Interval(15,20)
         );
-        System.out.println("Can Attend: " + minMeetingRooms(intervals1));
+        System.out.println("Min rooms: " + minMeetingRooms(intervals1));
 
     }
 }
