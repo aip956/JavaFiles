@@ -12,9 +12,9 @@ class Interval {
 
 class meetingRooms {
     public static boolean canAttend(List<Interval> intervals) {
-        System.out.println(intervals.size());
+        // System.out.println(intervals.size());
         for (int i = 1; i < intervals.size(); i++) {
-            if (intervals.get(i).start > intervals.get(i-1).start && (intervals.get(i).start < intervals.get(i-1).end) {
+            if (intervals.get(i).start > intervals.get(i-1).start && (intervals.get(i).start < intervals.get(i-1).end)) {
                 return false;
             }
         }
@@ -22,12 +22,19 @@ class meetingRooms {
     }
 
     public static void main(String[] args) {
-        List<Interval> intervals = Arrays.asList(
+        List<Interval> intervals1 = Arrays.asList(
             new Interval(0,30),
             new Interval(5,10), // intervals.get(1).start, .end
             new Interval(15,20)
         );
-        System.out.println("Can Attend: " + canAttend(intervals));
+        System.out.println("Can Attend: " + canAttend(intervals1));
+
+        List<Interval> intervals2 = Arrays.asList(
+            new Interval(5, 8),
+            new Interval(9, 15) // true
+        );
+        System.out.println("Can Attend: " + canAttend(intervals2));
+
     }
 }
 
@@ -40,6 +47,9 @@ class meetingRooms {
 
 /*
  * Meeting Rooms
+ * should sort first, then compare 2nd start < 1st end
+ * 
+ * 
 Given an array of meeting time interval objects consisting 
 of start and end times [[start_1,end_1],[start_2,end_2],...] 
 (start_i < end_i), determine if a person could add all 
