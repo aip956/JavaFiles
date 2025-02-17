@@ -12,15 +12,19 @@ class Interval {
 
 class meetingRooms {
     public static boolean canAttend(List<Interval> intervals) {
-
-
-        return false;
+        System.out.println(intervals.size());
+        for (int i = 1; i < intervals.size(); i++) {
+            if (intervals.get(i).start > intervals.get(i-1).start && (intervals.get(i).start < intervals.get(i-1).end) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
         List<Interval> intervals = Arrays.asList(
             new Interval(0,30),
-            new Interval(5,10),
+            new Interval(5,10), // intervals.get(1).start, .end
             new Interval(15,20)
         );
         System.out.println("Can Attend: " + canAttend(intervals));
@@ -50,10 +54,9 @@ Explanation:
 
 (0,30) and (5,10) will conflict
 (0,30) and (15,20) will conflict
+
 Example 2:
-
 Input: intervals = [(5,8),(9,15)]
-
 Output: true
 Note:
 
