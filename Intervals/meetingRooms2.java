@@ -1,7 +1,7 @@
 import java.util.*;
 
 // Definition of Interval:
- public class Interval {
+class Interval {
      public int start, end;
      public Interval(int start, int end) {
          this.start = start;
@@ -16,8 +16,14 @@ import java.util.*;
         int rooms = 0;
         // while start < end, add room
         for (int i = 1; i < intervals.size(); i++) {
+            int j = i;
             if (intervals.get(i).start < intervals.get(i-1).end) {
-                rooms ++;
+                
+                while (intervals.get(j).start < intervals.get(i - 1).end) {
+                    rooms ++;
+                    j ++;
+                }
+                
             }
         }
     }
@@ -36,6 +42,12 @@ import java.util.*;
 
 /*
  * Meeting Rooms II
+ * Sort the intervals
+ * Create start and end arrays
+ * Compare start vs. end; if start < end, increment rooms
+ * result and count vars
+ * s and e pointers
+ * 
 Given an array of meeting time interval objects 
 consisting of start and end times [[start_1,end_1],
 [start_2,end_2],...] (start_i < end_i), find the 
