@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "meetingRooms",
+            "request": "launch",
+            "mainClass": "Intervals.meetingRooms",
+            "projectName": "JavaFiles_65ae0c41"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
