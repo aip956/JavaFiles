@@ -33,7 +33,14 @@ through some operations, or false otherwise.
 The allowed operation on some point (x, y) is to convert it to 
 either (x, x + y) or (x + y, y).
 
- 
+Source = (2, 5), Target = (19, 12)
+If target's x > y, we had to use the (x+y, y)
+if tx > ty: tx -= ty
+else ty > tx: ty -=tx
+19, 12: tx > ty -> tx -= ty -> 19-12, 12 -> 7,12
+7, 12: ty > tx -> ty -= tx -> 7, 12-7 -> 7,5
+7, 5: tx>ty -> tx -= ty -> 2, 5
+
 
 Example 1:
 Input: sx = 1, sy = 1, tx = 3, ty = 5
