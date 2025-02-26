@@ -21,7 +21,25 @@ coding will primarily focus on building, optimizing, and maintaining financial m
     Concepts: Database indexing, real-time data processing (Kafka, Redis, KDB+/q)
 
 4. Algorithmic Trading & Market Microstructure
-    Developing 
+    Developing market-making, arbitrage, and trend-following strategies
+    Langs: C++, Python, Java
+    Concepts: Order book dynamics, execution algos (VWAP, TWAP), latency optimization
+
+5. Risk & Portfolio Management
+    Coding risk models to measure volatility, VaR (Value at risk) and exposure
+    Langs: Python, R
+    Concepts: Factor models, stress testing, portfolio optimization
+
+6. Distributed & Cloud Computing 
+    Scaling computations for backtesting analytics
+    Tools: AWS, Kubernetes, Spark 
+    Concepts: Distributed computing, parallel backtesting, cloud-based execution 
+
+7. Machine Learning in Quant Finance
+    Applying ML for predictive analytics
+    Langs: Python (TensorFlow, PyTorch, scikit-learn)
+    Concepts: Time-series forecasting, reinforcement learning, NLP for sentiment analysis
+    
 
 
 Stochastic calculus
