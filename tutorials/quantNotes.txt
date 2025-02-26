@@ -4,6 +4,26 @@ pythonprogramming.net for explanations
 https://quantnet.com/threads/so-you-want-to-be-a-financial-engineer.11338/
 
 
+coding will primarily focus on building, optimizing, and maintaining financial models, trading
+1. High-Performance Computing and optimization
+    Writing low-latency, high-throughput code for trading systems
+    Languages: C++, Java, Rust, Python
+    Concepts: Multithreading, parallel computing, vectorization, efficient memory management
+
+2. Financial and Quantitative Modeling
+    Implement pricing models, risk assessment tools, market simulators
+    Langs: Python (NumPy, Pandas, SciPy), MATLAB, R
+    Concepts: Stochastic calculus, Monte Carlo simulations, Black-Scholes model, time-series analysis
+
+3. Data Engineering for Market Data processing
+    Cleaning, storing, streamlining financial data (tick data, order books, historical prices)
+    Langs: Python, SQL, Scala, C++ (for low-latency data processing)
+    Concepts: Database indexing, real-time data processing (Kafka, Redis, KDB+/q)
+
+4. Algorithmic Trading & Market Microstructure
+    Developing 
+
+
 Stochastic calculus
 Linear algebra
 Spatial Geometry
