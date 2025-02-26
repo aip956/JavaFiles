@@ -39,6 +39,10 @@ coding will primarily focus on building, optimizing, and maintaining financial m
     Applying ML for predictive analytics
     Langs: Python (TensorFlow, PyTorch, scikit-learn)
     Concepts: Time-series forecasting, reinforcement learning, NLP for sentiment analysis
+
+Potential LOBs
+1. Corporate & Investment Bank (CIB)
+    Markets (Sales and Trading)
     
 
 
