@@ -1,9 +1,15 @@
+import java.util.*;
 class longIncrSubseq {
-    public static int LIS(vector<int> nums) {
-        
+    public static int LIS(List<Integer> nums) {
+
+
+        return 0;
     }
 
-
+    public static void main(String[] args) {
+        List<Integer> nums = Arrays.asList(10, 9, 2, 5, 3, 7, 101, 18);
+        System.out.println(LIS(nums));
+    }
 }
 
 

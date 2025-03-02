@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "longIncrSubseq",
+            "request": "launch",
+            "mainClass": "longIncrSubseq",
+            "projectName": "JavaFiles_65ae0c41"
+        },
+        {
+            "type": "java",
             "name": "meetingRooms",
             "request": "launch",
             "mainClass": "Intervals.meetingRooms",
