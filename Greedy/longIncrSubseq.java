@@ -1,4 +1,10 @@
+class longIncrSubseq {
+    public static int LIS(vector<int> nums) {
+        
+    }
 
+
+}
 
 
 
@@ -21,5 +27,12 @@ vector<int> nums = {10, 9, 2, 5, 3, 7, 101, 18};
 
 Output: 
 4 (The corresponding LIS is {2, 3, 7, 101}).
+
+start with 2; smallest num and good starting point
+consider 5; it forms an increasing subseq {2, 5}
+consider 3; smaller than 5 but greater than 2, so replace 5 with 3 => {2, 3}
+consier 7; greater than 3 so extend {2, 3, 7}
+consider 101; greater than 7, so extend {2, 3, 7, 101}
+consider 
 
  */
