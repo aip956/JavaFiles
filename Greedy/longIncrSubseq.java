@@ -1,7 +1,9 @@
 import java.util.*;
 class longIncrSubseq {
     public static int LIS(List<Integer> nums) {
-
+        if (nums.size() == 0 || nums.isEmpty()) return 0;
+        List<Integer> sub = new ArrayList<>();
+        
 
         return 0;
     }
