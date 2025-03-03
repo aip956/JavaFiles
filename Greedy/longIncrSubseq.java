@@ -1,15 +1,31 @@
 import java.util.*;
 class longIncrSubseq {
-    public static int LIS(List<Integer> nums) {
-        if (nums.size() == 0 || nums.isEmpty()) return 0;
-        List<Integer> sub = new ArrayList<>();
+    public static int LIS(int[] nums) {
+        if (nums.length == 0 || nums == null) return 0;
+        // List<Integer> sub = new ArrayList<>();
+        int[] len = new int[nums.length];
+        for (int i = 1; i < nums.length; i++) {
+            // j pointer
+            for (int j = 0; j < i; j++) {
+                if (nums[i] < nums[j])
+                    if (len[j] + 1 > len[i])
+                        len[i] = len[j] + 1;
+
+            // find max value
+            int maxIndex = 0;
+            for (int i = 0; i < len.length; i++)
+                if (len[i] > len[maxIndex])
+                    maxIndex = i;
+                return len[maxIndex] + 1;
+            }
+        }
 
 
         return 0;
     }
 
     public static void main(String[] args) {
-        List<Integer> nums = Arrays.asList(10, 9, 2, 5, 3, 7, 101, 18);
+        int[] nums = {10, 9, 2, 5, 3, 7, 101, 18};
         System.out.println(LIS(nums));
     }
 }
