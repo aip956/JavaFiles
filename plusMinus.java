@@ -1,13 +1,18 @@
-import java.util.List;
+import java.util.*;
 
 class plusMinus {
     static void plusMinus(List<Integer> arr) {
+
+
+
+        System.out.println();
 
     }
 
 
     public static void main(String[] args) {
-        
+        List <Integer> arr = new ArrayList<>(Arrays.asList(1, 1, 0, -1, -1));
+        plusMinus(arr);
     }
     
 }
