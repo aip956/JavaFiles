@@ -2,11 +2,18 @@ import java.util.*;
 
 class plusMinus {
     static void plusMinus(List<Integer> arr) {
-
-
-
-        System.out.println();
-
+        int neg = 0;
+        int zero = 0;
+        int pos = 0;
+        int len = arr.size();
+        for (int num : arr) {
+            if (num < 0) neg++;
+            else if (num == 0) zero++;
+            else if (num > 0) pos++;
+        }
+        System.out.printf("%.6f%n", (double) neg / len);
+        System.out.printf("%.6f%n", (double) zero / len);
+        System.out.printf("%.6f%n", (double) pos / len);
     }
 
 
