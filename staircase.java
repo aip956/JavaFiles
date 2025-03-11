@@ -1,18 +1,24 @@
 
 public class staircase {
     public static void staircase(int n) {
-        // Write your code here
-    
+        String space = " ";
+        String pound = "#";
+        for (int i = 1; i <= n; i++) {
+            System.out.print(space.repeat(n - i) + pound.repeat(i));
+            System.out.println();
+            // i = 1, space repeats 5-1 = 4, pound repeats 1
+            // i = 2; space repeats 5-2 = 3, pound repeats 2
+        }
     }
 
     public static void main(String[] args) {
-        
+        int n = 5;
+        staircase(n);
+
     }
 
 
 }
-
-
 
 
 
