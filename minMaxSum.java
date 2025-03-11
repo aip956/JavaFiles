@@ -3,19 +3,34 @@ import java.util.*;
 public class minMaxSum{
     public static void miniMaxSum(List<Integer> arr) {
     // Write your code here
+    Collections.sort(arr);
+    long min = 0;
+    long max = 0;
+    System.out.println("size: " + arr.size());
+    for (int i = 0; i <= arr.size() - 2; i++) {
+        min += arr.get(i);
+        // System.out.println("i: " + i);
+        // System.out.println("arr.get(i): " + arr.get(i));
+    }
+    max = min - arr.get(0) + arr.get(arr.size() - 1);
+    System.out.println(min + " " + max);
 
     }
 
     public static void main(String[] args) {
         List<Integer> arr = Arrays.asList(1, 2, 3, 4, 5);
-
+        miniMaxSum(arr);
     }
 }
 
 
 
 /*
- * Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+ * Given five positive integers, find the minimum and maximum
+ *  values that can be calculated by summing exactly four of 
+ * the five integers. Then print the respective minimum and 
+ * maximum values as a single line of two space-separated 
+ * long integers.
 
 Example
 
