@@ -20,8 +20,22 @@ class circArr {
         }
 
         // Read queries
+        List<Integer> queries = new ArrayList<>();
+        for (int i = 0; i < q; i++) {
+            queries.add(scanner.nextInt());
+        }
+
+        // Call function 
+        List<Integer> result = circularArrayRotation(a, k, queries);
+
+        // Print output; each query on next line
+        for (int val : result) {
+            System.out.println(val);
+        }
+
+        // Close scanner
+        scanner.close();
     }
-    
 }
 
 
