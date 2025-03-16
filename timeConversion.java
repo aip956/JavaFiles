@@ -5,38 +5,41 @@ class timeConversion {
         String AMPM = s.substring(8);
         // Convert hour from string to integer
         // get hour integer; do if statement to add or not
-        String timePart = s.substring(0, 8);
+        String minSec = s.substring(2, 8);
+        System.out.println("hourMin: " + minSec);
         String hour_st = s.substring(0, 2);
         int hour = Integer.parseInt(hour_st);
         System.out.println("Hour: " + hour);
         System.out.println("AMPM: " + AMPM);
-        if (AMPM == "PM") {
+        if (AMPM.equals("PM")) {
             if (hour != 12) {
                 hour += 12;
                 System.out.println("converted hour: " + hour);
-            }
-        else {
-            if (hour == 12) {
-                hour -= 12;
-                System.out.println("Converted hour: " + hour);
-            }
+            } 
+        } else {
+                if (hour == 12) {
+                    hour -= 12;
+                    System.out.println("Converted hour: " + hour);
+                }
         }
-        }
-        // if AM, 
-        // if 12, subtract 12
-        // else return number
 
-        return "abc";
-    
+        // Integer.toString()
+        // StringBuilder sb = new StringBuilder();
+        // sb.append(Integer.toString(hour)); // 12
+        // sb.append(hourMin); // 12:01:00
+        // String military = sb.toString();
+        // return military;
+        return String.format("%02d%s", hour, minSec);
         }
 
     public static void main(String[] args) {
-        String s = "12:01:00PM";
-        System.out.println(timeConversion(s));
-
+        String s1 = "12:01:00PM";
+        System.out.println("S1: " + timeConversion(s1));
+        String s2 = "02:01:00PM";
+        System.out.println("S2: " + timeConversion(s2)); // 14:01:00
+        String s3 = "12:59:00AM";
+        System.out.println("S3: " + timeConversion(s3)); // 2:01:00
     }
-
-
 }
 
 
