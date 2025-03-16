@@ -3,6 +3,16 @@ import java.util.*;
 class circArr {
     public static List<Integer> circularArrayRotation(List<Integer> a, int k, List<Integer> queries) {
         // Write your code here
+        int n = a.size();
+        k = k % n;
+        List<Integer> result = new ArrayList<>();
+
+        // Process queries based on new rotation
+        for (int q : queries) {
+            int newIndex = (q - k + n) % n;
+            result.add(a.get(newIndex));
+        }
+        return result;
     
     }
 
