@@ -2,10 +2,25 @@ import java.util.*;
 
 class LrgElInArr {
     public static int findKthLargest(int[] nums, int k) {
-        int kthLargest = Integer.MIN_VALUE;
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+        for (int elem : nums) {
+            System.out.println("9: " + elem);
+            if (pq.size() < k) {
+                pq.add(elem);
+                System.out.println("12: " + pq);
+            } else {
+                if (elem > pq.peek()) {
+                    pq.poll();
+                    pq.add(elem);
+                    System.out.println("17pq: " + pq);
+                }
+            }
+
+        }
+
         
-        
-        return kthLargest;
+        return pq.peek();
     }
 
 
@@ -23,6 +38,10 @@ class LrgElInArr {
 /* 
 Use pq, size n
 but need to manually limit pq to n; pq.size()
+iterate through elements; if pq.size < n, add
+if pq.size >= n, pq.poll()
+if elem > pq[0], pq.add(elem)
+
 
 Larges Element in Array
  * Find the Kth Largest Element in an Array
