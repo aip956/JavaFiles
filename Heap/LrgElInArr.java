@@ -1,13 +1,18 @@
 import java.util.*;
 
 class LrgElInArr {
-    public int findKthLargest(int[] nums, int k) {
+    public static int findKthLargest(int[] nums, int k) {
+        int kthLargest = Integer.MIN_VALUE;
         
+        
+        return kthLargest;
     }
 
 
     public static void main(String[] args) {
-
+        int[] nums1 = {3,2,1,5,6,4};
+        int k1 = 2;
+        System.out.println(findKthLargest(nums1, k1));
     }
 }
 
