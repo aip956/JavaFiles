@@ -16,10 +16,7 @@ class LrgElInArr {
                     System.out.println("17pq: " + pq);
                 }
             }
-
         }
-
-        
         return pq.peek();
     }
 
