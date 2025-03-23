@@ -1,34 +1,31 @@
 import java.util.*;
 class paren {
-    public boolean isValid(String s) {
-        if (s.length() == 0 || s == null) return False;
+    public static boolean isValid(String s) {
+        if (s == null || s.length() == 0) return false;
         Stack <Character> stack = new Stack<>();
         for (char b : s.toCharArray()) {
-            if (b == "(" || b == "{" || b == "[" ) {
+            if (b == '(' || b == '{' || b == '[' ) {
                 stack.push(b);
-            } else if (b == ")" && stack.peek() == "(") {
+            }   else if (!stack.isEmpty() && b == ')' && stack.peek() == '(') {
                     stack.pop();
                 }
-                else if (b == "}" && stack.peek() == "{") {
+                else if (!stack.isEmpty() && b == '}' && stack.peek() == '{') {
                     stack.pop();
                 }
-                else if (b == "]" && stack.peek() == "[") {
+                else if (!stack.isEmpty() && b == ']' && stack.peek() == '[') {
                     stack.pop();
                 }
+                else return false;
             }
-
-                    
-                   
-            
+            return stack.isEmpty();
         }
-        return True;
-    }
+    
 
     public static void main(String[] args) {
         String s1 =  "()";
         System.out.println(isValid(s1));
         System.out.println();
-        String s21 =  "()[]{}";
+        String s2 =  "([{])}";
         System.out.println(isValid(s2));
         System.out.println();
     }
