@@ -2,7 +2,10 @@ import java.util.*;
 
 class MergeIntervals {
     public static int[][] merge(int[][] intervals) {
-        
+        List<Integer, Integer> res = new List<>();
+
+
+        return res;
     }
 
     public static void main(String[] args) {
@@ -11,10 +14,6 @@ class MergeIntervals {
         System.out.println();
     }
 }
-
-
-
-
 
 
 /*
