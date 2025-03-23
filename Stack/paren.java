@@ -1,8 +1,25 @@
 import java.util.*;
 class paren {
     public boolean isValid(String s) {
+        if (s.length() == 0 || s == null) return False;
+        Stack <Character> stack = new Stack<>();
         for (char b : s.toCharArray()) {
+            if (b == "(" || b == "{" || b == "[" ) {
+                stack.push(b);
+            } else if (b == ")" && stack.peek() == "(") {
+                    stack.pop();
+                }
+                else if (b == "}" && stack.peek() == "{") {
+                    stack.pop();
+                }
+                else if (b == "]" && stack.peek() == "[") {
+                    stack.pop();
+                }
+            }
 
+                    
+                   
+            
         }
         return True;
     }
