@@ -3,8 +3,21 @@ import java.util.*;
 class MergeIntervals {
     public static int[][] merge(int[][] intervals) {
         List<Integer, Integer> res = new List<>();
+        // sort the intervals
+        Arrays.sort(intervals(a, b -> a[0], b[0]));
+        // add first to res
+        res.add(new int[]{intervals[0][0], intervals[0][1]});
 
-
+        // iterate through intervals
+        for (int i = 1; i < intervals.length; i++) {
+            int[] last = res.get(res.siz() - 1);
+            int[] curr = intervals[i];
+            if (curr[0] < last[1]) {
+                last[1] = MATH.max(last[1], curr[1]);
+            } else { // else add the interval to res
+                res.add(new int[]{curr[0], curr[1]});
+            }
+        }
         return res;
     }
 
@@ -14,7 +27,6 @@ class MergeIntervals {
         System.out.println();
     }
 }
-
 
 /*
 sort by first element: arrays.sort(arr, (a,b) -> Integer.compare(a[0], b[0]))
