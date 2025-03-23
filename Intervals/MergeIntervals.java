@@ -7,6 +7,14 @@
 
 /*
 sort by first element
+[[1,3],[2,6],[8,10],[15,18]]  => [[1,3],[2,6],[8,10],[15,18]]  
+Add the first interval to result
+res: [1,3]
+Merge an overlap; use greater end time
+res: [1,3] , [2, 6] = [1, 6]
+go to next interval; is interval start < prev interval end
+no: next interval
+
 
  * Merge Overlapping Intervals
 Problem Statement:
