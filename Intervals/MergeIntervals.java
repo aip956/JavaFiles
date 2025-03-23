@@ -1,4 +1,16 @@
+import java.util.*;
 
+class MergeIntervals {
+    public static int[][] merge(int[][] intervals) {
+        
+    }
+
+    public static void main(String[] args) {
+        int[][] intervals1 = {{1,3},{2,6},{8,10},{15,18}};
+        System.out.println(merge(intervals1));
+        System.out.println();
+    }
+}
 
 
 
@@ -6,9 +18,11 @@
 
 
 /*
-sort by first element
+sort by first element: arrays.sort(arr, (a,b) -> Integer.compare(a[0], b[0]))
+create new List res
+
 [[1,3],[2,6],[8,10],[15,18]]  => [[1,3],[2,6],[8,10],[15,18]]  
-Add the first interval to result
+Add the first interval to result; res.add(new int[]{arr[0][0],arr[0][1]})
 res: [1,3]
 Merge an overlap; use greater end time
 res: [1,3] , [2, 6] = [1, 6]
