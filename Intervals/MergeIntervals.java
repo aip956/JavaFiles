@@ -2,33 +2,36 @@ import java.util.*;
 
 class MergeIntervals {
     public static int[][] merge(int[][] intervals) {
-        List<Integer, Integer> res = new List<>();
+        List<int[]> res = new ArrayList<>();
         // sort the intervals
-        Arrays.sort(intervals(a, b -> a[0], b[0]));
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
         // add first to res
         res.add(new int[]{intervals[0][0], intervals[0][1]});
 
         // iterate through intervals
         for (int i = 1; i < intervals.length; i++) {
-            int[] last = res.get(res.siz() - 1);
+            int[] last = res.get(res.size() - 1);
             int[] curr = intervals[i];
-            if (curr[0] < last[1]) {
-                last[1] = MATH.max(last[1], curr[1]);
+            if (curr[0] <= last[1]) {
+                last[1] = Math.max(last[1], curr[1]); // find larger end time and merge
             } else { // else add the interval to res
                 res.add(new int[]{curr[0], curr[1]});
             }
         }
-        return res;
+        return res.toArray(new int[res.size()][]);
     }
 
     public static void main(String[] args) {
         int[][] intervals1 = {{1,3},{2,6},{8,10},{15,18}};
-        System.out.println(merge(intervals1));
+        System.out.println(Arrays.deepToString(merge(intervals1)));
+        System.out.println();
+        int[][] intervals2= {{1,4},{4,5}};
+        System.out.println(Arrays.deepToString(merge(intervals2)));
         System.out.println();
     }
 }
-
 /*
+https://leetcode.com/problems/merge-intervals/description/
 sort by first element: arrays.sort(arr, (a,b) -> Integer.compare(a[0], b[0]))
 create new List res
 
