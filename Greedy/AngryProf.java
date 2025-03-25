@@ -6,9 +6,9 @@ public class AngryProf {
         int count = 0;
         for (int num : a) {
             if (num <= 0) count++;
-            if (count >= k) return "Yes";
+            if (count >= k) return "NO";
         }
-        return "No";
+        return "YES";
     }
 
     public static void main(String[] args) {
