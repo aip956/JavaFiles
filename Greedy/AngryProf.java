@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.*;
 
 public class AngryProf {
     public static String angryProfessor(int k, List<Integer> a) {
@@ -16,6 +16,11 @@ public class AngryProf {
         List<Integer> a1 = Arrays.asList(-2, -1, 0, 1, 2);
         // 2 are late; threshold of 3, so class goes on; return YES
         System.out.println(angryProfessor(k1, a1));
+        System.out.println();
+        int k2 = 3;
+        List<Integer> a2 = Arrays.asList(-1, -3, 4, 2);
+        // 2 are late; threshold of 3, so class goes on; return YES
+        System.out.println(angryProfessor(k2, a2));
     }
 }
 
