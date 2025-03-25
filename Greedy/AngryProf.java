@@ -12,15 +12,28 @@ public class AngryProf {
     }
 
     public static void main(String[] args) {
-        int k1 = 3;
-        List<Integer> a1 = Arrays.asList(-2, -1, 0, 1, 2);
-        // 2 are late; threshold of 3, so class goes on; return YES
-        System.out.println(angryProfessor(k1, a1));
-        System.out.println();
-        int k2 = 3;
-        List<Integer> a2 = Arrays.asList(-1, -3, 4, 2);
-        // 2 are late; threshold of 3, so class goes on; return YES
-        System.out.println(angryProfessor(k2, a2));
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();  // number of test cases
+        for (int i = 0; i < t; i++) {
+            int n = scanner.nextInt();
+            int k = scanner.nextInt();
+
+            List<Integer> a = new ArrayList<>();
+            for (int j = 0; j < n; j++) {
+                a.add(scanner.nextInt());
+            }
+            System.out.println(angryProfessor(k, a));
+        }
+        scanner.close();
+        // int k1 = 3;
+        // List<Integer> a1 = Arrays.asList(-2, -1, 0, 1, 2);
+        // // 2 are late; threshold of 3, so class goes on; return YES
+        // System.out.println(angryProfessor(k1, a1));
+        // System.out.println();
+        // int k2 = 3;
+        // List<Integer> a2 = Arrays.asList(-1, -3, 4, 2);
+        // // 2 are late; threshold of 3, so class goes on; return YES
+        // System.out.println(angryProfessor(k2, a2));
     }
 }
 
