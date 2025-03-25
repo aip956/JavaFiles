@@ -1,11 +1,33 @@
+import java.util.List;
 
+public class AngryProf {
+    public static String angryProfessor(int k, List<Integer> a) {
+    // Write your code here
+        int count = 0;
+        for (int num : a) {
+            if (num <= 0) count++;
+            if (count >= k) return "Yes";
+        }
+        return "No";
+    }
 
+    public static void main(String[] args) {
+        int k1 = 3;
+        List<Integer> a1 = Arrays.asList(-2, -1, 0, 1, 2);
+        // 2 are late; threshold of 3, so class goes on; return YES
+        System.out.println(angryProfessor(k1, a1));
+    }
+}
 
 
 /*
  * https://www.hackerrank.com/challenges/angry-professor/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=7-day-campaign
  * Angry Professor
- * A Discrete Mathematics professor has a class of students. Frustrated with their lack of discipline, the professor decides to cancel class if fewer than some number of students are present when class starts. Arrival times go from on time () to arrived late ().
+ * A Discrete Mathematics professor has a class of students. 
+ * Frustrated with their lack of discipline, the professor 
+ * decides to cancel class if fewer than some number of 
+ * students are present when class starts. 
+ * Arrival times go from on time () to arrived late ().
 
 Given the arrival time of each student and a threshhold number of attendees, determine if the class is cancelled.
 
