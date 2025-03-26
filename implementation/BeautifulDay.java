@@ -3,6 +3,23 @@
 
 
 /*
+Determine reverse number
+while start / 10 > 0
+start = 321
+mid = 321 % 10 = 1
+end *= 10 (=10)
+start /= 10 (= 32)
+
+end = end + start % 10 (= 2) * 10 
+    = (10 + 2) * 10, = 120
+start /= 10 = 3
+end = (120 + 3)
+
+
+
+
+abs(Num - rev) % k == 0, Beautiful
+
  * Beautiful Days at the Movies
 https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
 Lily likes to play games with integers. She has created a new game where she determines the difference between a number and its reverse. For instance, given the number , its reverse is . Their difference is . The number  reversed is , and their difference is .
