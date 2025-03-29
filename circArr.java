@@ -53,6 +53,17 @@ class circArr {
 
 
 /*
+{1, 2, 3, 4, 5, 6, 7}; k = 3
+int newIndex = (q - k + n) % n;
+q = 0; new Index = (0 - 3 + 7) % n = 4 % 7 = 4
+q = 1; new Index = (1 - 3 + 7) % n = 5 % 7 = 5
+q = 2; new Index = (2 - 3 + 7) % n = 6 % 7 = 6
+q = 3; new Index = (3 - 3 + 7) % n = 7 % 7 = 0
+q = 4; new Index = (4 - 3 + 7) % n = 8 % 7 = 1
+q = 5; new Index = (5 - 3 + 7) % n = 9 % 7 = 2
+q = 6; new Index = (6 - 3 + 7) % n = 10 % 7 = 3
+q = 7; new Index = (7 - 3 + 7) % n = 11 % 7 = 4
+
 https://www.hackerrank.com/challenges/circular-array-rotation/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
  * John Watson knows of an operation called a right circular rotation on an array of integers. 
  * One rotation operation moves the last array element to the first position and shifts all 

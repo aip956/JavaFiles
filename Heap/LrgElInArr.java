@@ -2,6 +2,7 @@ import java.util.*;
 
 class LrgElInArr {
     public static int findKthLargest(int[] nums, int k) {
+        if (nums.length == 0 || nums == null) return 0;
         PriorityQueue<Integer> pq = new PriorityQueue<>();
 
         for (int elem : nums) {
@@ -25,6 +26,20 @@ class LrgElInArr {
         int[] nums1 = {3,2,1,5,6,4};
         int k1 = 2;
         System.out.println(findKthLargest(nums1, k1));
+        System.out.println();
+        int[] nums2 = {7,10,4,3,20,15};
+        int k2 = 3;
+        System.out.println(findKthLargest(nums2, k2));
+        System.out.println();
+        int[] nums3 = {};
+        int k3 = 3;
+        System.out.println(findKthLargest(nums3, k3));
+        System.out.println();
+        int[] nums4 = {3,2,3,1,2,4,5,5,6};
+        int k4 = 4;
+        System.out.println(findKthLargest(nums4, k4));
+        System.out.println();
+        
     }
 }
 
