@@ -1,25 +1,68 @@
 
 
+class BeautifulDay {
+    public static int beautifulDays(int i, int j, int k) {
+        // Write your code here
+    
+        }
+
+    public static int reverse(int i) {
+        int reversed;
+        while (i % 10 > 0) {
+            // 4321
+            int mod = i % 10; // 1
+            int mod10 = mod * 10; // 10, 20
+            reversed += mod10; // 10
+            i /= 10; // 32
+        }
+    }
+
+
+}
 
 
 /*
+
+reverse (number)
+number = abs val of number
+int reversed = 0
+
+while number/10 > 0
+    number = 321, 32, 3
+    int mod = number % 10 (321 % 10 = 1), 2, 3
+    reversed += mod = 1, 10+2=12, 120+3=123
+
+    reversed *= 10 (= 10), 120
+    number /= 10 = 32, 3
+
 Determine reverse number
-while start / 10 > 0
-start = 321
-mid = 321 % 10 = 1
-end *= 10 (=10)
-start /= 10 (= 32)
+4321 => 432
+4321%10 = 1 => 2
+4321/10 = 432 => 43
+rev+1 => 1  => 10+2
+rev *= 10 = 10 => 12
 
-end = 10 * [end (10) + start%10 (=2) = 12] == 120
-start = 32/10 = 3
+num = 4321
+mod = num%10  => 1
+rev += mod = 1
+rev *= 10 = 10
+num /= 10 = 432
 
+num = 432
+mod = num%10  => 2
+rev += mod = 10 + 2 = 12
+rev *= 10 = 120
+num /= 10 = 43
 
-end = end + start % 10 (= 2) * 10 
-    = (10 + 2) * 10, = 120
-start /= 10 = 3
-end = (120 + 3)
+num = 43
+mod = num%10  => 3
+rev += mod = 120 = 123
+rev *= 10 = 1230
+num /= 10 = 4
 
-
+num = 4
+mod = num%10  => 4
+rev += mod = 120 = 1234
 
 
 abs(Num - rev) % k == 0, Beautiful

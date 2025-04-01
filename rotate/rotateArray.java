@@ -3,35 +3,41 @@ import java.util.*;
 class rotateArray {
     public static void rotate(int[] nums, int k) {
         // reverse array {7, 6, 5, 4, 3, 2, 1} => 5, 6, 7, 1, 2, 3, 4
+        int n = nums.length;
         k = k % n;
-        int length = nums.length;
+        System.out.println("n: " + n);
+        System.out.println("k: " + k);
+        // reverse the string
+        reverse(nums, 0, n - 1);
+        System.out.println("Reverse: " + Arrays.toString(nums));
+
         // swap 0 - (k-1)
-        for (int i = 0; i <= k / 2; i++) {
-            int temp = nums[i];
-            nums[i] = nums[k-1];
-            nums[k-1] = temp;
+        reverse(nums, 0, k - 1);
+        System.out.println("Part1: " + Arrays.toString(nums));
+
+        // swap part2; k and length-1;; 3, 6
+        reverse(nums, k, n - 1);
+        System.out.println("Part2: " + Arrays.toString(nums));
         }
-        System.out.println(Arrays.toString(nums));
-        // swap 
-        for (i = k; i <= length; i++) {
-            int temp = nums[i];
-            nums[i] = nums[length - 1];
-            nums[length - 1] = temp;
+    
+    public static void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];//1
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
         }
-        System.out.println(Arrays.toString(nums));
     }
+
 
     public static void main(String[] args) {
         int[] nums1 = {1,2,3,4,5,6,7};
-        k1 = 3;
-        System.out.println(rotate(nums1, k1));
-
+        int k1 = 3;
+        rotate(nums1, k1);
+        System.out.println(Arrays.toString(nums1));
     }
 }
-
-
-
-
 
 
 
