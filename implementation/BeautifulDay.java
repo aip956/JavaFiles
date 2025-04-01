@@ -7,20 +7,14 @@ class BeautifulDay {
         }
 
     public static int reverse(int i) {
-        int rev;
+        int rev = 0;
         int num = i;
 
-// rev *= 10 = 0
-// mod = num%10  => 1
-// rev += mod => 1
-// num /= 10 = 432
-// num = 432, rev = 1
         while (num / 10 > 0) {
-            // 4321
-            int mod = i % 10; // 1
-            int mod10 = mod * 10; // 10, 20
-            reversed += mod10; // 10
-            i /= 10; // 32
+            rev *= 10;
+            int mod = num % 10;
+            rev += mod;
+            num /= 10;
         }
     }
 
