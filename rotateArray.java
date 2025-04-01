@@ -2,7 +2,19 @@ import java.util.*;
 
 class rotateArray {
     public static void rotate(int[] nums, int k) {
-        // reverse array {7, 6, 5, 4, 3, 2, 1}
+        // reverse array {7, 6, 5, 4, 3, 2, 1} => 5, 6, 7, 1, 2, 3, 4
+        k = k % n;
+        int sub = nums.length / 2;
+        // swap 0 - k
+        for (int i = 0; i <= k / 2; i++) {
+            int temp = nums[i];
+            nums[i] = nums[k-1];
+            nums[k-1] = temp;
+        }
+        System.out.println(Arrays.toString(nums));
+        
+
+
         
 
     }
@@ -26,7 +38,7 @@ class rotateArray {
  * right by k steps, where k is non-negative.
 
 Example 1:
-
+if k = 10, k % n = 3
 Input: nums = [1,2,3,4,5,6,7], k = 3
 Output: [5,6,7,1,2,3,4]
 Explanation:
