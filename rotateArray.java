@@ -2,8 +2,9 @@ import java.util.*;
 
 class rotateArray {
     public static void rotate(int[] nums, int k) {
-        // take arr
+        // reverse array {7, 6, 5, 4, 3, 2, 1}
         
+
     }
 
     public static void main(String[] args) {
