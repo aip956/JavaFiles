@@ -4,19 +4,21 @@ class rotateArray {
     public static void rotate(int[] nums, int k) {
         // reverse array {7, 6, 5, 4, 3, 2, 1} => 5, 6, 7, 1, 2, 3, 4
         k = k % n;
-        int sub = nums.length / 2;
-        // swap 0 - k
+        int length = nums.length;
+        // swap 0 - (k-1)
         for (int i = 0; i <= k / 2; i++) {
             int temp = nums[i];
             nums[i] = nums[k-1];
             nums[k-1] = temp;
         }
         System.out.println(Arrays.toString(nums));
-        
-
-
-        
-
+        // swap 
+        for (i = k; i <= length; i++) {
+            int temp = nums[i];
+            nums[i] = nums[length - 1];
+            nums[length - 1] = temp;
+        }
+        System.out.println(Arrays.toString(nums));
     }
 
     public static void main(String[] args) {
