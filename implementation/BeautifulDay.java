@@ -7,8 +7,15 @@ class BeautifulDay {
         }
 
     public static int reverse(int i) {
-        int reversed;
-        while (i % 10 > 0) {
+        int rev;
+        int num = i;
+
+// rev *= 10 = 0
+// mod = num%10  => 1
+// rev += mod => 1
+// num /= 10 = 432
+// num = 432, rev = 1
+        while (num / 10 > 0) {
             // 4321
             int mod = i % 10; // 1
             int mod10 = mod * 10; // 10, 20
@@ -36,34 +43,37 @@ while number/10 > 0
     number /= 10 = 32, 3
 
 Determine reverse number
-4321 => 432
-4321%10 = 1 => 2
-4321/10 = 432 => 43
-rev+1 => 1  => 10+2
-rev *= 10 = 10 => 12
+rev = 0
+
+while num > 0
 
 num = 4321
+rev *= 10 = 0
 mod = num%10  => 1
-rev += mod = 1
-rev *= 10 = 10
+rev += mod => 1
 num /= 10 = 432
+num = 432, rev = 1
 
 num = 432
+rev *= 10 => 10
 mod = num%10  => 2
-rev += mod = 10 + 2 = 12
-rev *= 10 = 120
+rev += mod => 12
 num /= 10 = 43
+num = 43, rev = 12
 
 num = 43
+rev *= 10 => 120
 mod = num%10  => 3
-rev += mod = 120 = 123
-rev *= 10 = 1230
+rev += mod => 123
 num /= 10 = 4
+num = 4, rev = 123
 
 num = 4
+rev *= 10 => 1230
 mod = num%10  => 4
-rev += mod = 120 = 1234
-
+rev += mod => 1234
+num /= 10 = 0
+num = 0, rev = 1234
 
 abs(Num - rev) % k == 0, Beautiful
 
