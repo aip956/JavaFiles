@@ -2,22 +2,39 @@
 
 class BeautifulDay {
     public static int beautifulDays(int i, int j, int k) {
-        // Write your code here
-    
-        }
+        // abs(Num - rev) % k == 0, Beautiful
+        int count = 0;
+        for (int a = i; a <= j; a++) {
+            int reverse = (reverse(a));
+            System.out.println("a: " + a);
+            System.out.println("reverse: " + reverse);
+            count += (Math.abs(a - reverse) % k == 0) ? 1 : 0;
+            System.out.println("count: " + count);
+        }   
+        return count;
+    }
 
     public static int reverse(int i) {
         int rev = 0;
         int num = i;
 
-        while (num / 10 > 0) {
+        while (num > 0) {
+            // System.out.println("num: " + num);
             rev *= 10;
             int mod = num % 10;
             rev += mod;
             num /= 10;
+            // System.out.println("rev: " + rev);
         }
+        return rev;
     }
 
+    public static void main(String[] args) {
+        int i = 20;
+        int j = 23;
+        int k = 6;
+        beautifulDays(i, j, k);
+    }
 
 }
 
@@ -40,7 +57,6 @@ Determine reverse number
 rev = 0
 
 while num > 0
-
 num = 4321
 rev *= 10 = 0
 mod = num%10  => 1
