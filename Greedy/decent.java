@@ -1,4 +1,37 @@
+import java.util.*;
 
+class decent {
+    public static void decentNumber(int n) {
+        // Write your code here
+        int numOfThrees = 0;
+        while ((n - numOfThrees) % 3 != 0) {
+            numOfThrees++;
+        }
+
+
+
+        }
+
+    public static void main(String[] args) {
+        int n1 = 1;
+        System.out.println(decentNumber(n1));
+        System.out.println();
+        int n2 = 3;
+        System.out.println(decentNumber(n2));
+        System.out.println();
+        int n3 = 5;
+        System.out.println(decentNumber(n3));
+        System.out.println();
+        int n4 = 11;
+        System.out.println(decentNumber(n4));
+        System.out.println();
+
+    }
+
+
+
+
+}
 
 
 
