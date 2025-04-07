@@ -3,37 +3,39 @@ import java.util.*;
 class decent {
     public static void decentNumber(int n) {
         // Write your code here
+        System.out.println("n: " + n);
         int numOfThrees = 0;
         int numOfFives = n;
-        while ((n - numOfThrees) % 3 != 0) {
+        while ((n - numOfThrees) % 3 != 0) { //n:3
             numOfThrees += 5; 
-            // nOT = 11 - 0 = 5
-            // = 11 - 5 = 6
-            
         }
         if (numOfThrees > n) {
             System.out.println("-1");
         } else {
             numOfFives = n - numOfThrees;
-            System.out.print("5".repeat(numOfFives) + "3".repeat(3));
+            // System.out.println("num 5s: " + numOfFives);
+            // System.out.println("num 3s: " + numOfThrees);
+            System.out.println("5".repeat(numOfFives) + "3".repeat(numOfThrees));
         }
-
-
-
-        }
+    }
 
     public static void main(String[] args) {
         int n1 = 1;
-        System.out.println(decentNumber(n1));
+        // System.out.print("n = 1: ");
+        decentNumber(n1);
         System.out.println();
+
         int n2 = 3;
-        System.out.println(decentNumber(n2));
+        // System.out.print("n = 3: ");
+        decentNumber(n2);
         System.out.println();
         int n3 = 5;
-        System.out.println(decentNumber(n3));
+        // System.out.print("n = 5: ");
+        decentNumber(n3);
         System.out.println();
         int n4 = 11;
-        System.out.println(decentNumber(n4));
+        // System.out.print("n = 11: ");
+        decentNumber(n4);
         System.out.println();
 
     }
