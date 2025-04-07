@@ -4,8 +4,18 @@ class decent {
     public static void decentNumber(int n) {
         // Write your code here
         int numOfThrees = 0;
+        int numOfFives = n;
         while ((n - numOfThrees) % 3 != 0) {
-            numOfThrees++;
+            numOfThrees += 5; 
+            // nOT = 11 - 0 = 5
+            // = 11 - 5 = 6
+            
+        }
+        if (numOfThrees > n) {
+            System.out.println("-1");
+        } else {
+            numOfFives = n - numOfThrees;
+            System.out.print("5".repeat(numOfFives) + "3".repeat(3));
         }
 
 
