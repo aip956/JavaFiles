@@ -3,9 +3,19 @@ import java.util.*;
 
 public class LibraryFine {
     public static int libraryFine(int d1, int m1, int y1, int d2, int m2, int y2) {
+        int fine = 0;
         // Write your code here
-    
+        if (y2 - y1 > 0) {
+            return fine = 10000; 
         }
+        if (m2 - m1 > 0) {
+            return fine = (m2 - m1) * 500;
+        }
+        if (d2 - d1 > 0) {
+            return fine = (d2 - d1) * 15;
+        }
+        return fine;
+    }
 
     public static void main(String[] args) {
         // Returned:
@@ -16,6 +26,7 @@ public class LibraryFine {
         int d2 = 6;
         int m2 = 6; 
         int y2 = 2015;
+        System.out.println(libraryFine(d1, m1, y1, d2, m2, y2));
     }
 }
 
