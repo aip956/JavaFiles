@@ -5,14 +5,18 @@ public class LibraryFine {
     public static int libraryFine(int d1, int m1, int y1, int d2, int m2, int y2) {
         int fine = 0;
         // Write your code here
-        if (y2 - y1 > 0) {
-            return fine = 10000; 
+        if (y1 - y2 > 0) {
+            return 10000; 
         }
-        if (m2 - m1 > 0) {
-            return fine = (m2 - m1) * 500;
+        
+        // if due: 4/1/24, return 5/1/23
+        // m2: 5, m1: 4; this should be no fine
+        if (m1 - m2 > 0 && y1==y2) {
+            return fine = (m1 - m2) * 500;
         }
-        if (d2 - d1 > 0) {
-            return fine = (d2 - d1) * 15;
+
+        if (d1 - d2 > 0 && m1 == m2 && y1 == y2) {
+            return fine = (d1 - d2) * 15;
         }
         return fine;
     }
