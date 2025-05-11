@@ -13,17 +13,19 @@ class repeatedString {
 
     public static long repeatedString(String s, long n) {
     // Write your code here
-        long freq = 0;
-        String repeated = String.repeat(n);
-        for (int i = 0; i <= n; i++ ) {
-            if (repeated.charAt(i) == 'a') {
-                freq ++;
-                System.out.println("i: " + i);
-                System.out.println("freq: " + freq);
-            }
+        long s_in_n = n / s.length(); // number of strings in n
+        long timesInString = 0;
+        long remainder = n % s.length(); // remainder of s
+        // count number of a's in s
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == 'a') timesInString ++;
         }
-        return freq;
-
+        timesInString *= s_in_n;
+        // count number of a's in remainder
+        for (int i = 0; i < remainder; i++) {
+            if (s.charAt(i) == 'a') timesInString ++;
+        }
+        return timesInString;
     }
 
     public static void main(String[] args) {
@@ -33,3 +35,13 @@ class repeatedString {
     }
 
 }
+
+
+/*
+ * https://www.hackerrank.com/challenges/repeated-string/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
+ * count a's in original string
+ * count how many times s fits in n: times = n/s.length
+ * count remainder of partial string: a's inRemainder = n % s.length
+ * repeats = times + a's inRemainder
+ * 
+ */
