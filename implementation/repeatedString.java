@@ -13,6 +13,16 @@ class repeatedString {
 
     public static long repeatedString(String s, long n) {
     // Write your code here
+        long freq = 0;
+        String repeated = String.repeat(n);
+        for (int i = 0; i <= n; i++ ) {
+            if (repeated.charAt(i) == 'a') {
+                freq ++;
+                System.out.println("i: " + i);
+                System.out.println("freq: " + freq);
+            }
+        }
+        return freq;
 
     }
 
